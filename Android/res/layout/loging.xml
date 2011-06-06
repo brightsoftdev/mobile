@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="horizontal" android:layout_width="fill_parent"
+	android:layout_height="fill_parent" android:layout_gravity="right|fill_horizontal">
+
+	<TextView android:id="@+id/welcome_text" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:textSize="8pt"
+		android:paddingBottom="20dip" 
+		android:text="@string/welcome_text" />
+	
+	<LinearLayout android:layout_height="wrap_content" 
+	android:layout_width="fill_parent" 
+	android:id="@+id/datas" 
+	android:layout_below="@+id/welcome_text"
+	android:orientation="vertical" 
+	android:padding="20dip">
+
+		<TextView 
+			android:id="@+id/txt_user" 
+			android:layout_height="wrap_content" 
+			android:layout_width="fill_parent" 
+			android:layout_below="@id/welcome_text" 
+			android:text="@string/username">
+		</TextView>
+	
+		<EditText 
+			android:id="@+id/username" 
+			android:layout_width="fill_parent" 
+			android:layout_height="wrap_content"
+			android:inputType="textImeMultiLine"
+			android:nextFocusDown="@+id/pass">
+		</EditText>
+		
+		
+		<TextView 
+			android:id="@+id/txt_pass"
+			android:paddingTop="10dip"
+			android:layout_height="wrap_content"  
+			android:layout_width="fill_parent" 
+			android:layout_below="@id/username" 
+			android:text="@string/password">
+		</TextView>
+		
+		<EditText 
+			android:id="@+id/password"
+			android:layout_width="fill_parent" 
+			android:layout_height="wrap_content" 
+			android:inputType="textImeMultiLine|textPassword">
+		</EditText>
+
+		<CheckBox android:id="@+id/rememberMe" 
+			android:text="@string/remember"
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content">
+		</CheckBox>
+	</LinearLayout>
+	
+	<Button 
+		android:id="@+id/login_button" 
+		android:layout_height="wrap_content" 
+		android:layout_width="100dip" 
+		android:text="@string/sign_in" 
+		android:layout_below="@+id/datas"
+		android:layout_marginRight="20dip" 
+		android:layout_alignParentRight="true">
+	</Button>
+
+
+</RelativeLayout>
