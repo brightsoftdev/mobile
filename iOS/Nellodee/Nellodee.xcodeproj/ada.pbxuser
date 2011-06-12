@@ -1,0 +1,352 @@
+// !$*UTF8*$!
+{
+	1D3623240D0F684500981E51 /* NellodeeAppDelegate.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {925, 383}}";
+			sepNavSelRange = "{322, 0}";
+			sepNavVisRange = "{0, 773}";
+		};
+	};
+	1D3623250D0F684500981E51 /* NellodeeAppDelegate.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {2371, 1859}}";
+			sepNavSelRange = "{329, 0}";
+			sepNavVisRange = "{3958, 516}";
+			sepNavWindowFrame = "{{15, 88}, {919, 685}}";
+		};
+	};
+	1D6058900D05DD3D006BFB54 /* Nellodee */ = {
+		activeExec = 0;
+		executables = (
+			60E8DCE113A3F1C700181578 /* Nellodee */,
+		);
+	};
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = 60E8DCE113A3F1C700181578 /* Nellodee */;
+		activeTarget = 1D6058900D05DD3D006BFB54 /* Nellodee */;
+		breakpoints = (
+		);
+		codeSenseManager = 60E8DCEE13A3F1E500181578 /* Code sense */;
+		executables = (
+			60E8DCE113A3F1C700181578 /* Nellodee */,
+		);
+		perUserDictionary = {
+			"PBXConfiguration.PBXBreakpointsDataSource.v1:1CA1AED706398EBD00589147" = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXBreakpointsDataSource_BreakpointID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					20,
+					198,
+					20,
+					99,
+					99,
+					29,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXBreakpointsDataSource_ActionID,
+					PBXBreakpointsDataSource_TypeID,
+					PBXBreakpointsDataSource_BreakpointID,
+					PBXBreakpointsDataSource_UseID,
+					PBXBreakpointsDataSource_LocationID,
+					PBXBreakpointsDataSource_ConditionID,
+					PBXBreakpointsDataSource_IgnoreCountID,
+					PBXBreakpointsDataSource_ContinueID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					747,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 329539965;
+			PBXWorkspaceStateSaveDate = 329539965;
+		};
+		perUserProjectItems = {
+			60122FAA13A461DD0067BFFF /* PBXTextBookmark */ = 60122FAA13A461DD0067BFFF /* PBXTextBookmark */;
+			60122FAB13A461DD0067BFFF /* PBXTextBookmark */ = 60122FAB13A461DD0067BFFF /* PBXTextBookmark */;
+			60122FAC13A461DD0067BFFF /* PBXTextBookmark */ = 60122FAC13A461DD0067BFFF /* PBXTextBookmark */;
+			60122FAD13A461DD0067BFFF /* PBXTextBookmark */ = 60122FAD13A461DD0067BFFF /* PBXTextBookmark */;
+			60122FAE13A461DD0067BFFF /* PBXTextBookmark */ = 60122FAE13A461DD0067BFFF /* PBXTextBookmark */;
+			60122FAF13A461DD0067BFFF /* PBXTextBookmark */ = 60122FAF13A461DD0067BFFF /* PBXTextBookmark */;
+			60122FB013A461DD0067BFFF /* PBXTextBookmark */ = 60122FB013A461DD0067BFFF /* PBXTextBookmark */;
+			60122FB113A461DD0067BFFF /* PBXTextBookmark */ = 60122FB113A461DD0067BFFF /* PBXTextBookmark */;
+			60CD94D613A460CA007DDA74 /* PBXTextBookmark */ = 60CD94D613A460CA007DDA74 /* PBXTextBookmark */;
+			60CE468D13A445C600415DBB /* PlistBookmark */ = 60CE468D13A445C600415DBB /* PlistBookmark */;
+			60CF5D3E13A45F02006A9300 /* PBXTextBookmark */ = 60CF5D3E13A45F02006A9300 /* PBXTextBookmark */;
+			60CF5D3F13A45F02006A9300 /* PBXTextBookmark */ = 60CF5D3F13A45F02006A9300 /* PBXTextBookmark */;
+			60CF5D4013A45F02006A9300 /* PBXTextBookmark */ = 60CF5D4013A45F02006A9300 /* PBXTextBookmark */;
+		};
+		sourceControlManager = 60E8DCED13A3F1E500181578 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	29B97316FDCFA39411CA2CEA /* main.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {925, 406}}";
+			sepNavSelRange = "{72, 0}";
+			sepNavVisRange = "{0, 306}";
+		};
+	};
+	32CA4F630368D1EE00C91783 /* Nellodee_Prefix.pch */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {925, 406}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 360}";
+		};
+	};
+	60122FAA13A461DD0067BFFF /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* NellodeeAppDelegate.h */;
+		name = "NellodeeAppDelegate.h: 14";
+		rLen = 0;
+		rLoc = 322;
+		rType = 0;
+		vrLen = 773;
+		vrLoc = 0;
+	};
+	60122FAB13A461DD0067BFFF /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* NellodeeAppDelegate.m */;
+		name = "NellodeeAppDelegate.m: 22";
+		rLen = 0;
+		rLoc = 329;
+		rType = 0;
+		vrLen = 516;
+		vrLoc = 3958;
+	};
+	60122FAC13A461DD0067BFFF /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = B75ED5971124F75C004F6C94 /* ViewTwoController.m */;
+		name = "ViewTwoController.m: 5";
+		rLen = 39;
+		rLoc = 43;
+		rType = 0;
+		vrLen = 694;
+		vrLoc = 0;
+	};
+	60122FAD13A461DD0067BFFF /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = B75ED5961124F75C004F6C94 /* ViewTwoController.h */;
+		name = "ViewTwoController.h: 3";
+		rLen = 0;
+		rLoc = 39;
+		rType = 0;
+		vrLen = 174;
+		vrLoc = 0;
+	};
+	60122FAE13A461DD0067BFFF /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = B725505C1118D2A00016AD41 /* LoginViewController.h */;
+		name = "LoginViewController.h: 2";
+		rLen = 0;
+		rLoc = 26;
+		rType = 0;
+		vrLen = 579;
+		vrLoc = 0;
+	};
+	60122FAF13A461DD0067BFFF /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = B7F6523F10FFD98E0008748C /* MainViewController.m */;
+		name = "MainViewController.m: 42";
+		rLen = 21;
+		rLoc = 1193;
+		rType = 0;
+		vrLen = 882;
+		vrLoc = 579;
+	};
+	60122FB013A461DD0067BFFF /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = B7F6523E10FFD98E0008748C /* MainViewController.h */;
+		name = "MainViewController.h: 21";
+		rLen = 0;
+		rLoc = 321;
+		rType = 0;
+		vrLen = 329;
+		vrLoc = 0;
+	};
+	60122FB113A461DD0067BFFF /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = B7F6523E10FFD98E0008748C /* MainViewController.h */;
+		name = "MainViewController.h: 21";
+		rLen = 0;
+		rLoc = 321;
+		rType = 0;
+		vrLen = 329;
+		vrLoc = 0;
+	};
+	60CD94D613A460CA007DDA74 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = B725505D1118D2A00016AD41 /* LoginViewController.m */;
+		name = "LoginViewController.m: 2";
+		rLen = 0;
+		rLoc = 26;
+		rType = 0;
+		vrLen = 613;
+		vrLoc = 0;
+	};
+	60CE468D13A445C600415DBB /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D1107310486CEB800E47090 /* Nellodee-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/ada/GSoC/Nellodee/iOS/Nellodee/Nellodee-Info.plist";
+		rLen = 0;
+		rLoc = 9223372036854775808;
+	};
+	60CF5D3E13A45F02006A9300 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = B725505E1118D2A00016AD41 /* LoginViewController.xib */;
+		name = "LoginViewController.xib: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1452;
+		vrLoc = 1938;
+	};
+	60CF5D3F13A45F02006A9300 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 32CA4F630368D1EE00C91783 /* Nellodee_Prefix.pch */;
+		name = "Nellodee_Prefix.pch: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 360;
+		vrLoc = 0;
+	};
+	60CF5D4013A45F02006A9300 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 29B97316FDCFA39411CA2CEA /* main.m */;
+		name = "main.m: 6";
+		rLen = 0;
+		rLoc = 72;
+		rType = 0;
+		vrLen = 306;
+		vrLoc = 0;
+	};
+	60E8DCE113A3F1C700181578 /* Nellodee */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = Nellodee;
+		savedGlobals = {
+		};
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+		variableFormatDictionary = {
+		};
+	};
+	60E8DCED13A3F1E500181578 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	60E8DCEE13A3F1E500181578 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	8D1107310486CEB800E47090 /* Nellodee-Info.plist */ = {
+		uiCtxt = {
+			sepNavWindowFrame = "{{38, 67}, {919, 685}}";
+		};
+	};
+	B725505C1118D2A00016AD41 /* LoginViewController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {925, 403}}";
+			sepNavSelRange = "{26, 0}";
+			sepNavVisRange = "{0, 579}";
+			sepNavWindowFrame = "{{15, 88}, {919, 685}}";
+		};
+	};
+	B725505D1118D2A00016AD41 /* LoginViewController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {860, 663}}";
+			sepNavSelRange = "{26, 0}";
+			sepNavVisRange = "{0, 921}";
+			sepNavWindowFrame = "{{15, 88}, {919, 685}}";
+		};
+	};
+	B725505E1118D2A00016AD41 /* LoginViewController.xib */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {925, 6513}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{1938, 1452}";
+		};
+	};
+	B75ED5961124F75C004F6C94 /* ViewTwoController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {925, 383}}";
+			sepNavSelRange = "{39, 0}";
+			sepNavVisRange = "{0, 174}";
+			sepNavWindowFrame = "{{84, 25}, {919, 685}}";
+		};
+	};
+	B75ED5971124F75C004F6C94 /* ViewTwoController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1146, 780}}";
+			sepNavSelRange = "{43, 39}";
+			sepNavVisRange = "{0, 694}";
+			sepNavWindowFrame = "{{38, 67}, {919, 685}}";
+		};
+	};
+	B7F6523E10FFD98E0008748C /* MainViewController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {925, 383}}";
+			sepNavSelRange = "{321, 0}";
+			sepNavVisRange = "{0, 329}";
+		};
+	};
+	B7F6523F10FFD98E0008748C /* MainViewController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1146, 949}}";
+			sepNavSelRange = "{1193, 21}";
+			sepNavVisRange = "{579, 882}";
+		};
+	};
+}
