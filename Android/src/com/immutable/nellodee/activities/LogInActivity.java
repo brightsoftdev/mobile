@@ -4,6 +4,7 @@ package com.immutable.nellodee.activities;
 import com.immutable.nellodee.R;
 import com.immutable.nellodee.R.id;
 import com.immutable.nellodee.R.layout;
+import com.immutable.nellodee.auth.Authorization;
 
 
 import android.app.Activity;
@@ -37,6 +38,12 @@ public class LogInActivity extends Activity {
 			String password = password_EditText.getText().toString();
 			
 			Log.v("CREDENTIALS: ", "Clicked the sign in button. This is the username: "+ username+ " and pass:" + password);
+			Authorization auth = new Authorization();
+			try {
+				auth.executeHttpGet();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
 		}
 	};
   
