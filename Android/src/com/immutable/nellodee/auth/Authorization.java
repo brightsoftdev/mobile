@@ -32,44 +32,87 @@ public class Authorization {
 		HttpClient client = new DefaultHttpClient();
 		HttpPost request = new HttpPost();
 		BufferedReader in = null;
-	try{
-		request.setURI(new URI("http://10.211.55.2:8080/system/sling/formlogin"));
-		List<NameValuePair> postParameters = new ArrayList<NameValuePair>(); 
+		try{
+			request.setURI(new URI("http://10.211.55.2:8080/system/sling/formlogin"));
+			List<NameValuePair> postParameters = new ArrayList<NameValuePair>(); 
+			
+			postParameters.add(new BasicNameValuePair("sakaiauth:un", "ada")); 
+			postParameters.add(new BasicNameValuePair("sakaiauth:pw", "babagge")); 
+			postParameters.add(new BasicNameValuePair("sakaiauth:login", "1")); 
 
-		postParameters.add(new BasicNameValuePair("sakaiauth:un", "ada")); 
-		postParameters.add(new BasicNameValuePair("sakaiauth:pw", "babagge")); 
-		postParameters.add(new BasicNameValuePair("sakaiauth:login", "1")); 
-
-		UrlEncodedFormEntity formEntity = new UrlEncodedFormEntity(postParameters);
-		request.setEntity(formEntity);
+			UrlEncodedFormEntity formEntity = new UrlEncodedFormEntity(postParameters);
+			request.setEntity(formEntity);
 		
 		
-		HttpResponse response = client.execute(request);
-		int status = response.getStatusLine().getStatusCode();
-		System.out.println("STATUS" + status);
-		in = new BufferedReader(new InputStreamReader(response.getEntity().getContent()));
-		StringBuffer sb = new StringBuffer();
-		String line= "";
-		String NL = System.getProperty("line.separator");
-		while ((line=in.readLine())!=null){
-			sb.append(line+NL);
+			HttpResponse response = client.execute(request);
+			int status = response.getStatusLine().getStatusCode();
+			System.out.println("status: " + status);
+			in = new BufferedReader(new InputStreamReader(response.getEntity().getContent()));
+			StringBuffer sb = new StringBuffer();
+			String line= "";
+			String NL = System.getProperty("line.separator");
+			while ((line=in.readLine())!=null){
+				sb.append(line+NL);
+			}
+			in.close();
+			String page = sb.toString();
+			System.out.println(page);
 		}
-		in.close();
-		String page = sb.toString();
-		System.out.println(page);
-	}
-	finally{
-		if(in!=null){
-			try{
-				in.close();
-			} 
-			catch(IOException e){
-				e.printStackTrace();
+		finally{
+			if(in!=null){
+				try{
+					in.close();
+				} 
+				catch(IOException e){
+					e.printStackTrace();
+				}
 			}
 		}
-
 	}
 	
+	
+	public void me() throws Exception{
+		
+		HttpClient client = new DefaultHttpClient();
+		HttpGet request = new HttpGet();
+		BufferedReader in = null;
+		try{
+			/*new Uri.Builder()
+		    .scheme("http")
+		    .authority("foo.com")
+		    .path("someservlet")
+		    .appendQueryParameter("param1", foo)
+		    .appendQueryParameter("param2", bar)
+		    .build();
+			*/
+			request.setURI(new URI("http://10.211.55.2:8080/system/me"));
+			request.getParams().setParameter("uid", "ada");
+		
+			HttpResponse response = client.execute(request);
+			int status = response.getStatusLine().getStatusCode();
+			System.out.println("STATUS: " + status);
+			in = new BufferedReader(new InputStreamReader(response.getEntity().getContent()));
+			StringBuffer sb = new StringBuffer();
+			String line= "";
+			String NL = System.getProperty("line.separator");
+			while ((line=in.readLine())!=null){
+				sb.append(line+NL);
+			}
+			in.close();
+			String page = sb.toString();
+			System.out.println(page);
+		}
+		finally{
+			if(in!=null){
+				try{
+					in.close();
+				} 
+				catch(IOException e){
+					e.printStackTrace();
+				}
+			}
+		}
+	}
 	
 	/*public void executeHttpGet() throws Exception{
 		BufferedReader in = null;
