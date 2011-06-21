@@ -35,13 +35,15 @@ public class Authorization {
 		try{
 			request.setURI(new URI("http://10.211.55.2:8080/system/sling/formlogin"));
 			List<NameValuePair> postParameters = new ArrayList<NameValuePair>(); 
-			
 			postParameters.add(new BasicNameValuePair("sakaiauth:un", "ada")); 
-			postParameters.add(new BasicNameValuePair("sakaiauth:pw", "babagge")); 
+			postParameters.add(new BasicNameValuePair("sakaiauth:pw", "babbage")); 
 			postParameters.add(new BasicNameValuePair("sakaiauth:login", "1")); 
+			postParameters.add(new BasicNameValuePair("_charset_", "utf-8")); 
 
 			UrlEncodedFormEntity formEntity = new UrlEncodedFormEntity(postParameters);
 			request.setEntity(formEntity);
+			//Add referer
+			request.addHeader("Referer", "http://10.211.55.2:8080");
 		
 		
 			HttpResponse response = client.execute(request);

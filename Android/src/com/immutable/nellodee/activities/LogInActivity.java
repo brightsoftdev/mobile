@@ -40,7 +40,7 @@ public class LogInActivity extends Activity {
 			Log.v("CREDENTIALS: ", "Clicked the sign in button. This is the username: "+ username+ " and pass:" + password);
 			Authorization auth = new Authorization();
 			try {
-				auth.me();
+				auth.formBasedAuth();
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
