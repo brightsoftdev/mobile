@@ -7,20 +7,29 @@ import java.net.URI;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.http.HttpEntity;
 import org.apache.http.HttpHost;
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
 import org.apache.http.auth.AuthScope;
 import org.apache.http.auth.UsernamePasswordCredentials;
+import org.apache.http.client.CookieStore;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
+import org.apache.http.cookie.Cookie;
+import org.apache.http.entity.StringEntity;
+import org.apache.http.impl.client.BasicCookieStore;
 import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.message.BasicHeader;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.params.BasicHttpParams;
 import org.apache.http.params.HttpConnectionParams;
 import org.apache.http.params.HttpParams;
+import org.apache.http.protocol.HTTP;
+import org.apache.http.util.EntityUtils;
+import org.json.JSONObject;
 
 import android.net.Credentials;
 
@@ -29,26 +38,46 @@ public class Authorization {
     
 	public void formBasedAuth() throws Exception{
 		
-		HttpClient client = new DefaultHttpClient();
+		DefaultHttpClient client = new DefaultHttpClient();
 		HttpPost request = new HttpPost();
 		BufferedReader in = null;
 		try{
 			request.setURI(new URI("http://10.211.55.2:8080/system/sling/formlogin"));
-			List<NameValuePair> postParameters = new ArrayList<NameValuePair>(); 
-			postParameters.add(new BasicNameValuePair("sakaiauth:un", "ada")); 
-			postParameters.add(new BasicNameValuePair("sakaiauth:pw", "babbage")); 
-			postParameters.add(new BasicNameValuePair("sakaiauth:login", "1")); 
-			postParameters.add(new BasicNameValuePair("_charset_", "utf-8")); 
-
-			UrlEncodedFormEntity formEntity = new UrlEncodedFormEntity(postParameters);
-			request.setEntity(formEntity);
+			
+			JSONObject data = new JSONObject();
+			data.put("sakaiauth:un", "ada");
+			data.put("sakaiauth:pw", "babbage");
+			data.put("_charset_", "utf-8");
+			HttpEntity entity ;
+			StringEntity s = new StringEntity(data.toString());
+			s.setContentEncoding(new BasicHeader(HTTP.CONTENT_TYPE, "application/json"));
+		    entity = s;
+		    request.setEntity(entity);
+		    
 			//Add referer
 			request.addHeader("Referer", "http://10.211.55.2:8080");
 		
-		
 			HttpResponse response = client.execute(request);
 			int status = response.getStatusLine().getStatusCode();
-			System.out.println("status: " + status);
+			System.out.println("Status: " + status);
+			
+
+			List<Cookie> cookies = client.getCookieStore().getCookies();
+			CookieStore store = new BasicCookieStore();
+			if (cookies.isEmpty()) {
+                System.out.println("None");
+            } else {
+                for (int i = 0; i < cookies.size(); i++) {
+                	store.addCookie(cookies.get(i));
+                    System.out.println("- " + cookies.get(i).toString());
+                }
+            }
+			client.setCookieStore(store);
+			
+			/*HttpGet requestGET = new HttpGet();
+			requestGET.setURI(new URI("http://10.211.55.2:8080/system/me"));
+			response = client.execute(requestGET);
+			System.out.println("STATUS: " + status);
 			in = new BufferedReader(new InputStreamReader(response.getEntity().getContent()));
 			StringBuffer sb = new StringBuffer();
 			String line= "";
@@ -58,7 +87,8 @@ public class Authorization {
 			}
 			in.close();
 			String page = sb.toString();
-			System.out.println(page);
+			System.out.println(page);*/
+			
 		}
 		finally{
 			if(in!=null){
