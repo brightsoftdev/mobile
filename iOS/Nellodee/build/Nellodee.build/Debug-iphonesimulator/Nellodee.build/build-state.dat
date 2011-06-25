@@ -1,7 +1,7 @@
 TNellodee
 v7
 r0
-t329539951.503596
+t330693126.722991
 cCheck dependencies
 cProcessInfoPlistFile /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator/Nellodee.app/Info.plist Nellodee-Info.plist
 cCompileXIB /Users/ada/GSoC/Nellodee/iOS/Nellodee/MainWindow.xib
@@ -14,6 +14,19 @@ cCompileC build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Objects-norm
 cCompileC build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Objects-normal/i386/MainViewController.o /Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/../MainViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
 cCompileC build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Objects-normal/i386/LoginViewController.o /Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/../LoginViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
 cCompileC build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Objects-normal/i386/ViewTwoController.o /Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/../ViewTwoController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Objects-normal/i386/Authorization.o /Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/Authorization.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Objects-normal/i386/NSObject+SBJson.o /Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/NSObject+SBJson.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Objects-normal/i386/SBJsonParser.o /Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/SBJsonParser.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Objects-normal/i386/SBJsonStreamParser.o /Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/SBJsonStreamParser.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Objects-normal/i386/SBJsonStreamParserAccumulator.o /Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/SBJsonStreamParserAccumulator.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Objects-normal/i386/SBJsonStreamParserAdapter.o /Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/SBJsonStreamParserAdapter.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Objects-normal/i386/SBJsonStreamParserState.o /Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/SBJsonStreamParserState.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Objects-normal/i386/SBJsonStreamWriter.o /Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/SBJsonStreamWriter.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Objects-normal/i386/SBJsonStreamWriterAccumulator.o /Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/SBJsonStreamWriterAccumulator.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Objects-normal/i386/SBJsonStreamWriterState.o /Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/SBJsonStreamWriterState.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Objects-normal/i386/SBJsonTokeniser.o /Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/SBJsonTokeniser.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Objects-normal/i386/SBJsonUTF8Stream.o /Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/SBJsonUTF8Stream.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Objects-normal/i386/SBJsonWriter.o /Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/SBJsonWriter.m normal i386 objective-c com.apple.compilers.gcc.4_2
 cLd /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator/Nellodee.app/Nellodee normal i386
 cGenerateDSYMFile /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator/Nellodee.app.dSYM /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator/Nellodee.app/Nellodee
 cTouch /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator/Nellodee.app
@@ -63,11 +76,17 @@ c000000004D4F7A2B0000000000001B19
 t1297054251
 s6937
 
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/lib/gcc/i686-apple-darwin10/4.2.1/include/limits.h
+c000000004A1198340000000000000C7E
+t1242667060
+s3198
+
 N/Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/../LoginViewController.m
-c000000004DF428FD00000000000003EF
-t1307846909
-s1007
+c000000004E04D7100000000000000408
+t1308940048
+s1032
 i"LoginViewController.h"
+i"Authorization.h"
 
 N/Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/../MainViewController.m
 c000000004DF42733000000000000086C
@@ -82,6 +101,32 @@ t1307847221
 s1382
 i"ViewTwoController.h"
 
+N/Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/Authorization.h
+c000000004E05C28500000000000000F6
+t1309000325
+s246
+i<Foundation/Foundation.h>
+
+N/Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/Authorization.m
+c000000004E05B48F00000000000002EE
+t1308996751
+s750
+i"Authorization.h"
+
+N/Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/NSObject+SBJson.h
+c000000004E042A3C00000000000008B7
+t1308895804
+s2231
+i<Foundation/Foundation.h>
+
+N/Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/NSObject+SBJson.m
+c000000004E042A3C000000000000088A
+t1308895804
+s2186
+i"NSObject+SBJson.h"
+i"SBJsonWriter.h"
+i"SBJsonParser.h"
+
 N/Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/NellodeeAppDelegate.h
 c000000004DF426510000000000000306
 t1307846225
@@ -92,6 +137,154 @@ c000000004DF4263E000000000000117B
 t1307846206
 s4475
 i"NellodeeAppDelegate.h"
+
+N/Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/SBJsonParser.h
+c000000004E042A3C0000000000000DCA
+t1308895804
+s3530
+i<Foundation/Foundation.h>
+
+N/Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/SBJsonParser.m
+c000000004E042A3C0000000000000C58
+t1308895804
+s3160
+i"SBJsonParser.h"
+i"SBJsonStreamParser.h"
+i"SBJsonStreamParserAdapter.h"
+i"SBJsonStreamParserAccumulator.h"
+
+N/Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/SBJsonStreamParser.h
+c000000004E042A3C0000000000001550
+t1308895804
+s5456
+i<Foundation/Foundation.h>
+
+N/Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/SBJsonStreamParser.m
+c000000004E042A3C0000000000001A44
+t1308895804
+s6724
+i"SBJsonStreamParser.h"
+i"SBJsonTokeniser.h"
+i"SBJsonStreamParserState.h"
+i<limits.h>
+
+N/Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/SBJsonStreamParserAccumulator.h
+c000000004E042A3C00000000000006AE
+t1308895804
+s1710
+i<Foundation/Foundation.h>
+i"SBJsonStreamParserAdapter.h"
+
+N/Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/SBJsonStreamParserAccumulator.m
+c000000004E042A3C000000000000074B
+t1308895804
+s1867
+i"SBJsonStreamParserAccumulator.h"
+
+N/Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/SBJsonStreamParserAdapter.h
+c000000004E042A3C000000000000141D
+t1308895804
+s5149
+i<Foundation/Foundation.h>
+i"SBJsonStreamParser.h"
+
+N/Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/SBJsonStreamParserAdapter.m
+c000000004E042A3C000000000000113C
+t1308895804
+s4412
+i"SBJsonStreamParserAdapter.h"
+
+N/Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/SBJsonStreamParserState.h
+c000000004E042A3C0000000000000B22
+t1308895804
+s2850
+i<Foundation/Foundation.h>
+i"SBJsonTokeniser.h"
+i"SBJsonStreamParser.h"
+
+N/Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/SBJsonStreamParserState.m
+c000000004E042A3C0000000000001FB6
+t1308895804
+s8118
+i"SBJsonStreamParserState.h"
+i"SBJsonStreamParser.h"
+
+N/Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/SBJsonStreamWriter.h
+c000000004E042A3C00000000000015F9
+t1308895804
+s5625
+i<Foundation/Foundation.h>
+
+N/Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/SBJsonStreamWriter.m
+c000000004E042A3C00000000000029D0
+t1308895804
+s10704
+i"SBJsonStreamWriter.h"
+i"SBJsonStreamWriterState.h"
+
+N/Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/SBJsonStreamWriterAccumulator.h
+c000000004E042A3C0000000000000693
+t1308895804
+s1683
+i"SBJsonStreamWriter.h"
+
+N/Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/SBJsonStreamWriterAccumulator.m
+c000000004E042A3C00000000000007AE
+t1308895804
+s1966
+i"SBJsonStreamWriterAccumulator.h"
+
+N/Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/SBJsonStreamWriterState.h
+c000000004E042A3C00000000000009EC
+t1308895804
+s2540
+i<Foundation/Foundation.h>
+
+N/Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/SBJsonStreamWriterState.m
+c000000004E042A3C0000000000000F61
+t1308895804
+s3937
+i"SBJsonStreamWriterState.h"
+i"SBJsonStreamWriter.h"
+
+N/Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/SBJsonTokeniser.h
+c000000004E042A3C0000000000000888
+t1308895804
+s2184
+i<Foundation/Foundation.h>
+
+N/Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/SBJsonTokeniser.m
+c000000004E042A3C00000000000030C4
+t1308895804
+s12484
+i"SBJsonTokeniser.h"
+i"SBJsonUTF8Stream.h"
+
+N/Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/SBJsonUTF8Stream.h
+c000000004E042A3C0000000000000814
+t1308895804
+s2068
+i<Foundation/Foundation.h>
+
+N/Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/SBJsonUTF8Stream.m
+c000000004E042A3C0000000000000ECB
+t1308895804
+s3787
+i"SBJsonUTF8Stream.h"
+
+N/Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/SBJsonWriter.h
+c000000004E042A3C0000000000001059
+t1308895804
+s4185
+i<Foundation/Foundation.h>
+
+N/Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/SBJsonWriter.m
+c000000004E042A3C0000000000000D57
+t1308895804
+s3415
+i"SBJsonWriter.h"
+i"SBJsonStreamWriter.h"
+i"SBJsonStreamWriterAccumulator.h"
 
 N/Users/ada/GSoC/Nellodee/iOS/Nellodee/LoginViewController.h
 c000000004DF428F30000000000000244
@@ -143,11 +336,11 @@ t1265942512
 s16982
 
 N/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator/Nellodee.app
-t1307847151
+t1309000326
 s306
 
 N/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator/Nellodee.app.dSYM
-t1307846997
+t1309000326
 s102
 
 N/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator/Nellodee.app/Info.plist
@@ -167,8 +360,8 @@ t1307846722
 s4006
 
 N/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator/Nellodee.app/Nellodee
-t1307846997
-s25544
+t1309000326
+s124236
 
 N/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator/Nellodee.app/PkgInfo
 t1307846588
@@ -178,25 +371,77 @@ N/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator/Nellodee.app/
 t1307846589
 s1973
 
+N/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Objects-normal/i386/Authorization.o
+t1309000326
+s5968
+
 N/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Objects-normal/i386/LoginViewController.o
-t1307846997
+t1309000326
 s45400
 
 N/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Objects-normal/i386/MainViewController.o
-t1307846997
+t1308861206
 s44540
 
+N/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Objects-normal/i386/NSObject+SBJson.o
+t1308999714
+s8424
+
 N/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Objects-normal/i386/Nellodee.LinkFileList
-c000000004DF427BC00000000000002A0
-t1307846588
-s672
+c000000004E05C02000000000000009A3
+t1308999712
+s2467
 
 N/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Objects-normal/i386/NellodeeAppDelegate.o
 t1307846589
 s58492
 
+N/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Objects-normal/i386/SBJsonParser.o
+t1308999714
+s15636
+
+N/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Objects-normal/i386/SBJsonStreamParser.o
+t1308999714
+s27952
+
+N/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Objects-normal/i386/SBJsonStreamParserAccumulator.o
+t1308999714
+s9272
+
+N/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Objects-normal/i386/SBJsonStreamParserAdapter.o
+t1308999714
+s23536
+
+N/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Objects-normal/i386/SBJsonStreamParserState.o
+t1308999714
+s45108
+
+N/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Objects-normal/i386/SBJsonStreamWriter.o
+t1308999714
+s45096
+
+N/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Objects-normal/i386/SBJsonStreamWriterAccumulator.o
+t1308999714
+s9860
+
+N/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Objects-normal/i386/SBJsonStreamWriterState.o
+t1308999715
+s27916
+
+N/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Objects-normal/i386/SBJsonTokeniser.o
+t1308999715
+s29732
+
+N/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Objects-normal/i386/SBJsonUTF8Stream.o
+t1308999715
+s16720
+
+N/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Objects-normal/i386/SBJsonWriter.o
+t1308999715
+s17644
+
 N/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Objects-normal/i386/ViewTwoController.o
-t1307846589
+t1308861207
 s38068
 
 N/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Objects-normal/i386/main.o
@@ -220,11 +465,24 @@ s909
 
 CCheck dependencies
 r0
-lSLF07#2@18"Check dependencies329539950#329539950#0(0"0(0#1#0"8604242496#0"0#
+lSLF07#2@18"Check dependencies330693126#330693126#0(0"0(0#1#0"8610857952#0"0#
+
+CCompileC build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Objects-normal/i386/Authorization.o /Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/Authorization.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s330693126.091526
+e330693126.270381
+r1
+xCompileC
+xbuild/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Objects-normal/i386/Authorization.o
+x/Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/Authorization.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@69"Compile /Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/Authorization.m330693126#330693126#0(0"0(0#0#61"/Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/Authorization.m8611567392#2023"    cd /Users/ada/GSoC/Nellodee/iOS/Nellodee    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Nellodee-generated-files.hmap -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Nellodee-own-target-headers.hmap -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Nellodee-all-target-headers.hmap -iquote /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Nellodee-project-headers.hmap -F/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator "-F/Volumes/Skiiing2/CD/ViewBased/Unknown Path/System/Library/Frameworks" -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator/include -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/DerivedSources/i386 -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/DerivedSources -include /var/folders/2m/2m-ROx2eE94ZRPRBWv04I++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Nellodee_Prefix-cbhsmqsnmppurhbksrcuipkkzdfu/Nellodee_Prefix.pch -c /Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/Authorization.m -o /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Objects-normal/i386/Authorization.o0#
 
 CCompileC build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Objects-normal/i386/LoginViewController.o /Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/../LoginViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s329539797.406781
-e329539797.587319
+s330693126.089977
+e330693126.437816
 r1
 xCompileC
 xbuild/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Objects-normal/i386/LoginViewController.o
@@ -233,11 +491,11 @@ xnormal
 xi386
 xobjective-c
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@78"Compile /Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/../LoginViewController.m329539797#329539797#0(0"0(0#0#70"/Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/../LoginViewController.m8602319744#2038"    cd /Users/ada/GSoC/Nellodee/iOS/Nellodee    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Nellodee-generated-files.hmap -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Nellodee-own-target-headers.hmap -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Nellodee-all-target-headers.hmap -iquote /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Nellodee-project-headers.hmap -F/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator "-F/Volumes/Skiiing2/CD/ViewBased/Unknown Path/System/Library/Frameworks" -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator/include -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/DerivedSources/i386 -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/DerivedSources -include /var/folders/2m/2m-ROx2eE94ZRPRBWv04I++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Nellodee_Prefix-cbhsmqsnmppurhbksrcuipkkzdfu/Nellodee_Prefix.pch -c /Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/../LoginViewController.m -o /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Objects-normal/i386/LoginViewController.o0#
+lSLF07#2@78"Compile /Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/../LoginViewController.m330693126#330693126#0(0"0(0#0#70"/Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/../LoginViewController.m8611749760#2038"    cd /Users/ada/GSoC/Nellodee/iOS/Nellodee    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Nellodee-generated-files.hmap -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Nellodee-own-target-headers.hmap -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Nellodee-all-target-headers.hmap -iquote /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Nellodee-project-headers.hmap -F/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator "-F/Volumes/Skiiing2/CD/ViewBased/Unknown Path/System/Library/Frameworks" -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator/include -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/DerivedSources/i386 -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/DerivedSources -include /var/folders/2m/2m-ROx2eE94ZRPRBWv04I++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Nellodee_Prefix-cbhsmqsnmppurhbksrcuipkkzdfu/Nellodee_Prefix.pch -c /Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/../LoginViewController.m -o /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Objects-normal/i386/LoginViewController.o0#
 
 CCompileC build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Objects-normal/i386/MainViewController.o /Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/../MainViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s329539797.402274
-e329539797.542965
+s330554004.861639
+e330554006.977834
 r1
 xCompileC
 xbuild/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Objects-normal/i386/MainViewController.o
@@ -246,7 +504,20 @@ xnormal
 xi386
 xobjective-c
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@77"Compile /Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/../MainViewController.m329539797#329539797#0(0"0(0#0#69"/Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/../MainViewController.m7307761437599099904#2036"    cd /Users/ada/GSoC/Nellodee/iOS/Nellodee    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Nellodee-generated-files.hmap -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Nellodee-own-target-headers.hmap -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Nellodee-all-target-headers.hmap -iquote /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Nellodee-project-headers.hmap -F/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator "-F/Volumes/Skiiing2/CD/ViewBased/Unknown Path/System/Library/Frameworks" -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator/include -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/DerivedSources/i386 -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/DerivedSources -include /var/folders/2m/2m-ROx2eE94ZRPRBWv04I++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Nellodee_Prefix-cbhsmqsnmppurhbksrcuipkkzdfu/Nellodee_Prefix.pch -c /Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/../MainViewController.m -o /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Objects-normal/i386/MainViewController.o0#
+lSLF07#2@77"Compile /Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/../MainViewController.m330554004#330554006#0(0"0(0#0#69"/Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/../MainViewController.m7307761437599099904#2036"    cd /Users/ada/GSoC/Nellodee/iOS/Nellodee    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Nellodee-generated-files.hmap -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Nellodee-own-target-headers.hmap -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Nellodee-all-target-headers.hmap -iquote /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Nellodee-project-headers.hmap -F/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator "-F/Volumes/Skiiing2/CD/ViewBased/Unknown Path/System/Library/Frameworks" -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator/include -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/DerivedSources/i386 -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/DerivedSources -include /var/folders/2m/2m-ROx2eE94ZRPRBWv04I++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Nellodee_Prefix-cbhsmqsnmppurhbksrcuipkkzdfu/Nellodee_Prefix.pch -c /Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/../MainViewController.m -o /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Objects-normal/i386/MainViewController.o0#
+
+CCompileC build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Objects-normal/i386/NSObject+SBJson.o /Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/NSObject+SBJson.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s330692512.399231
+e330692514.460425
+r1
+xCompileC
+xbuild/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Objects-normal/i386/NSObject+SBJson.o
+x/Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/NSObject+SBJson.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@71"Compile /Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/NSObject+SBJson.m330692512#330692514#0(0"0(0#0#63"/Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/NSObject+SBJson.m8598128512#2027"    cd /Users/ada/GSoC/Nellodee/iOS/Nellodee    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Nellodee-generated-files.hmap -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Nellodee-own-target-headers.hmap -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Nellodee-all-target-headers.hmap -iquote /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Nellodee-project-headers.hmap -F/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator "-F/Volumes/Skiiing2/CD/ViewBased/Unknown Path/System/Library/Frameworks" -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator/include -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/DerivedSources/i386 -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/DerivedSources -include /var/folders/2m/2m-ROx2eE94ZRPRBWv04I++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Nellodee_Prefix-cbhsmqsnmppurhbksrcuipkkzdfu/Nellodee_Prefix.pch -c /Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/NSObject+SBJson.m -o /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Objects-normal/i386/NSObject+SBJson.o0#
 
 CCompileC build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Objects-normal/i386/NellodeeAppDelegate.o /Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/NellodeeAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s329539389.573953
@@ -261,9 +532,152 @@ xobjective-c
 xcom.apple.compilers.gcc.4_2
 lSLF07#2@75"Compile /Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/NellodeeAppDelegate.m329539389#329539389#0(0"0(0#0#67"/Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/NellodeeAppDelegate.m8603040128#2035"    cd /Users/ada/GSoC/Nellodee/iOS/Nellodee    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Nellodee-generated-files.hmap -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Nellodee-own-target-headers.hmap -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Nellodee-all-target-headers.hmap -iquote /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Nellodee-project-headers.hmap -F/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator "-F/Volumes/Skiiing2/CD/ViewBased/Unknown Path/System/Library/Frameworks" -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator/include -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/DerivedSources/i386 -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/DerivedSources -include /var/folders/2m/2m-ROx2eE94ZRPRBWv04I++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Nellodee_Prefix-cbhsmqsnmppurhbksrcuipkkzdfu/Nellodee_Prefix.pch -c /Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/NellodeeAppDelegate.m -o /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Objects-normal/i386/NellodeeAppDelegate.o0#
 
+CCompileC build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Objects-normal/i386/SBJsonParser.o /Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/SBJsonParser.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s330692512.415378
+e330692514.452494
+r1
+xCompileC
+xbuild/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Objects-normal/i386/SBJsonParser.o
+x/Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/SBJsonParser.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@68"Compile /Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/SBJsonParser.m330692512#330692514#0(0"0(0#0#60"/Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/SBJsonParser.m8611717728#2021"    cd /Users/ada/GSoC/Nellodee/iOS/Nellodee    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Nellodee-generated-files.hmap -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Nellodee-own-target-headers.hmap -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Nellodee-all-target-headers.hmap -iquote /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Nellodee-project-headers.hmap -F/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator "-F/Volumes/Skiiing2/CD/ViewBased/Unknown Path/System/Library/Frameworks" -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator/include -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/DerivedSources/i386 -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/DerivedSources -include /var/folders/2m/2m-ROx2eE94ZRPRBWv04I++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Nellodee_Prefix-cbhsmqsnmppurhbksrcuipkkzdfu/Nellodee_Prefix.pch -c /Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/SBJsonParser.m -o /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Objects-normal/i386/SBJsonParser.o0#
+
+CCompileC build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Objects-normal/i386/SBJsonStreamParser.o /Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/SBJsonStreamParser.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s330692514.452653
+e330692514.654737
+r1
+xCompileC
+xbuild/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Objects-normal/i386/SBJsonStreamParser.o
+x/Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/SBJsonStreamParser.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@74"Compile /Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/SBJsonStreamParser.m330692514#330692514#0(0"0(0#0#66"/Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/SBJsonStreamParser.m8611377440#2033"    cd /Users/ada/GSoC/Nellodee/iOS/Nellodee    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Nellodee-generated-files.hmap -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Nellodee-own-target-headers.hmap -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Nellodee-all-target-headers.hmap -iquote /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Nellodee-project-headers.hmap -F/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator "-F/Volumes/Skiiing2/CD/ViewBased/Unknown Path/System/Library/Frameworks" -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator/include -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/DerivedSources/i386 -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/DerivedSources -include /var/folders/2m/2m-ROx2eE94ZRPRBWv04I++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Nellodee_Prefix-cbhsmqsnmppurhbksrcuipkkzdfu/Nellodee_Prefix.pch -c /Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/SBJsonStreamParser.m -o /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Objects-normal/i386/SBJsonStreamParser.o0#
+
+CCompileC build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Objects-normal/i386/SBJsonStreamParserAccumulator.o /Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/SBJsonStreamParserAccumulator.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s330692514.460539
+e330692514.535179
+r1
+xCompileC
+xbuild/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Objects-normal/i386/SBJsonStreamParserAccumulator.o
+x/Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/SBJsonStreamParserAccumulator.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@85"Compile /Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/SBJsonStreamParserAccumulator.m330692514#330692514#0(0"0(0#0#77"/Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/SBJsonStreamParserAccumulator.m8611538368#2055"    cd /Users/ada/GSoC/Nellodee/iOS/Nellodee    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Nellodee-generated-files.hmap -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Nellodee-own-target-headers.hmap -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Nellodee-all-target-headers.hmap -iquote /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Nellodee-project-headers.hmap -F/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator "-F/Volumes/Skiiing2/CD/ViewBased/Unknown Path/System/Library/Frameworks" -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator/include -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/DerivedSources/i386 -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/DerivedSources -include /var/folders/2m/2m-ROx2eE94ZRPRBWv04I++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Nellodee_Prefix-cbhsmqsnmppurhbksrcuipkkzdfu/Nellodee_Prefix.pch -c /Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/SBJsonStreamParserAccumulator.m -o /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Objects-normal/i386/SBJsonStreamParserAccumulator.o0#
+
+CCompileC build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Objects-normal/i386/SBJsonStreamParserAdapter.o /Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/SBJsonStreamParserAdapter.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s330692514.535294
+e330692514.697228
+r1
+xCompileC
+xbuild/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Objects-normal/i386/SBJsonStreamParserAdapter.o
+x/Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/SBJsonStreamParserAdapter.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@81"Compile /Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/SBJsonStreamParserAdapter.m330692514#330692514#0(0"0(0#0#73"/Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/SBJsonStreamParserAdapter.m8609284480#2047"    cd /Users/ada/GSoC/Nellodee/iOS/Nellodee    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Nellodee-generated-files.hmap -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Nellodee-own-target-headers.hmap -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Nellodee-all-target-headers.hmap -iquote /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Nellodee-project-headers.hmap -F/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator "-F/Volumes/Skiiing2/CD/ViewBased/Unknown Path/System/Library/Frameworks" -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator/include -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/DerivedSources/i386 -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/DerivedSources -include /var/folders/2m/2m-ROx2eE94ZRPRBWv04I++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Nellodee_Prefix-cbhsmqsnmppurhbksrcuipkkzdfu/Nellodee_Prefix.pch -c /Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/SBJsonStreamParserAdapter.m -o /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Objects-normal/i386/SBJsonStreamParserAdapter.o0#
+
+CCompileC build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Objects-normal/i386/SBJsonStreamParserState.o /Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/SBJsonStreamParserState.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s330692514.654859
+e330692514.809212
+r1
+xCompileC
+xbuild/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Objects-normal/i386/SBJsonStreamParserState.o
+x/Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/SBJsonStreamParserState.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@79"Compile /Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/SBJsonStreamParserState.m330692514#330692514#0(0"0(0#0#71"/Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/SBJsonStreamParserState.m8611336512#2043"    cd /Users/ada/GSoC/Nellodee/iOS/Nellodee    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Nellodee-generated-files.hmap -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Nellodee-own-target-headers.hmap -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Nellodee-all-target-headers.hmap -iquote /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Nellodee-project-headers.hmap -F/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator "-F/Volumes/Skiiing2/CD/ViewBased/Unknown Path/System/Library/Frameworks" -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator/include -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/DerivedSources/i386 -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/DerivedSources -include /var/folders/2m/2m-ROx2eE94ZRPRBWv04I++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Nellodee_Prefix-cbhsmqsnmppurhbksrcuipkkzdfu/Nellodee_Prefix.pch -c /Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/SBJsonStreamParserState.m -o /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Objects-normal/i386/SBJsonStreamParserState.o0#
+
+CCompileC build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Objects-normal/i386/SBJsonStreamWriter.o /Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/SBJsonStreamWriter.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s330692514.697348
+e330692514.942920
+r1
+xCompileC
+xbuild/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Objects-normal/i386/SBJsonStreamWriter.o
+x/Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/SBJsonStreamWriter.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@74"Compile /Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/SBJsonStreamWriter.m330692514#330692514#0(0"0(0#0#66"/Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/SBJsonStreamWriter.m8611156768#2033"    cd /Users/ada/GSoC/Nellodee/iOS/Nellodee    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Nellodee-generated-files.hmap -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Nellodee-own-target-headers.hmap -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Nellodee-all-target-headers.hmap -iquote /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Nellodee-project-headers.hmap -F/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator "-F/Volumes/Skiiing2/CD/ViewBased/Unknown Path/System/Library/Frameworks" -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator/include -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/DerivedSources/i386 -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/DerivedSources -include /var/folders/2m/2m-ROx2eE94ZRPRBWv04I++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Nellodee_Prefix-cbhsmqsnmppurhbksrcuipkkzdfu/Nellodee_Prefix.pch -c /Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/SBJsonStreamWriter.m -o /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Objects-normal/i386/SBJsonStreamWriter.o0#
+
+CCompileC build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Objects-normal/i386/SBJsonStreamWriterAccumulator.o /Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/SBJsonStreamWriterAccumulator.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s330692514.809327
+e330692514.928023
+r1
+xCompileC
+xbuild/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Objects-normal/i386/SBJsonStreamWriterAccumulator.o
+x/Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/SBJsonStreamWriterAccumulator.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@85"Compile /Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/SBJsonStreamWriterAccumulator.m330692514#330692514#0(0"0(0#0#77"/Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/SBJsonStreamWriterAccumulator.m8610624512#2055"    cd /Users/ada/GSoC/Nellodee/iOS/Nellodee    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Nellodee-generated-files.hmap -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Nellodee-own-target-headers.hmap -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Nellodee-all-target-headers.hmap -iquote /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Nellodee-project-headers.hmap -F/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator "-F/Volumes/Skiiing2/CD/ViewBased/Unknown Path/System/Library/Frameworks" -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator/include -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/DerivedSources/i386 -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/DerivedSources -include /var/folders/2m/2m-ROx2eE94ZRPRBWv04I++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Nellodee_Prefix-cbhsmqsnmppurhbksrcuipkkzdfu/Nellodee_Prefix.pch -c /Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/SBJsonStreamWriterAccumulator.m -o /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Objects-normal/i386/SBJsonStreamWriterAccumulator.o0#
+
+CCompileC build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Objects-normal/i386/SBJsonStreamWriterState.o /Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/SBJsonStreamWriterState.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s330692514.928143
+e330692515.047519
+r1
+xCompileC
+xbuild/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Objects-normal/i386/SBJsonStreamWriterState.o
+x/Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/SBJsonStreamWriterState.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@79"Compile /Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/SBJsonStreamWriterState.m330692514#330692515#0(0"0(0#0#71"/Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/SBJsonStreamWriterState.m8610233856#2043"    cd /Users/ada/GSoC/Nellodee/iOS/Nellodee    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Nellodee-generated-files.hmap -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Nellodee-own-target-headers.hmap -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Nellodee-all-target-headers.hmap -iquote /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Nellodee-project-headers.hmap -F/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator "-F/Volumes/Skiiing2/CD/ViewBased/Unknown Path/System/Library/Frameworks" -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator/include -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/DerivedSources/i386 -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/DerivedSources -include /var/folders/2m/2m-ROx2eE94ZRPRBWv04I++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Nellodee_Prefix-cbhsmqsnmppurhbksrcuipkkzdfu/Nellodee_Prefix.pch -c /Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/SBJsonStreamWriterState.m -o /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Objects-normal/i386/SBJsonStreamWriterState.o0#
+
+CCompileC build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Objects-normal/i386/SBJsonTokeniser.o /Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/SBJsonTokeniser.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s330692514.943031
+e330692515.146152
+r1
+xCompileC
+xbuild/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Objects-normal/i386/SBJsonTokeniser.o
+x/Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/SBJsonTokeniser.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@71"Compile /Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/SBJsonTokeniser.m330692514#330692515#0(0"0(0#0#63"/Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/SBJsonTokeniser.m8609631008#2027"    cd /Users/ada/GSoC/Nellodee/iOS/Nellodee    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Nellodee-generated-files.hmap -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Nellodee-own-target-headers.hmap -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Nellodee-all-target-headers.hmap -iquote /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Nellodee-project-headers.hmap -F/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator "-F/Volumes/Skiiing2/CD/ViewBased/Unknown Path/System/Library/Frameworks" -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator/include -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/DerivedSources/i386 -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/DerivedSources -include /var/folders/2m/2m-ROx2eE94ZRPRBWv04I++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Nellodee_Prefix-cbhsmqsnmppurhbksrcuipkkzdfu/Nellodee_Prefix.pch -c /Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/SBJsonTokeniser.m -o /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Objects-normal/i386/SBJsonTokeniser.o0#
+
+CCompileC build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Objects-normal/i386/SBJsonUTF8Stream.o /Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/SBJsonUTF8Stream.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s330692515.047637
+e330692515.171409
+r1
+xCompileC
+xbuild/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Objects-normal/i386/SBJsonUTF8Stream.o
+x/Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/SBJsonUTF8Stream.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@72"Compile /Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/SBJsonUTF8Stream.m330692515#330692515#0(0"0(0#0#64"/Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/SBJsonUTF8Stream.m8611368032#2029"    cd /Users/ada/GSoC/Nellodee/iOS/Nellodee    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Nellodee-generated-files.hmap -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Nellodee-own-target-headers.hmap -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Nellodee-all-target-headers.hmap -iquote /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Nellodee-project-headers.hmap -F/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator "-F/Volumes/Skiiing2/CD/ViewBased/Unknown Path/System/Library/Frameworks" -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator/include -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/DerivedSources/i386 -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/DerivedSources -include /var/folders/2m/2m-ROx2eE94ZRPRBWv04I++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Nellodee_Prefix-cbhsmqsnmppurhbksrcuipkkzdfu/Nellodee_Prefix.pch -c /Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/SBJsonUTF8Stream.m -o /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Objects-normal/i386/SBJsonUTF8Stream.o0#
+
+CCompileC build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Objects-normal/i386/SBJsonWriter.o /Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/SBJsonWriter.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s330692515.146265
+e330692515.252464
+r1
+xCompileC
+xbuild/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Objects-normal/i386/SBJsonWriter.o
+x/Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/SBJsonWriter.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@68"Compile /Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/SBJsonWriter.m330692515#330692515#0(0"0(0#0#60"/Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/SBJsonWriter.m8611526272#2021"    cd /Users/ada/GSoC/Nellodee/iOS/Nellodee    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Nellodee-generated-files.hmap -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Nellodee-own-target-headers.hmap -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Nellodee-all-target-headers.hmap -iquote /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Nellodee-project-headers.hmap -F/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator "-F/Volumes/Skiiing2/CD/ViewBased/Unknown Path/System/Library/Frameworks" -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator/include -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/DerivedSources/i386 -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/DerivedSources -include /var/folders/2m/2m-ROx2eE94ZRPRBWv04I++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Nellodee_Prefix-cbhsmqsnmppurhbksrcuipkkzdfu/Nellodee_Prefix.pch -c /Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/SBJsonWriter.m -o /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Objects-normal/i386/SBJsonWriter.o0#
+
 CCompileC build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Objects-normal/i386/ViewTwoController.o /Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/../ViewTwoController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s329539389.750093
-e329539389.830183
+s330554006.978993
+e330554007.088267
 r1
 xCompileC
 xbuild/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Objects-normal/i386/ViewTwoController.o
@@ -272,7 +686,7 @@ xnormal
 xi386
 xobjective-c
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@76"Compile /Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/../ViewTwoController.m329539389#329539389#0(0"0(0#0#68"/Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/../ViewTwoController.m8603275296#2034"    cd /Users/ada/GSoC/Nellodee/iOS/Nellodee    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Nellodee-generated-files.hmap -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Nellodee-own-target-headers.hmap -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Nellodee-all-target-headers.hmap -iquote /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Nellodee-project-headers.hmap -F/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator "-F/Volumes/Skiiing2/CD/ViewBased/Unknown Path/System/Library/Frameworks" -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator/include -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/DerivedSources/i386 -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/DerivedSources -include /var/folders/2m/2m-ROx2eE94ZRPRBWv04I++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Nellodee_Prefix-cbhsmqsnmppurhbksrcuipkkzdfu/Nellodee_Prefix.pch -c /Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/../ViewTwoController.m -o /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Objects-normal/i386/ViewTwoController.o0#
+lSLF07#2@76"Compile /Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/../ViewTwoController.m330554007#330554007#0(0"0(0#0#68"/Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/../ViewTwoController.m8602654560#2034"    cd /Users/ada/GSoC/Nellodee/iOS/Nellodee    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Nellodee-generated-files.hmap -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Nellodee-own-target-headers.hmap -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Nellodee-all-target-headers.hmap -iquote /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Nellodee-project-headers.hmap -F/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator "-F/Volumes/Skiiing2/CD/ViewBased/Unknown Path/System/Library/Frameworks" -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator/include -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/DerivedSources/i386 -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/DerivedSources -include /var/folders/2m/2m-ROx2eE94ZRPRBWv04I++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Nellodee_Prefix-cbhsmqsnmppurhbksrcuipkkzdfu/Nellodee_Prefix.pch -c /Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/../ViewTwoController.m -o /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Objects-normal/i386/ViewTwoController.o0#
 
 CCompileC build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Objects-normal/i386/main.o /Users/ada/GSoC/Nellodee/iOS/Nellodee/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s329539389.572744
@@ -322,24 +736,24 @@ x/Users/ada/GSoC/Nellodee/iOS/Nellodee/ViewTwoController.xib
 lSLF07#2@32"CompileXIB ViewTwoController.xib329539388#329539389#0(0"0(0#0#59"/Users/ada/GSoC/Nellodee/iOS/Nellodee/ViewTwoController.xib8602670112#582"    cd /Users/ada/GSoC/Nellodee/iOS/Nellodee    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.3    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator/Nellodee.app/ViewTwoController.nib /Users/ada/GSoC/Nellodee/iOS/Nellodee/ViewTwoController.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk0#
 
 CGenerateDSYMFile /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator/Nellodee.app.dSYM /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator/Nellodee.app/Nellodee
-s329539797.619007
-e329539797.642011
+s330693126.621379
+e330693126.719846
 r1
 xGenerateDSYMFile
 x/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator/Nellodee.app.dSYM
 x/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator/Nellodee.app/Nellodee
-lSLF07#2@112"GenerateDSYMFile build/Debug-iphonesimulator/Nellodee.app.dSYM build/Debug-iphonesimulator/Nellodee.app/Nellodee329539797#329539797#0(0"0(0#0#87"/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator/Nellodee.app/Nellodee12948282727006308#383"    cd /Users/ada/GSoC/Nellodee/iOS/Nellodee    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator/Nellodee.app/Nellodee -o /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator/Nellodee.app.dSYM0#
+lSLF07#2@112"GenerateDSYMFile build/Debug-iphonesimulator/Nellodee.app.dSYM build/Debug-iphonesimulator/Nellodee.app/Nellodee330693126#330693126#0(0"0(0#0#87"/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator/Nellodee.app/Nellodee8609523520#383"    cd /Users/ada/GSoC/Nellodee/iOS/Nellodee    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator/Nellodee.app/Nellodee -o /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator/Nellodee.app.dSYM0#
 
 CLd /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator/Nellodee.app/Nellodee normal i386
-s329539797.587420
-e329539797.618908
+s330693126.437921
+e330693126.621259
 r1
 xLd
 x/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator/Nellodee.app/Nellodee
 xnormal
 xi386
 old: warning: directory '/Volumes/Skiiing2/CD/ViewBased/Unknown Path/System/Library/Frameworks' following -F not found
-lSLF07#2@92"Link /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator/Nellodee.app/Nellodee329539797#329539797#0(118"ld: warning: directory '/Volumes/Skiiing2/CD/ViewBased/Unknown Path/System/Library/Frameworks' following -F not found1(22@104"Directory '/Volumes/Skiiing2/CD/ViewBased/Unknown Path/System/Library/Frameworks' following -F not found329539797#0#118#0(6@0"329539797#0#0#0#0#0"0(0#0#0"8601320896#994"    cd /Users/ada/GSoC/Nellodee/iOS/Nellodee    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -L/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator -F/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator "-F/Volumes/Skiiing2/CD/ViewBased/Unknown Path/System/Library/Frameworks" -filelist /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Objects-normal/i386/Nellodee.LinkFileList -mmacosx-version-min=10.6 -Xlinker -objc_abi_version -Xlinker 2 -framework Foundation -framework UIKit -framework CoreGraphics -framework CoreData -o /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator/Nellodee.app/Nellodee0#
+lSLF07#2@92"Link /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator/Nellodee.app/Nellodee330693126#330693126#0(118"ld: warning: directory '/Volumes/Skiiing2/CD/ViewBased/Unknown Path/System/Library/Frameworks' following -F not found1(22@104"Directory '/Volumes/Skiiing2/CD/ViewBased/Unknown Path/System/Library/Frameworks' following -F not found330693126#0#118#0(6@0"330693126#0#0#0#0#0"0(0#0#0"8610296448#994"    cd /Users/ada/GSoC/Nellodee/iOS/Nellodee    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -L/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator -F/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator "-F/Volumes/Skiiing2/CD/ViewBased/Unknown Path/System/Library/Frameworks" -filelist /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Objects-normal/i386/Nellodee.LinkFileList -mmacosx-version-min=10.6 -Xlinker -objc_abi_version -Xlinker 2 -framework Foundation -framework UIKit -framework CoreGraphics -framework CoreData -o /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator/Nellodee.app/Nellodee0#
 
 CProcessInfoPlistFile /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator/Nellodee.app/Info.plist Nellodee-Info.plist
 s329539388.266529
@@ -354,10 +768,10 @@ CProcessPCH /var/folders/2m/2m-ROx2eE94ZRPRBWv04I++++TI/-Caches-/com.apple.Xcode
 r0
 
 CTouch /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator/Nellodee.app
-s329539951.500390
-e329539951.503539
+s330693126.719946
+e330693126.722947
 r1
 xTouch
 x/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator/Nellodee.app
-lSLF07#2@84"Touch /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator/Nellodee.app329539951#329539951#0(0"0(0#0#0"8602416064#277"    cd /Users/ada/GSoC/Nellodee/iOS/Nellodee    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator/Nellodee.app0#
+lSLF07#2@84"Touch /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator/Nellodee.app330693126#330693126#0(0"0(0#0#0"8609315200#277"    cd /Users/ada/GSoC/Nellodee/iOS/Nellodee    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator/Nellodee.app0#
 
