@@ -26,6 +26,7 @@
 		60893ED913B5F78F008DCDF0 /* SBJsonTokeniser.m in Sources */ = {isa = PBXBuildFile; fileRef = 60893ECB13B5F78F008DCDF0 /* SBJsonTokeniser.m */; };
 		60893EDA13B5F78F008DCDF0 /* SBJsonUTF8Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = 60893ECD13B5F78F008DCDF0 /* SBJsonUTF8Stream.m */; };
 		60893EDB13B5F78F008DCDF0 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 60893ECF13B5F78F008DCDF0 /* SBJsonWriter.m */; };
+		60893FBA13B75DA2008DCDF0 /* NellodeeApp.m in Sources */ = {isa = PBXBuildFile; fileRef = 60893FB913B75DA2008DCDF0 /* NellodeeApp.m */; };
 		60ACE0DA13B50E6600764BEF /* Authorization.m in Sources */ = {isa = PBXBuildFile; fileRef = 60ACE0D913B50E6600764BEF /* Authorization.m */; };
 		B725505F1118D2A00016AD41 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B725505D1118D2A00016AD41 /* LoginViewController.m */; };
 		B72550601118D2A00016AD41 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B725505E1118D2A00016AD41 /* LoginViewController.xib */; };
@@ -71,6 +72,8 @@
 		60893ECD13B5F78F008DCDF0 /* SBJsonUTF8Stream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonUTF8Stream.m; sourceTree = "<group>"; };
 		60893ECE13B5F78F008DCDF0 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
 		60893ECF13B5F78F008DCDF0 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
+		60893FB813B75DA2008DCDF0 /* NellodeeApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NellodeeApp.h; sourceTree = "<group>"; };
+		60893FB913B75DA2008DCDF0 /* NellodeeApp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NellodeeApp.m; sourceTree = "<group>"; };
 		60ACE0D813B50E6600764BEF /* Authorization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Authorization.h; sourceTree = "<group>"; };
 		60ACE0D913B50E6600764BEF /* Authorization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Authorization.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Nellodee-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Nellodee-Info.plist"; sourceTree = "<group>"; };
@@ -103,6 +106,8 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				60893FB813B75DA2008DCDF0 /* NellodeeApp.h */,
+				60893FB913B75DA2008DCDF0 /* NellodeeApp.m */,
 				60893EDE13B5F9F0008DCDF0 /* Views */,
 				60893EB313B5F707008DCDF0 /* Auth */,
 				60893EB213B5F6F7008DCDF0 /* JSON */,
@@ -299,6 +304,7 @@
 				60893ED913B5F78F008DCDF0 /* SBJsonTokeniser.m in Sources */,
 				60893EDA13B5F78F008DCDF0 /* SBJsonUTF8Stream.m in Sources */,
 				60893EDB13B5F78F008DCDF0 /* SBJsonWriter.m in Sources */,
+				60893FBA13B75DA2008DCDF0 /* NellodeeApp.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

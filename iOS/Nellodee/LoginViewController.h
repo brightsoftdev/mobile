@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 
 #import "MainViewController.h"
+#import "Authorization.h"
+
 
 @interface LoginViewController : UIViewController
 {

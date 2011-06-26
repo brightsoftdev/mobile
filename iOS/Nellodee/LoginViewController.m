@@ -18,7 +18,10 @@
 -(IBAction)attemptLogin
 {
 	// Code for attempting the login goes here
-	
+	Authorization* auth =[[Authorization alloc] init]; 
+	NSString * user = [username text];
+	NSString * pass = [password text];
+	[auth formBasedAuth:user:pass];
 	// Assuming it was successful, tell MainViewController to show the Tab Bar
 	[mainViewController showDashboard];
 }

@@ -7,9 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
-
 #import "ViewTwoController.h"
+
 @class LoginViewController;
 
 @interface MainViewController : UIViewController {
