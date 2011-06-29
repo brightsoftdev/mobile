@@ -330,7 +330,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>6089401613B7A854008DCDF0</string>
+										<string>60991C1813B8E19500064DB2</string>
 										<key>history</key>
 										<array>
 											<string>60CE468D13A445C600415DBB</string>
@@ -348,7 +348,7 @@
 											<string>60893FEB13B7960E008DCDF0</string>
 											<string>60893FFA13B799ED008DCDF0</string>
 											<string>6089401113B7A340008DCDF0</string>
-											<string>6089401213B7A340008DCDF0</string>
+											<string>60BDDE0D13B7E3D6006AFE97</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -360,14 +360,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {1033, 490}}</string>
+								<string>{{0, 0}, {1033, 478}}</string>
 								<key>RubberWindowFrame</key>
 								<string>0 59 1280 719 0 0 1280 778 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>490pt</string>
+							<string>478pt</string>
 						</dict>
 						<dict>
 							<key>ContentConfiguration</key>
@@ -380,14 +380,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 495}, {1033, 183}}</string>
+								<string>{{0, 483}, {1033, 195}}</string>
 								<key>RubberWindowFrame</key>
 								<string>0 59 1280 719 0 0 1280 778 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
 							<key>Proportion</key>
-							<string>183pt</string>
+							<string>195pt</string>
 						</dict>
 					</array>
 					<key>Proportion</key>
@@ -406,9 +406,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>60893E9A13B5E34E008DCDF0</string>
+				<string>60991C1513B8DDA800064DB2</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>60893E9B13B5E34E008DCDF0</string>
+				<string>60991C1613B8DDA800064DB2</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -559,9 +559,7 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>1CD10A99069EF8BA00B06720</string>
 		<string>60E8DCEB13A3F1E400181578</string>
-		<string>1C78EAAD065D492600B07095</string>
 		<string>/Users/ada/GSoC/Nellodee/iOS/Nellodee/Nellodee.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
@@ -586,7 +584,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>NellodeeApp.h</string>
+								<string></string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -603,8 +601,6 @@
 							<string>288pt</string>
 						</dict>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -644,7 +640,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>60E8DCEB13A3F1E400181578</string>
-				<string>60893E9C13B5E34E008DCDF0</string>
+				<string>60991C1713B8DDA800064DB2</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>

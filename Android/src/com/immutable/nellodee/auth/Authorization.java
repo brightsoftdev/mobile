@@ -32,6 +32,7 @@ import org.apache.http.util.EntityUtils;
 import org.json.JSONObject;
 
 import android.net.Credentials;
+import android.util.Log;
 
 public class Authorization {
 
@@ -42,39 +43,39 @@ public class Authorization {
 		HttpPost request = new HttpPost();
 		BufferedReader in = null;
 		try{
+			
 			request.setURI(new URI("http://10.211.55.2:8080/system/sling/formlogin"));
 			
-			JSONObject data = new JSONObject();
-			data.put("sakaiauth:un", "ada");
-			data.put("sakaiauth:pw", "babbage");
-			data.put("_charset_", "utf-8");
-			HttpEntity entity ;
-			StringEntity s = new StringEntity(data.toString());
-			s.setContentEncoding(new BasicHeader(HTTP.CONTENT_TYPE, "application/json"));
-		    entity = s;
-		    request.setEntity(entity);
-		    
+			List<NameValuePair> postParameters = new ArrayList<NameValuePair>(); 
+
+			postParameters.add(new BasicNameValuePair("sakaiauth:un", "ada")); 
+			postParameters.add(new BasicNameValuePair("sakaiauth:pw", "babagge")); 
+			postParameters.add(new BasicNameValuePair("sakaiauth:login", "1")); 
+
+			UrlEncodedFormEntity formEntity = new UrlEncodedFormEntity(postParameters);
+			request.setEntity(formEntity);
+					    
 			//Add referer
 			request.addHeader("Referer", "http://10.211.55.2:8080");
-		
+			
 			HttpResponse response = client.execute(request);
 			int status = response.getStatusLine().getStatusCode();
-			System.out.println("Status: " + status);
+			Log.i("STATUS", String.valueOf(status));
 			
 
 			List<Cookie> cookies = client.getCookieStore().getCookies();
 			CookieStore store = new BasicCookieStore();
 			if (cookies.isEmpty()) {
-                System.out.println("None");
+                Log.i("COOKIES", "None");
             } else {
                 for (int i = 0; i < cookies.size(); i++) {
                 	store.addCookie(cookies.get(i));
-                    System.out.println("- " + cookies.get(i).toString());
+                    Log.i("COOKIES","- " + cookies.get(i).toString());
                 }
             }
 			client.setCookieStore(store);
 			
-			/*HttpGet requestGET = new HttpGet();
+			HttpGet requestGET = new HttpGet();
 			requestGET.setURI(new URI("http://10.211.55.2:8080/system/me"));
 			response = client.execute(requestGET);
 			System.out.println("STATUS: " + status);
@@ -87,7 +88,7 @@ public class Authorization {
 			}
 			in.close();
 			String page = sb.toString();
-			System.out.println(page);*/
+			System.out.println(page);
 			
 		}
 		finally{

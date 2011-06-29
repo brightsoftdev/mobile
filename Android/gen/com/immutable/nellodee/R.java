@@ -33,13 +33,24 @@ public final class R {
         public static final int url_config=0x7f030002;
     }
     public static final class string {
+        /**  BUTTONS 
+         */
+        public static final int OK=0x7f040002;
         public static final int app_name=0x7f040001;
-        public static final int next=0x7f040006;
-        public static final int password=0x7f040003;
-        public static final int remember=0x7f040007;
-        public static final int sign_in=0x7f040004;
-        public static final int url=0x7f040005;
-        public static final int username=0x7f040002;
+        public static final int next=0x7f040004;
+        public static final int noURL=0x7f040006;
+        public static final int noURL_message=0x7f040007;
+        public static final int noValid=0x7f040008;
+        public static final int noValid_message=0x7f040009;
+        public static final int password=0x7f04000b;
+        public static final int remember=0x7f040005;
+        public static final int sign_in=0x7f04000c;
+        /**  URL Activity 
+         */
+        public static final int url=0x7f040003;
+        /**   LOG IN Activity 
+         */
+        public static final int username=0x7f04000a;
         public static final int welcome_text=0x7f040000;
     }
 }

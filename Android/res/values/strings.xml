@@ -2,13 +2,22 @@
 <resources>
     <string name="welcome_text">Nellodee: sakai for android</string>
     <string name="app_name">Nellodee</string>
-
-    <string name="username">User name: </string>
-    <string name="password">Password: </string>
-	<string name="sign_in">Sign in</string>
+    
+    <!-- BUTTONS -->
+	<string name="OK">OK</string>
 	
+	<!-- URL Activity -->
     <string name="url">Sakai URL </string>
     <string name="next">Next</string>
     <string name="remember">Remember me</string>
+	<string name="noURL">No URL</string>
+	<string name="noURL_message">There is missing the URL.</string>
+	<string name="noValid">No valid URL</string>
+	<string name="noValid_message">The URL is not valid.</string>
+	
+	<!--  LOG IN Activity -->
+    <string name="username">User name: </string>
+    <string name="password">Password: </string>
+	<string name="sign_in">Sign in</string>
 
 </resources>
