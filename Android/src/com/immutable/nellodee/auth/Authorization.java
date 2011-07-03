@@ -44,19 +44,19 @@ public class Authorization {
 		BufferedReader in = null;
 		try{
 			
-			request.setURI(new URI("http://10.211.55.2:8080/system/sling/formlogin"));
+			request.setURI(new URI("http://10.0.2.2:8080/system/sling/formlogin"));
 			
 			List<NameValuePair> postParameters = new ArrayList<NameValuePair>(); 
 
 			postParameters.add(new BasicNameValuePair("sakaiauth:un", "ada")); 
-			postParameters.add(new BasicNameValuePair("sakaiauth:pw", "babagge")); 
+			postParameters.add(new BasicNameValuePair("sakaiauth:pw", "babbage")); 
 			postParameters.add(new BasicNameValuePair("sakaiauth:login", "1")); 
 
 			UrlEncodedFormEntity formEntity = new UrlEncodedFormEntity(postParameters);
 			request.setEntity(formEntity);
 					    
 			//Add referer
-			request.addHeader("Referer", "http://10.211.55.2:8080");
+			request.addHeader("Referer", "http://10.0.2.2:8080");
 			
 			HttpResponse response = client.execute(request);
 			int status = response.getStatusLine().getStatusCode();
@@ -76,7 +76,7 @@ public class Authorization {
 			client.setCookieStore(store);
 			
 			HttpGet requestGET = new HttpGet();
-			requestGET.setURI(new URI("http://10.211.55.2:8080/system/me"));
+			requestGET.setURI(new URI("http://10.0.2.2:8080/system/me"));
 			response = client.execute(requestGET);
 			System.out.println("STATUS: " + status);
 			in = new BufferedReader(new InputStreamReader(response.getEntity().getContent()));
