@@ -11,12 +11,9 @@ public class User {
 	private String userProfilePath;
 	private Boolean superUser;
 	private Properties properties;
-	private String eventbus;
-	private Profile profile;
-	private Messages messages;
-	private Contacts contacts;
-	private ArrayList<String> groups;
-	
+	private ArrayList<String> subjects;
+	private Locale locale;
+		
 
 	public User() {
 		super();
@@ -25,28 +22,23 @@ public class User {
 		this.userProfilePath = "";
 		this.superUser = false;
 		this.properties = new Properties();
-		this.eventbus = "";
-		this.profile = new Profile();
-		this.messages = new Messages();
-		this.contacts = new Contacts();
-		this.groups = new ArrayList<String>();
+		this.subjects = new ArrayList<String>();
+		this.locale = new Locale();
+
 	}
 	
 	public User(String userid, String userStoragePrefix,
-			String userProfilePath, Boolean superUser, Properties properties,
-			String eventbus, Profile profile, Messages messages,
-			Contacts contacts, ArrayList<String> groups) {
+			String userProfilePath, Boolean superUser, Properties properties, 
+			ArrayList<String> subjects, Locale locale) {
 		super();
 		this.userid = userid;
 		this.userStoragePrefix = userStoragePrefix;
 		this.userProfilePath = userProfilePath;
 		this.superUser = superUser;
 		this.properties = properties;
-		this.eventbus = eventbus;
-		this.profile = profile;
-		this.messages = messages;
-		this.contacts = contacts;
-		this.groups = groups;
+		this.subjects = subjects;
+		this.locale = locale;
+
 	}
 
 	public String getUserid() {
@@ -89,45 +81,21 @@ public class User {
 		this.properties = properties;
 	}
 
-	public String getEventbus() {
-		return eventbus;
+	public ArrayList<String> getSubjects() {
+		return subjects;
 	}
 
-	public void setEventbus(String eventbus) {
-		this.eventbus = eventbus;
+	public void setSubjects(ArrayList<String> subjects) {
+		this.subjects = subjects;
 	}
 
-	public Profile getProfile() {
-		return profile;
+	public Locale getLocale() {
+		return locale;
 	}
 
-	public void setProfile(Profile profile) {
-		this.profile = profile;
+	public void setLocale(Locale locale) {
+		this.locale = locale;
 	}
 
-	public Messages getMessages() {
-		return messages;
-	}
-
-	public void setMessages(Messages messages) {
-		this.messages = messages;
-	}
-
-	public Contacts getContacts() {
-		return contacts;
-	}
-
-	public void setContacts(Contacts contacts) {
-		this.contacts = contacts;
-	}
-
-	public ArrayList<String> getGroups() {
-		return groups;
-	}
-
-	public void setGroups(ArrayList<String> groups) {
-		this.groups = groups;
-	} 
-	
 
 }

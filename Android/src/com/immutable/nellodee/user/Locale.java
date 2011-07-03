@@ -1,4 +1,5 @@
 package com.immutable.nellodee.user;
+
  
 
 public class Locale {
