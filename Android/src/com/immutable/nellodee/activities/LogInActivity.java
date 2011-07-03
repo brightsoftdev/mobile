@@ -25,11 +25,14 @@ public class LogInActivity extends Activity {
 	private Button loginButton;
 	private CheckBox rememberButton;
 	private SharedPreferences settings;
+	private NellodeeApplication app;
 
 
 	/** Called when the activity is first created. */
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //app = (NellodeeApplication) this.getApplication();
+        //System.out.println(app.getPrefsName());
         setContentView(R.layout.authorization);
         Log.v("LOG IN:","set login activity");
     }

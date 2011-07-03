@@ -43,8 +43,13 @@ public class NellodeeApplication extends Application {
 	public boolean isFirstTime(Context context) {
 		return context.getSharedPreferences(getPrefsName(),MODE_PRIVATE).getBoolean("first", true);
     }
+
 	public boolean isSavedUser(Context context) {
 		return context.getSharedPreferences(getPrefsName(),MODE_PRIVATE).getBoolean("savedUser", false);
+    }
+	
+	public String sakaiURL(Context context) {
+		return context.getSharedPreferences(getPrefsName(),MODE_PRIVATE).getString("url", "");
     }
 
 }
