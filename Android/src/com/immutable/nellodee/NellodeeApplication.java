@@ -14,6 +14,7 @@ public class NellodeeApplication extends Application {
 	private DefaultHttpClient client;
 	private CookieStore store;
 	
+	
 	public NellodeeApplication() {
 		this.client = new DefaultHttpClient();
 		this.store = new BasicCookieStore();
@@ -34,10 +35,10 @@ public class NellodeeApplication extends Application {
 	public void setStore(CookieStore store) {
 		this.store = store;
 	}
-
 	public static String getPrefsName() {
 		return PREFS_NAME;
 	}
+	
 	
 	/* MANAGE PREFERENCES */
 	public boolean isFirstTime(Context context) {
@@ -48,7 +49,7 @@ public class NellodeeApplication extends Application {
 		return context.getSharedPreferences(getPrefsName(),MODE_PRIVATE).getBoolean("savedUser", false);
     }
 	
-	public String sakaiURL(Context context) {
+	public String getURL(Context context) {
 		return context.getSharedPreferences(getPrefsName(),MODE_PRIVATE).getString("url", "");
     }
 

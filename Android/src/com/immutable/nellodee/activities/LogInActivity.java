@@ -10,6 +10,7 @@ import com.immutable.nellodee.auth.Authorization;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.Application;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -31,8 +32,8 @@ public class LogInActivity extends Activity {
 	/** Called when the activity is first created. */
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //app = (NellodeeApplication) this.getApplication();
-        //System.out.println(app.getPrefsName());
+        app = ((NellodeeApplication)getApplication());
+        
         setContentView(R.layout.authorization);
         Log.v("LOG IN:","set login activity");
     }
@@ -53,13 +54,14 @@ public class LogInActivity extends Activity {
 			String password = password_EditText.getText().toString();
 			Log.v("CREDENTIALS: ", "Clicked the sign in button. This is the username: "+ username+ " and pass:" + password);
 
-			
 			if(username_EditText == null || password_EditText == null){
 				notLogin();
             }else{
-            	Authorization auth = new Authorization();
+            	String url = app.getURL(app.getApplicationContext());
+    			Log.v("CREDENTIALS: ", "URL: "+ url); 
+            	Authorization auth = new Authorization(url,username,password);
             	try {
-            		auth.formBasedAuth();
+            		auth.formBasedAuth(app);
             	} catch (Exception e) {
             		e.printStackTrace();
             	}

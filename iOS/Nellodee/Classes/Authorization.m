@@ -17,29 +17,24 @@
 	NSLog(@"\nUsername: %@ - Password: %@ ", username, password);
 	NSLog(@" formBasedAuth ");
 	
-	//Dictionary with the user connection data 
-	NSDictionary *requestData = [NSDictionary dictionaryWithObjectsAndKeys:
-								 @"sakaiauth:un", username,
-								 @"sakaiauth:pw", password,
-								 @"sakaiauth:login", @"1",
-								 @"_charset_", @"utf-8",
-								 nil];
-	//JSON Object
-	NSString *jsonString = [requestData JSONRepresentation];
-	NSData *jsonData = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
-	NSLog(@"%@", jsonString);
-	
+	//Formating post data. 
+	NSString *post = [NSString 
+					   stringWithFormat:@"sakaiauth:un=%@&sakaiauth:pw=%@&sakaiauth:login=1&_charset_=utf-8",username,password];
+	NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
+	NSString *postLength = [NSString stringWithFormat:@"%d", [postData length]];
+
+
 	//Creating the request
-	
-	//NSMutableURLRequest *request = [NSMutableURLRequest 
-	//								requestWithURL:[NSURL URLWithString:@"http://10.211.55.2:8080/system/sling/formlogin"]];
 	NSMutableURLRequest *request = [NSMutableURLRequest 
-									requestWithURL:[NSURL URLWithString:@"http://sakai3-demo.uits.indiana.edu:8080/system/sling/formlogin"]];
+									requestWithURL:[NSURL URLWithString:@"http://10.211.55.2:8080/system/sling/formlogin"]];
+	//NSMutableURLRequest *request = [NSMutableURLRequest 
+	//								requestWithURL:[NSURL URLWithString:@"http://sakai3-demo.uits.indiana.edu:8080/system/sling/formlogin"]];
 	[request setHTTPMethod:@"POST"];
-	[request addValue:@"http://sakai3-demo.uits.indiana.edu:8080" forHTTPHeaderField:@"Referer"];
-	[request setValue:jsonString forHTTPHeaderField:@"json"];
-	[request setValue:@"application/json" forHTTPHeaderField:@"Content-type"];
-	[request setHTTPBody:jsonData];
+	[request addValue:@"http://10.211.55.2:8080/system/sling/formlogin" forHTTPHeaderField:@"Referer"];
+	[request setValue:postLength forHTTPHeaderField:@"Content-Length"];
+	[request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
+	[request setHTTPBody:postData];
+	
 	
 	NSURLResponse *response =[[NSURLResponse alloc]init];
 	NSError *error = nil;
@@ -80,3 +75,28 @@
 } 
 
 @end
+
+
+
+/* NOTES:
+ 
+ How to send JSON object:
+
+ NSDictionary *requestData = [NSDictionary dictionaryWithObjectsAndKeys:
+ @"sakaiauth:un", username,
+ @"sakaiauth:pw", password,
+ @"sakaiauth:login", @"1",
+ @"_charset_", @"utf-8",
+ nil];
+
+ -> JSON Object
+ NSString *jsonString = [requestData JSONRepresentation];
+ NSData *jsonData = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
+ NSLog(@"%@", jsonString);
+
+ -> Sending JSON Object
+ [request setValue:jsonString forHTTPHeaderField:@"json"];
+ [request setValue:@"application/json" forHTTPHeaderField:@"Content-type"];
+ [request setHTTPBody:jsonData];
+ 
+*/

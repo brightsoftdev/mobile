@@ -32,32 +32,61 @@ import org.apache.http.protocol.HTTP;
 import org.apache.http.util.EntityUtils;
 import org.json.JSONObject;
 
+import com.immutable.nellodee.NellodeeApplication;
+
 import android.net.Credentials;
 import android.util.Log;
 
 public class Authorization {
 
+    private String url;
+    private String user;
+    private String pass;
     
-	public void formBasedAuth() throws Exception{
-		
-		DefaultHttpClient client = new DefaultHttpClient();
+	public Authorization() {
+		super();
+		this.url = "";
+		this.user = "";
+		this.pass = "";
+	}
+    
+	public Authorization(String url, String user, String pass) {
+		super();
+		this.url = url;
+		this.user = user;
+		this.pass = pass;
+	}
+
+
+	public void formBasedAuth(NellodeeApplication app) throws Exception{
+		//DefaultHttpClient client  = app.getClient();
+		DefaultHttpClient client  = new DefaultHttpClient();
 		HttpPost request = new HttpPost();
 		BufferedReader in = null;
 		try{
+			Log.i("URL",url);
 			
-			request.setURI(new URI("http://10.0.2.2:8080/system/sling/formlogin"));
+			String uri = url + "/system/sling/formlogin";
+			Log.i("URL",uri);
+			request.setURI(new URI(uri));
+			//request.setURI(new URI("http://10.0.2.2:8080/system/sling/formlogin"));
 			
 			List<NameValuePair> postParameters = new ArrayList<NameValuePair>(); 
 
-			postParameters.add(new BasicNameValuePair("sakaiauth:un", "ada")); 
-			postParameters.add(new BasicNameValuePair("sakaiauth:pw", "babbage")); 
+			/* postParameters.add(new BasicNameValuePair("sakaiauth:un", "ada")); 
+			postParameters.add(new BasicNameValuePair("sakaiauth:pw", "babagge")); 
+			postParameters.add(new BasicNameValuePair("sakaiauth:login", "1"));*/
+			postParameters.add(new BasicNameValuePair("sakaiauth:un", user)); 
+			postParameters.add(new BasicNameValuePair("sakaiauth:pw", pass)); 
 			postParameters.add(new BasicNameValuePair("sakaiauth:login", "1")); 
 
+			
 			UrlEncodedFormEntity formEntity = new UrlEncodedFormEntity(postParameters);
 			request.setEntity(formEntity);
 					    
 			//Add referer
-			request.addHeader("Referer", "http://10.0.2.2:8080");
+			request.addHeader("Referer", url);
+			//request.addHeader("Referer", "http://10.0.2.2:8080");
 			
 			HttpResponse response = client.execute(request);
 			int status = response.getStatusLine().getStatusCode();
@@ -77,7 +106,9 @@ public class Authorization {
 			client.setCookieStore(store);
 			
 			HttpGet requestGET = new HttpGet();
-			requestGET.setURI(new URI("http://10.0.2.2:8080/system/me"));
+			uri = url + "/system/me";
+			Log.i("URL",uri);
+			requestGET.setURI(new URI(uri));
 			response = client.execute(requestGET);
 			System.out.println("STATUS: " + status);
 			in = new BufferedReader(new InputStreamReader(response.getEntity().getContent()));
@@ -92,7 +123,7 @@ public class Authorization {
 			System.out.println("JSON:" + jString);
 			
 			//Parse Json response 
-			JSONObject jObject;
+			/*JSONObject jObject;
 			jObject = new JSONObject(jString); 
 			JSONObject userObject = jObject.getJSONObject("user");
 			String userId = userObject.getString("userid");
@@ -163,7 +194,7 @@ public class Authorization {
 			Log.i("JUSER", "p_countLastUpdate: "+ p_countLastUpdate + " - sakai_excludeSearch:" + sakai_excludeSearch + " - homePath:" + homePath);
 			Log.i("JUSER", "_path: "+ _path + " - unread:" + unread + " - accepted:" + accepted);
 			Log.i("JUSER", "pending: "+ pending + " - invited:" + invited );
-			
+			*/
 			
 			
 		}
