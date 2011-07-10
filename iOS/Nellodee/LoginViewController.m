@@ -8,6 +8,7 @@
 
 #import "LoginViewController.h"
 #import "Authorization.h"
+#import "User.h"
 
 @implementation LoginViewController
 
@@ -21,7 +22,9 @@
 	Authorization* auth =[[Authorization alloc] init]; 
 	NSString * user = [username text];
 	NSString * pass = [password text];
+	
 	[auth formBasedAuth:user:pass];
+	//[auth meService];
 	// Assuming it was successful, tell MainViewController to show the Tab Bar
 	[mainViewController showDashboard];
 }

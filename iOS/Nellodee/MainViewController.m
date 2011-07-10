@@ -44,7 +44,10 @@
 	// Remove the previous view. In this case, viewOne
 	[self.view removeFromSuperview];
 	[loginView release];
-
+	
+	Authorization* auth =[[Authorization alloc] init]; 
+	[auth meService];
+	
 	ViewTwoController *viewTwo = [[ViewTwoController alloc] init];
 	viewTwo.title = @"Dashboard";
 

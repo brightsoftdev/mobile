@@ -11,10 +11,15 @@
 
 @interface NellodeeApp : NSObject {
 	NSString *sakaiURL;
+	NSArray *cookies;
+
 }
 
 //Nellodee config properties
 @property (nonatomic, retain) NSString *sakaiURL;
+
+//Shared info
+@property (nonatomic, retain) NSArray *cookies;
 
 
 

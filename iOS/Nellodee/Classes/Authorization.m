@@ -12,9 +12,9 @@
 
 @implementation Authorization
 
-@synthesize responseData;
+@synthesize responseData,currentCookies;
 
-/*
+
 - (BOOL) formBasedAuth :(NSString*)username :(NSString*) password{
 	NSLog(@"\nUsername: %@ - Password: %@ ", username, password);
 	NSLog(@" formBasedAuth ");
@@ -53,15 +53,15 @@
 		NSLog(@"Status: %d",status);
 		if (status == 200) {
 			// Get an array with all the cookies 
-			NSArray* allCookies =[NSHTTPCookie cookiesWithResponseHeaderFields:[response allHeaderFields]
+			self.currentCookies =[NSHTTPCookie cookiesWithResponseHeaderFields:[response allHeaderFields]
 																		forURL:[NSURL URLWithString:@"http://10.211.55.2:8080/system/sling/formlogin"]];
 			// Add the array of cookies in the shared cookie storage instance 
 			[[NSHTTPCookieStorage sharedHTTPCookieStorage]
-			 setCookies:allCookies
+			 setCookies:self.currentCookies
 			 forURL:[NSURL URLWithString:@"http://sakai3-demo.uits.indiana.edu:8080/system/sling/formlogin"]
 			 mainDocumentURL:nil];
 			
-			for (NSHTTPCookie* cookie in allCookies)
+			for (NSHTTPCookie* cookie in self.currentCookies)
 				NSLog(@"\nName: %@\nValue: %@\nExpires: %@", [cookie name], [cookie value], [cookie expiresDate]);
 			
 			//ME SERVICE
@@ -78,7 +78,7 @@
 			NSInteger status =[response statusCode];
 			NSLog(@"Status: %d",status);
 			*/
-	/*		
+			
 			return YES;
 		}
 		else{
@@ -94,8 +94,8 @@
 	return NO;	
 } 
 
-*/
 
+/*
 - (BOOL) formBasedAuth :(NSString*)username :(NSString*) password{
 	NSLog(@"--- formBasedAuth ---");
 	NSLog(@"\nUsername: %@ - Password: %@ ", username, password);
@@ -114,12 +114,35 @@
 	[request setValue:postLength forHTTPHeaderField:@"Content-Length"];
 	[request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
 	[request setHTTPBody:postData];
-	[request setHTTPShouldHandleCookies:YES];
+	//[request setHTTPShouldHandleCookies:YES];
 
     [[NSURLConnection alloc] initWithRequest:request delegate:self startImmediately:YES];  
 	
 	return YES;
 } 
+*/
+
+-(BOOL) meService{
+	NSLog(@" ---- me Service ---");
+	NSMutableURLRequest *request = [NSMutableURLRequest
+									requestWithURL:[NSURL URLWithString:@"http://10.211.55.2:8080/system/me"]];
+	[request setHTTPMethod: @"GET"];
+	[request setHTTPShouldHandleCookies:NO];
+	[request addValue:@"http://10.211.55.2:8080/system/me" forHTTPHeaderField:@"Referer"];
+	
+	if(self.currentCookies != nil){
+		[request setAllHTTPHeaderFields:
+		 [NSHTTPCookie requestHeaderFieldsWithCookies:self.currentCookies]];
+	}
+
+	[[NSURLConnection alloc] initWithRequest:request delegate:self];  
+
+//	NSURLConnection *conection = [[NSURLConnection alloc] initWithRequest:request delegate:self startImmediately:NO]; 
+//	[conection scheduleInRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
+//	[conection start];
+} 
+
+
 
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {  
@@ -129,7 +152,22 @@
 		NSLog(@"Remote url returned error %d %@",[httpResponse statusCode],[NSHTTPURLResponse localizedStringForStatusCode:[httpResponse statusCode]]);
 	} else {
 		NSLog(@"It is working. Status: %d %@",[httpResponse statusCode],[NSHTTPURLResponse localizedStringForStatusCode:[httpResponse statusCode]]);
-	}
+		//Get Cookies
+		self.currentCookies =[NSHTTPCookie 
+							  cookiesWithResponseHeaderFields:[response allHeaderFields]
+							  forURL:[NSURL URLWithString:@"http://10.211.55.2:8080"]];
+		
+		// Add the array of cookies in the shared cookie storage instance 
+		[[NSHTTPCookieStorage sharedHTTPCookieStorage]
+		 setCookies:self.currentCookies
+		 forURL:[NSURL URLWithString:@"http://10.211.55.2:8080"]
+		 mainDocumentURL:nil];
+		
+		for (NSHTTPCookie* cookie in self.currentCookies)
+			NSLog(@"\nName: %@\nValue: %@\nExpires: %@", [cookie name], [cookie value], [cookie expiresDate]);
+		
+
+		 }
     [responseData setLength:0];  
 }  
 
@@ -146,18 +184,12 @@
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {  
 	NSLog(@"connectionDidFinishLoading");
 
+
+	
     [connection release];  
-    NSString *responseString = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];  
     [responseData release];  
 	
-    NSLog(responseString);
-	//NSDictionary *results = [responseString JSONValue];  
-	
-    //NSArray *allTweets = [results objectForKey:@"results"];  
-	
-	//NSLog(responseString);
 }  
-
 
 
 

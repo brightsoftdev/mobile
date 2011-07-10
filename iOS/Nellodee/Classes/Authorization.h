@@ -9,10 +9,13 @@
 
 @interface Authorization : NSObject {
 	NSMutableData *responseData;
+	NSArray *currentCookies;
 }
 
 - (BOOL) formBasedAuth:(NSString*)username:(NSString*)password;
+- (BOOL) meService;
 
 @property (nonatomic, retain) NSMutableData *responseData;
+@property (nonatomic, retain) NSArray *currentCookies;
 
 @end
