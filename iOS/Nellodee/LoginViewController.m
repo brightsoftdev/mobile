@@ -24,7 +24,7 @@
 	NSString * pass = [password text];
 	
 	[auth formBasedAuth:user:pass];
-	//[auth meService];
+	[auth meService];
 	// Assuming it was successful, tell MainViewController to show the Tab Bar
 	[mainViewController showDashboard];
 }

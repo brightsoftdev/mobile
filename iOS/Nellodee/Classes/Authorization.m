@@ -54,11 +54,11 @@
 		if (status == 200) {
 			// Get an array with all the cookies 
 			self.currentCookies =[NSHTTPCookie cookiesWithResponseHeaderFields:[response allHeaderFields]
-																		forURL:[NSURL URLWithString:@"http://10.211.55.2:8080/system/sling/formlogin"]];
+																		forURL:[NSURL URLWithString:@"http://10.211.55.2:8080"]];
 			// Add the array of cookies in the shared cookie storage instance 
 			[[NSHTTPCookieStorage sharedHTTPCookieStorage]
 			 setCookies:self.currentCookies
-			 forURL:[NSURL URLWithString:@"http://sakai3-demo.uits.indiana.edu:8080/system/sling/formlogin"]
+			 forURL:[NSURL URLWithString:@"http://10.211.55.2:8080"]
 			 mainDocumentURL:nil];
 			
 			for (NSHTTPCookie* cookie in self.currentCookies)
@@ -132,8 +132,12 @@
 	
 	if(self.currentCookies != nil){
 		[request setAllHTTPHeaderFields:
-		 [NSHTTPCookie requestHeaderFieldsWithCookies:self.currentCookies]];
+			[NSHTTPCookie requestHeaderFieldsWithCookies:self.currentCookies]];				
 	}
+	
+	for (NSHTTPCookie* cookie in self.currentCookies)
+		NSLog(@"\nName: %@\nValue: %@\nExpires: %@", [cookie name], [cookie value], [cookie expiresDate]);
+	
 
 	[[NSURLConnection alloc] initWithRequest:request delegate:self];  
 
@@ -173,7 +177,8 @@
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {  
 	NSLog(@"didReceiveData");
-
+	NSString *theResponseString = [[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding] autorelease];
+	NSLog(theResponseString);
     [responseData appendData:data];  
 }  
 
@@ -184,8 +189,6 @@
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {  
 	NSLog(@"connectionDidFinishLoading");
 
-
-	
     [connection release];  
     [responseData release];  
 	

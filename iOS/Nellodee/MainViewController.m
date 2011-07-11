@@ -45,8 +45,8 @@
 	[self.view removeFromSuperview];
 	[loginView release];
 	
-	Authorization* auth =[[Authorization alloc] init]; 
-	[auth meService];
+	//Authorization* auth =[[Authorization alloc] init]; 
+	//[auth meService];
 	
 	ViewTwoController *viewTwo = [[ViewTwoController alloc] init];
 	viewTwo.title = @"Dashboard";
