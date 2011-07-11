@@ -38,7 +38,7 @@
 	[request setHTTPBody:postData];
 	[request setHTTPShouldHandleCookies:YES];
 
-	
+
 	NSURLResponse *response =[[NSURLResponse alloc]init];
 	NSError *error = nil;
 	
@@ -63,21 +63,7 @@
 			
 			for (NSHTTPCookie* cookie in self.currentCookies)
 				NSLog(@"\nName: %@\nValue: %@\nExpires: %@", [cookie name], [cookie value], [cookie expiresDate]);
-			
-			//ME SERVICE
-			/*request = [NSMutableURLRequest 
-					   requestWithURL:[NSURL URLWithString:@"http://10.211.55.2:8080/system/me"]];
-			[request setHTTPShouldHandleCookies:NO];
 
-			if(allCookies != nil){
-				[request setAllHTTPHeaderFields:[NSHTTPCookie requestHeaderFieldsWithCookies:allCookies]];				
-			}
-			data=[NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error]; 
-			NSMutableString *string = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-			NSLog(@"Response: ", string);
-			NSInteger status =[response statusCode];
-			NSLog(@"Status: %d",status);
-			*/
 			
 			return YES;
 		}
@@ -129,21 +115,22 @@
 	[request setHTTPMethod: @"GET"];
 	[request setHTTPShouldHandleCookies:NO];
 	[request addValue:@"http://10.211.55.2:8080/system/me" forHTTPHeaderField:@"Referer"];
-	
-	if(self.currentCookies != nil){
-		[request setAllHTTPHeaderFields:
-			[NSHTTPCookie requestHeaderFieldsWithCookies:self.currentCookies]];				
+	NSArray* cookies = [[NSHTTPCookieStorage sharedHTTPCookieStorage]
+						cookiesForURL:[NSURL URLWithString:@"http://10.211.55.2:8080"]];
+	NSDictionary* headers = [NSHTTPCookie requestHeaderFieldsWithCookies:cookies];
+
+	if(cookies != nil){
+		[request setAllHTTPHeaderFields:headers];
+	}
+	else{
+		NSLog(@"Error: user no authenticated");
 	}
 	
-	for (NSHTTPCookie* cookie in self.currentCookies)
-		NSLog(@"\nName: %@\nValue: %@\nExpires: %@", [cookie name], [cookie value], [cookie expiresDate]);
 	
 
 	[[NSURLConnection alloc] initWithRequest:request delegate:self];  
+	return YES;
 
-//	NSURLConnection *conection = [[NSURLConnection alloc] initWithRequest:request delegate:self startImmediately:NO]; 
-//	[conection scheduleInRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
-//	[conection start];
 } 
 
 

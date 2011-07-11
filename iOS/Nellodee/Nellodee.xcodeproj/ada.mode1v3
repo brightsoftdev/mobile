@@ -216,7 +216,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>607E738F13CB603800F48A8C</string>
+						<string>607E73B113CB65B400F48A8C</string>
 						<key>history</key>
 						<array>
 							<string>608AC94413CA7308004A0693</string>
@@ -370,7 +370,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>607E738E13CB603800F48A8C</string>
+										<string>607E73B013CB65B400F48A8C</string>
 										<key>history</key>
 										<array>
 											<string>60CE468D13A445C600415DBB</string>
@@ -380,17 +380,17 @@
 											<string>60893FC613B75E36008DCDF0</string>
 											<string>60893FC713B75E36008DCDF0</string>
 											<string>608B0A6213CA5B110024162C</string>
-											<string>608B0A6413CA5B110024162C</string>
 											<string>608B0A6513CA5B110024162C</string>
-											<string>608B0A6713CA5B110024162C</string>
 											<string>608AC8E413CA5F49004A0693</string>
-											<string>608AC91413CA6FC3004A0693</string>
-											<string>608AC92113CA7019004A0693</string>
-											<string>608AC92213CA7019004A0693</string>
-											<string>608AC92313CA7019004A0693</string>
-											<string>608AC92F13CA7060004A0693</string>
-											<string>608AC93D13CA7143004A0693</string>
-											<string>607E738713CB603100F48A8C</string>
+											<string>607E739513CB61D100F48A8C</string>
+											<string>607E739613CB61D100F48A8C</string>
+											<string>607E739713CB61D100F48A8C</string>
+											<string>607E739813CB61D100F48A8C</string>
+											<string>607E739913CB61D100F48A8C</string>
+											<string>607E739A13CB61D100F48A8C</string>
+											<string>607E739B13CB61D100F48A8C</string>
+											<string>607E739C13CB61D100F48A8C</string>
+											<string>607E739D13CB61D100F48A8C</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -601,15 +601,14 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>607E739013CB603800F48A8C</string>
 		<string>607E738A13CB603500F48A8C</string>
 		<string>607E739113CB603800F48A8C</string>
 		<string>607E738513CB600B00F48A8C</string>
+		<string>1CD10A99069EF8BA00B06720</string>
 		<string>60E8DCEB13A3F1E400181578</string>
 		<string>608AC91813CA6FC3004A0693</string>
 		<string>1C78EAAD065D492600B07095</string>
 		<string>/Users/ada/GSoC/Nellodee/iOS/Nellodee/Nellodee.xcodeproj</string>
-		<string>1CD10A99069EF8BA00B06720</string>
 	</array>
 	<key>WindowString</key>
 	<string>0 59 1280 719 0 0 1280 778 </string>
@@ -826,7 +825,7 @@
 			<key>WindowToolGUID</key>
 			<string>1CD10A99069EF8BA00B06720</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>Identifier</key>
