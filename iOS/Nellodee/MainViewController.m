@@ -7,8 +7,8 @@
 //
 
 #import "MainViewController.h"
-
 #import "LoginViewController.h"
+#import "User.h"
 
 @implementation MainViewController
 
@@ -45,10 +45,12 @@
 	[self.view removeFromSuperview];
 	[loginView release];
 	
+	User *u =[[User alloc] init];
+	[u meService];
 	//Authorization* auth =[[Authorization alloc] init]; 
 	//[auth meService];
 	
-	ViewTwoController *viewTwo = [[ViewTwoController alloc] init];
+	TabViewController *viewTwo = [[TabViewController alloc] init];
 	viewTwo.title = @"Dashboard";
 
 	[mainWindow addSubview: viewTwo.view];

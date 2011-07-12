@@ -13,7 +13,6 @@
 }
 
 - (BOOL) formBasedAuth:(NSString*)username:(NSString*)password;
-- (BOOL) meService;
 
 @property (nonatomic, retain) NSMutableData *responseData;
 @property (nonatomic, retain) NSArray *currentCookies;

@@ -15,6 +15,7 @@
 @synthesize responseData,currentCookies;
 
 
+
 - (BOOL) formBasedAuth :(NSString*)username :(NSString*) password{
 	NSLog(@"\nUsername: %@ - Password: %@ ", username, password);
 	NSLog(@" formBasedAuth ");
@@ -42,18 +43,19 @@
 	NSURLResponse *response =[[NSURLResponse alloc]init];
 	NSError *error = nil;
 	
-	//WARNING (TO MYSELF): I SHOULD IMPLEMENT THE DELEGATE METHODS TO REMOVE THE WARNINGS.
+	//WARNING (TO MYSELF): I SHOULD IMPLEMENT THE DELEGATE METHODS.
 	//Calling the web service
 	@try {
 		
 		NSData * data=[NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error]; 
 		NSMutableString *string = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
 		NSLog(@"Response: ", string);
-		NSInteger status =[response statusCode];
+		NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)response;
+		NSInteger status = [httpResponse statusCode];
 		NSLog(@"Status: %d",status);
 		if (status == 200) {
 			// Get an array with all the cookies 
-			self.currentCookies =[NSHTTPCookie cookiesWithResponseHeaderFields:[response allHeaderFields]
+			self.currentCookies =[NSHTTPCookie cookiesWithResponseHeaderFields:[httpResponse allHeaderFields]
 																		forURL:[NSURL URLWithString:@"http://10.211.55.2:8080"]];
 			// Add the array of cookies in the shared cookie storage instance 
 			[[NSHTTPCookieStorage sharedHTTPCookieStorage]
@@ -80,9 +82,9 @@
 	return NO;	
 } 
 
-
 /*
-- (BOOL) formBasedAuth :(NSString*)username :(NSString*) password{
+
+- (BOOL) formBasedAuth:(NSString*)username :(NSString*) password{
 	NSLog(@"--- formBasedAuth ---");
 	NSLog(@"\nUsername: %@ - Password: %@ ", username, password);
 	
@@ -102,37 +104,17 @@
 	[request setHTTPBody:postData];
 	//[request setHTTPShouldHandleCookies:YES];
 
-    [[NSURLConnection alloc] initWithRequest:request delegate:self startImmediately:YES];  
-	
+   NSURLConnection * _connection = [[NSURLConnection alloc] initWithRequest:request delegate:self startImmediately:YES];  
+ 
+	NSPort* port = [NSPort port];
+	NSRunLoop* rl = [NSRunLoop currentRunLoop]; // Get the runloop
+	[rl addPort:port forMode:NSDefaultRunLoopMode];
+	[_connection scheduleInRunLoop:rl forMode:NSDefaultRunLoopMode];
+	[_connection start];
+	[rl run];
+ 
 	return YES;
 } 
-*/
-
--(BOOL) meService{
-	NSLog(@" ---- me Service ---");
-	NSMutableURLRequest *request = [NSMutableURLRequest
-									requestWithURL:[NSURL URLWithString:@"http://10.211.55.2:8080/system/me"]];
-	[request setHTTPMethod: @"GET"];
-	[request setHTTPShouldHandleCookies:NO];
-	[request addValue:@"http://10.211.55.2:8080/system/me" forHTTPHeaderField:@"Referer"];
-	NSArray* cookies = [[NSHTTPCookieStorage sharedHTTPCookieStorage]
-						cookiesForURL:[NSURL URLWithString:@"http://10.211.55.2:8080"]];
-	NSDictionary* headers = [NSHTTPCookie requestHeaderFieldsWithCookies:cookies];
-
-	if(cookies != nil){
-		[request setAllHTTPHeaderFields:headers];
-	}
-	else{
-		NSLog(@"Error: user no authenticated");
-	}
-	
-	
-
-	[[NSURLConnection alloc] initWithRequest:request delegate:self];  
-	return YES;
-
-} 
-
 
 
 
@@ -181,9 +163,7 @@
 	
 }  
 
-
-
-
+*/
 
 
 

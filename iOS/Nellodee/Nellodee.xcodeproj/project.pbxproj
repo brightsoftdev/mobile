@@ -31,8 +31,8 @@
 		60ACE0DA13B50E6600764BEF /* Authorization.m in Sources */ = {isa = PBXBuildFile; fileRef = 60ACE0D913B50E6600764BEF /* Authorization.m */; };
 		B725505F1118D2A00016AD41 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B725505D1118D2A00016AD41 /* LoginViewController.m */; };
 		B72550601118D2A00016AD41 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B725505E1118D2A00016AD41 /* LoginViewController.xib */; };
-		B75ED5991124F75C004F6C94 /* ViewTwoController.m in Sources */ = {isa = PBXBuildFile; fileRef = B75ED5971124F75C004F6C94 /* ViewTwoController.m */; };
-		B75ED59A1124F75C004F6C94 /* ViewTwoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B75ED5981124F75C004F6C94 /* ViewTwoController.xib */; };
+		B75ED5991124F75C004F6C94 /* TabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B75ED5971124F75C004F6C94 /* TabViewController.m */; };
+		B75ED59A1124F75C004F6C94 /* TabViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B75ED5981124F75C004F6C94 /* TabViewController.xib */; };
 		B7F6524110FFD98E0008748C /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7F6523F10FFD98E0008748C /* MainViewController.m */; };
 		B7F6524210FFD98E0008748C /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7F6524010FFD98E0008748C /* MainViewController.xib */; };
 /* End PBXBuildFile section */
@@ -83,9 +83,9 @@
 		B725505C1118D2A00016AD41 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = ../LoginViewController.h; sourceTree = "<group>"; };
 		B725505D1118D2A00016AD41 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = ../LoginViewController.m; sourceTree = "<group>"; };
 		B725505E1118D2A00016AD41 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
-		B75ED5961124F75C004F6C94 /* ViewTwoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewTwoController.h; path = ../ViewTwoController.h; sourceTree = "<group>"; };
-		B75ED5971124F75C004F6C94 /* ViewTwoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewTwoController.m; path = ../ViewTwoController.m; sourceTree = "<group>"; };
-		B75ED5981124F75C004F6C94 /* ViewTwoController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewTwoController.xib; sourceTree = "<group>"; };
+		B75ED5961124F75C004F6C94 /* TabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TabViewController.h; path = ../TabViewController.h; sourceTree = "<group>"; };
+		B75ED5971124F75C004F6C94 /* TabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TabViewController.m; path = ../TabViewController.m; sourceTree = "<group>"; };
+		B75ED5981124F75C004F6C94 /* TabViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabViewController.xib; sourceTree = "<group>"; };
 		B7F6523E10FFD98E0008748C /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainViewController.h; path = ../MainViewController.h; sourceTree = "<group>"; };
 		B7F6523F10FFD98E0008748C /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainViewController.m; path = ../MainViewController.m; sourceTree = "<group>"; };
 		B7F6524010FFD98E0008748C /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
@@ -154,7 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				B725505E1118D2A00016AD41 /* LoginViewController.xib */,
-				B75ED5981124F75C004F6C94 /* ViewTwoController.xib */,
+				B75ED5981124F75C004F6C94 /* TabViewController.xib */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
 				B7F6524010FFD98E0008748C /* MainViewController.xib */,
 				8D1107310486CEB800E47090 /* Nellodee-Info.plist */,
@@ -217,8 +217,8 @@
 		60893EDE13B5F9F0008DCDF0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				B75ED5961124F75C004F6C94 /* ViewTwoController.h */,
-				B75ED5971124F75C004F6C94 /* ViewTwoController.m */,
+				B75ED5961124F75C004F6C94 /* TabViewController.h */,
+				B75ED5971124F75C004F6C94 /* TabViewController.m */,
 				B725505C1118D2A00016AD41 /* LoginViewController.h */,
 				B725505D1118D2A00016AD41 /* LoginViewController.m */,
 				B7F6523E10FFD98E0008748C /* MainViewController.h */,
@@ -288,7 +288,7 @@
 				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
 				B7F6524210FFD98E0008748C /* MainViewController.xib in Resources */,
 				B72550601118D2A00016AD41 /* LoginViewController.xib in Resources */,
-				B75ED59A1124F75C004F6C94 /* ViewTwoController.xib in Resources */,
+				B75ED59A1124F75C004F6C94 /* TabViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,7 +303,7 @@
 				1D3623260D0F684500981E51 /* NellodeeAppDelegate.m in Sources */,
 				B7F6524110FFD98E0008748C /* MainViewController.m in Sources */,
 				B725505F1118D2A00016AD41 /* LoginViewController.m in Sources */,
-				B75ED5991124F75C004F6C94 /* ViewTwoController.m in Sources */,
+				B75ED5991124F75C004F6C94 /* TabViewController.m in Sources */,
 				60ACE0DA13B50E6600764BEF /* Authorization.m in Sources */,
 				60893ED013B5F78F008DCDF0 /* NSObject+SBJson.m in Sources */,
 				60893ED113B5F78F008DCDF0 /* SBJsonParser.m in Sources */,

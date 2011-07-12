@@ -23,12 +23,19 @@
 	NSString * user = [username text];
 	NSString * pass = [password text];
 	
-	[auth formBasedAuth:user:pass];
-	[auth meService];
+	//Dismiss the keyboard
+	[username resignFirstResponder];
+	[password resignFirstResponder];
+	
 	// Assuming it was successful, tell MainViewController to show the Tab Bar
-	[mainViewController showDashboard];
-}
+	if([auth formBasedAuth:user:pass]){
+		[mainViewController showDashboard];
 
+	}
+	else {
+		NSLog(@"User no authenticated");
+	}
+}
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     // Override to allow orientations other than the default portrait orientation.
@@ -55,5 +62,11 @@
     [super dealloc];
 }
 
+//Dismiss the keyboard
+//NOT WORKING
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{
+	[textField resignFirstResponder];
+	return YES;
+}
 
 @end

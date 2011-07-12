@@ -22,7 +22,7 @@
 }
 
 
--(IBAction)attemptLogin; // action to be performed when login button is touched
+- (IBAction) attemptLogin; // action to be performed when login button is touched
 
 
 @property (nonatomic, retain) MainViewController *mainViewController;
