@@ -28,11 +28,11 @@
 		60893EDB13B5F78F008DCDF0 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 60893ECF13B5F78F008DCDF0 /* SBJsonWriter.m */; };
 		60893FBA13B75DA2008DCDF0 /* NellodeeApp.m in Sources */ = {isa = PBXBuildFile; fileRef = 60893FB913B75DA2008DCDF0 /* NellodeeApp.m */; };
 		608AC8D113CA5D9F004A0693 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 608AC8D013CA5D9F004A0693 /* User.m */; };
+		6094372213CDF1EE00CEA8BC /* TabViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6094372113CDF1EE00CEA8BC /* TabViewController.xib */; };
 		60ACE0DA13B50E6600764BEF /* Authorization.m in Sources */ = {isa = PBXBuildFile; fileRef = 60ACE0D913B50E6600764BEF /* Authorization.m */; };
 		B725505F1118D2A00016AD41 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B725505D1118D2A00016AD41 /* LoginViewController.m */; };
 		B72550601118D2A00016AD41 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B725505E1118D2A00016AD41 /* LoginViewController.xib */; };
 		B75ED5991124F75C004F6C94 /* TabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B75ED5971124F75C004F6C94 /* TabViewController.m */; };
-		B75ED59A1124F75C004F6C94 /* TabViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B75ED5981124F75C004F6C94 /* TabViewController.xib */; };
 		B7F6524110FFD98E0008748C /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7F6523F10FFD98E0008748C /* MainViewController.m */; };
 		B7F6524210FFD98E0008748C /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7F6524010FFD98E0008748C /* MainViewController.xib */; };
 /* End PBXBuildFile section */
@@ -77,6 +77,7 @@
 		60893FB913B75DA2008DCDF0 /* NellodeeApp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NellodeeApp.m; sourceTree = "<group>"; };
 		608AC8CF13CA5D9F004A0693 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = ../User.h; sourceTree = "<group>"; };
 		608AC8D013CA5D9F004A0693 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = ../User.m; sourceTree = "<group>"; };
+		6094372113CDF1EE00CEA8BC /* TabViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabViewController.xib; sourceTree = "<group>"; };
 		60ACE0D813B50E6600764BEF /* Authorization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Authorization.h; sourceTree = "<group>"; };
 		60ACE0D913B50E6600764BEF /* Authorization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Authorization.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Nellodee-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Nellodee-Info.plist"; sourceTree = "<group>"; };
@@ -85,7 +86,6 @@
 		B725505E1118D2A00016AD41 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		B75ED5961124F75C004F6C94 /* TabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TabViewController.h; path = ../TabViewController.h; sourceTree = "<group>"; };
 		B75ED5971124F75C004F6C94 /* TabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TabViewController.m; path = ../TabViewController.m; sourceTree = "<group>"; };
-		B75ED5981124F75C004F6C94 /* TabViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabViewController.xib; sourceTree = "<group>"; };
 		B7F6523E10FFD98E0008748C /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainViewController.h; path = ../MainViewController.h; sourceTree = "<group>"; };
 		B7F6523F10FFD98E0008748C /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainViewController.m; path = ../MainViewController.m; sourceTree = "<group>"; };
 		B7F6524010FFD98E0008748C /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
@@ -154,7 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				B725505E1118D2A00016AD41 /* LoginViewController.xib */,
-				B75ED5981124F75C004F6C94 /* TabViewController.xib */,
+				6094372113CDF1EE00CEA8BC /* TabViewController.xib */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
 				B7F6524010FFD98E0008748C /* MainViewController.xib */,
 				8D1107310486CEB800E47090 /* Nellodee-Info.plist */,
@@ -288,7 +288,7 @@
 				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
 				B7F6524210FFD98E0008748C /* MainViewController.xib in Resources */,
 				B72550601118D2A00016AD41 /* LoginViewController.xib in Resources */,
-				B75ED59A1124F75C004F6C94 /* TabViewController.xib in Resources */,
+				6094372213CDF1EE00CEA8BC /* TabViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

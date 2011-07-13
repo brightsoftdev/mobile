@@ -12,6 +12,7 @@
 @implementation NellodeeAppDelegate
 
 @synthesize window;
+//@synthesize rootController;
 
 #pragma mark -
 #pragma mark Application lifecycle
@@ -89,7 +90,7 @@
         return persistentStoreCoordinator;
     }
 	
-    NSURL *storeUrl = [NSURL fileURLWithPath: [[self applicationDocumentsDirectory] stringByAppendingPathComponent: @"TabBarTest.sqlite"]];
+    NSURL *storeUrl = [NSURL fileURLWithPath: [[self applicationDocumentsDirectory] stringByAppendingPathComponent: @"Nellodee.sqlite"]];
 	
 	NSError *error = nil;
     persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
@@ -131,7 +132,8 @@
     [managedObjectContext release];
     [managedObjectModel release];
     [persistentStoreCoordinator release];
-    
+//    [rootController release];
+	
 	[window release];
 	[super dealloc];
 }

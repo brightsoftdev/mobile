@@ -12,7 +12,8 @@
     NSManagedObjectContext *managedObjectContext;	    
     NSPersistentStoreCoordinator *persistentStoreCoordinator;
 
-	IBOutlet UIViewController *mainViewController;
+	//IBOutlet UITabBarController *rootController;
+	IBOutlet UITabBarController *mainViewController;
     UIWindow *window;
 }
 

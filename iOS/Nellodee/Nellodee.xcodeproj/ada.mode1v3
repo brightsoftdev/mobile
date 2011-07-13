@@ -197,7 +197,48 @@
 	<key>Notifications</key>
 	<array/>
 	<key>OpenEditors</key>
-	<array/>
+	<array>
+		<dict>
+			<key>Content</key>
+			<dict>
+				<key>PBXProjectModuleGUID</key>
+				<string>6006F31913CD02E9006527F6</string>
+				<key>PBXProjectModuleLabel</key>
+				<string>NellodeeAppDelegate.m</string>
+				<key>PBXSplitModuleInNavigatorKey</key>
+				<dict>
+					<key>Split0</key>
+					<dict>
+						<key>PBXProjectModuleGUID</key>
+						<string>6006F31A13CD02E9006527F6</string>
+						<key>PBXProjectModuleLabel</key>
+						<string>NellodeeAppDelegate.m</string>
+						<key>_historyCapacity</key>
+						<integer>0</integer>
+						<key>bookmark</key>
+						<string>6094371613CDA9A200CEA8BC</string>
+						<key>history</key>
+						<array>
+							<string>6006F32613CD04EA006527F6</string>
+						</array>
+					</dict>
+					<key>SplitCount</key>
+					<string>1</string>
+				</dict>
+				<key>StatusBarVisibility</key>
+				<true/>
+			</dict>
+			<key>Geometry</key>
+			<dict>
+				<key>Frame</key>
+				<string>{{0, 20}, {919, 588}}</string>
+				<key>PBXModuleWindowStatusBarHidden2</key>
+				<false/>
+				<key>RubberWindowFrame</key>
+				<string>15 144 919 629 0 0 1280 778 </string>
+			</dict>
+		</dict>
+	</array>
 	<key>PerspectiveWidths</key>
 	<array>
 		<integer>1280</integer>
@@ -276,7 +317,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>22</integer>
+									<integer>23</integer>
 									<integer>21</integer>
 									<integer>0</integer>
 								</array>
@@ -317,7 +358,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>LoginViewController.m</string>
+								<string>NellodeeAppDelegate.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -325,18 +366,17 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>LoginViewController.m</string>
+										<string>NellodeeAppDelegate.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>6006F2D313CCC4FF006527F6</string>
+										<string>6094371313CDA9A200CEA8BC</string>
 										<key>history</key>
 										<array>
 											<string>60CE468D13A445C600415DBB</string>
 											<string>60CF5D3E13A45F02006A9300</string>
 											<string>60CF5D4013A45F02006A9300</string>
 											<string>60893FC213B75E36008DCDF0</string>
-											<string>60893FC713B75E36008DCDF0</string>
 											<string>608B0A6513CA5B110024162C</string>
 											<string>6006F1B813CB82AF006527F6</string>
 											<string>6006F1D313CB8387006527F6</string>
@@ -344,12 +384,13 @@
 											<string>6006F25313CCAFFA006527F6</string>
 											<string>6006F25413CCAFFA006527F6</string>
 											<string>6006F2A413CCBD6F006527F6</string>
-											<string>6006F2A513CCBD6F006527F6</string>
-											<string>6006F2A613CCBD6F006527F6</string>
-											<string>6006F2AF13CCBF50006527F6</string>
 											<string>6006F2B613CCC13A006527F6</string>
 											<string>6006F2B713CCC13A006527F6</string>
-											<string>6006F2C713CCC339006527F6</string>
+											<string>6006F2DA13CCD240006527F6</string>
+											<string>6006F30913CCD512006527F6</string>
+											<string>6006F30A13CCD512006527F6</string>
+											<string>6006F31613CD02E9006527F6</string>
+											<string>6006F32513CD04EA006527F6</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -361,14 +402,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {1009, 546}}</string>
+								<string>{{0, 0}, {1009, 542}}</string>
 								<key>RubberWindowFrame</key>
 								<string>0 59 1280 719 0 0 1280 778 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>546pt</string>
+							<string>542pt</string>
 						</dict>
 						<dict>
 							<key>ContentConfiguration</key>
@@ -381,14 +422,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 551}, {1009, 127}}</string>
+								<string>{{0, 547}, {1009, 131}}</string>
 								<key>RubberWindowFrame</key>
 								<string>0 59 1280 719 0 0 1280 778 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
 							<key>Proportion</key>
-							<string>127pt</string>
+							<string>131pt</string>
 						</dict>
 					</array>
 					<key>Proportion</key>
@@ -407,9 +448,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>6006F1A913CB7FEC006527F6</string>
+				<string>6094371413CDA9A200CEA8BC</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>6006F1AA13CB7FEC006527F6</string>
+				<string>6094371513CDA9A200CEA8BC</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -560,12 +601,8 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>6006F2CF13CCC359006527F6</string>
-		<string>6006F1E013CB8604006527F6</string>
-		<string>6006F1D713CB8387006527F6</string>
-		<string>1CD10A99069EF8BA00B06720</string>
 		<string>60E8DCEB13A3F1E400181578</string>
-		<string>1C78EAAD065D492600B07095</string>
+		<string>6006F31913CD02E9006527F6</string>
 		<string>/Users/ada/GSoC/Nellodee/iOS/Nellodee/Nellodee.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
@@ -590,7 +627,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>MainViewController.h</string>
+								<string></string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -607,8 +644,6 @@
 							<string>288pt</string>
 						</dict>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -648,7 +683,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>60E8DCEB13A3F1E400181578</string>
-				<string>6006F1AC13CB7FEC006527F6</string>
+				<string>6094371713CDA9A200CEA8BC</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
