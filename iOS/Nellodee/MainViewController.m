@@ -9,6 +9,7 @@
 #import "MainViewController.h"
 #import "LoginViewController.h"
 #import "User.h"
+#import "UserViewController.h"
 
 @implementation MainViewController
 
@@ -47,13 +48,16 @@
 	
 	User *u =[[User alloc] init];
 	[u meService];
-	//Authorization* auth =[[Authorization alloc] init]; 
-	//[auth meService];
 	
+	/*UserViewController *userView =[[UserViewController alloc] init];
+	userView.title =@"User";
+	*/
 	TabViewController *viewTwo = [[TabViewController alloc] init];
 	viewTwo.title = @"Dashboard";
-
+	
 	[mainWindow addSubview: viewTwo.view];
+	
+	//[mainWindow addSubview: rootController.view];
 }
 
 // Override to allow orientations other than the default portrait orientation.

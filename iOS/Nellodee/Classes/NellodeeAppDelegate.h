@@ -12,8 +12,7 @@
     NSManagedObjectContext *managedObjectContext;	    
     NSPersistentStoreCoordinator *persistentStoreCoordinator;
 
-	//IBOutlet UITabBarController *rootController;
-	IBOutlet UITabBarController *mainViewController;
+	IBOutlet UIViewController *mainViewController;
     UIWindow *window;
 }
 
@@ -22,6 +21,7 @@
 @property (nonatomic, retain, readonly) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
+@property (nonatomic, retain) IBOutlet UITabBarController *rootController;
 
 - (NSString *)applicationDocumentsDirectory;
 

@@ -12,7 +12,7 @@
 @implementation NellodeeAppDelegate
 
 @synthesize window;
-//@synthesize rootController;
+@synthesize rootController;
 
 #pragma mark -
 #pragma mark Application lifecycle
@@ -21,6 +21,7 @@
     
 	NSLog(@"Nellodee did finish");
     // Override point for customization after app launch
+	//[window addSubview:rootController.view];
 	[window makeKeyAndVisible];
 }
 
@@ -132,7 +133,8 @@
     [managedObjectContext release];
     [managedObjectModel release];
     [persistentStoreCoordinator release];
-//    [rootController release];
+
+    [rootController release];
 	
 	[window release];
 	[super dealloc];

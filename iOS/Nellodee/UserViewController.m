@@ -1,21 +1,22 @@
 //
-//  ViewTwoController.m
+//  UserViewController.m
 //  Nellodee
 //
-//  Created by May Giménez on 6/12/11.
+//  Created by Ada Hopper on 13/07/11.
+//  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
-//
 
-#import "ViewTwoController.h"
+#import "UserViewController.h"
 
 
-@implementation ViewTwoController
+@implementation UserViewController
 
+// The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 /*
- // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
-        // Custom initialization
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        // Custom initialization.
     }
     return self;
 }
@@ -31,7 +32,7 @@
 /*
 // Override to allow orientations other than the default portrait orientation.
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    // Return YES for supported orientations
+    // Return YES for supported orientations.
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 */
@@ -40,7 +41,7 @@
     // Releases the view if it doesn't have a superview.
     [super didReceiveMemoryWarning];
     
-    // Release any cached data, images, etc that aren't in use.
+    // Release any cached data, images, etc. that aren't in use.
 }
 
 - (void)viewDidUnload {

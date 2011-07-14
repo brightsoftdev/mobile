@@ -14,6 +14,8 @@
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
 		28D801B40F44B63D00FB423F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28D801B30F44B63D00FB423F /* CoreData.framework */; };
+		607B3BE813CDFF9D00B45F19 /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 607B3BE613CDFF9D00B45F19 /* UserViewController.m */; };
+		607B3BE913CDFF9D00B45F19 /* UserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607B3BE713CDFF9D00B45F19 /* UserViewController.xib */; };
 		60893ED013B5F78F008DCDF0 /* NSObject+SBJson.m in Sources */ = {isa = PBXBuildFile; fileRef = 60893EB813B5F78E008DCDF0 /* NSObject+SBJson.m */; };
 		60893ED113B5F78F008DCDF0 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 60893EBB13B5F78E008DCDF0 /* SBJsonParser.m */; };
 		60893ED213B5F78F008DCDF0 /* SBJsonStreamParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 60893EBD13B5F78E008DCDF0 /* SBJsonStreamParser.m */; };
@@ -48,6 +50,9 @@
 		28D801B30F44B63D00FB423F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* Nellodee_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Nellodee_Prefix.pch; sourceTree = "<group>"; };
+		607B3BE513CDFF9D00B45F19 /* UserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserViewController.h; path = ../UserViewController.h; sourceTree = "<group>"; };
+		607B3BE613CDFF9D00B45F19 /* UserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserViewController.m; path = ../UserViewController.m; sourceTree = "<group>"; };
+		607B3BE713CDFF9D00B45F19 /* UserViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserViewController.xib; sourceTree = "<group>"; };
 		60893EB713B5F78E008DCDF0 /* NSObject+SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJson.h"; sourceTree = "<group>"; };
 		60893EB813B5F78E008DCDF0 /* NSObject+SBJson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJson.m"; sourceTree = "<group>"; };
 		60893EB913B5F78E008DCDF0 /* SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJson.h; sourceTree = "<group>"; };
@@ -155,6 +160,7 @@
 			children = (
 				B725505E1118D2A00016AD41 /* LoginViewController.xib */,
 				6094372113CDF1EE00CEA8BC /* TabViewController.xib */,
+				607B3BE713CDFF9D00B45F19 /* UserViewController.xib */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
 				B7F6524010FFD98E0008748C /* MainViewController.xib */,
 				8D1107310486CEB800E47090 /* Nellodee-Info.plist */,
@@ -219,6 +225,8 @@
 			children = (
 				B75ED5961124F75C004F6C94 /* TabViewController.h */,
 				B75ED5971124F75C004F6C94 /* TabViewController.m */,
+				607B3BE513CDFF9D00B45F19 /* UserViewController.h */,
+				607B3BE613CDFF9D00B45F19 /* UserViewController.m */,
 				B725505C1118D2A00016AD41 /* LoginViewController.h */,
 				B725505D1118D2A00016AD41 /* LoginViewController.m */,
 				B7F6523E10FFD98E0008748C /* MainViewController.h */,
@@ -289,6 +297,7 @@
 				B7F6524210FFD98E0008748C /* MainViewController.xib in Resources */,
 				B72550601118D2A00016AD41 /* LoginViewController.xib in Resources */,
 				6094372213CDF1EE00CEA8BC /* TabViewController.xib in Resources */,
+				607B3BE913CDFF9D00B45F19 /* UserViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,6 +328,7 @@
 				60893EDB13B5F78F008DCDF0 /* SBJsonWriter.m in Sources */,
 				60893FBA13B75DA2008DCDF0 /* NellodeeApp.m in Sources */,
 				608AC8D113CA5D9F004A0693 /* User.m in Sources */,
+				607B3BE813CDFF9D00B45F19 /* UserViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

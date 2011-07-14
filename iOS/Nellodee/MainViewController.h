@@ -9,13 +9,15 @@
 #import <UIKit/UIKit.h>
 #import "TabViewController.h"
 
+
 @class LoginViewController;
 
 @interface MainViewController : UIViewController {
 	IBOutlet UIWindow *mainWindow;
-	
+
 	LoginViewController *loginView;
 }
+
 
 -(void)showDashboard;
 
