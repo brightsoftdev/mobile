@@ -9,7 +9,6 @@
 #import "MainViewController.h"
 #import "LoginViewController.h"
 #import "User.h"
-#import "UserViewController.h"
 
 @implementation MainViewController
 
@@ -46,18 +45,27 @@
 	[self.view removeFromSuperview];
 	[loginView release];
 	
+	tabBarController = [[UITabBarController alloc] init];
+	[tabBarController setHidesBottomBarWhenPushed:YES];
+	
 	User *u =[[User alloc] init];
 	[u meService];
 	
-	/*UserViewController *userView =[[UserViewController alloc] init];
-	userView.title =@"User";
-	*/
-	TabViewController *viewTwo = [[TabViewController alloc] init];
-	viewTwo.title = @"Dashboard";
+	ViewTwoController *youView = [[ViewTwoController alloc] init];
+	youView.title = @"You";
 	
-	[mainWindow addSubview: viewTwo.view];
-	
-	//[mainWindow addSubview: rootController.view];
+	ViewTwoController *createAddView = [[ViewTwoController alloc] init];
+	createAddView.title = @"Create + Add";
+
+	ViewTwoController *exploreView = [[ViewTwoController alloc] init];
+	exploreView.title = @"Explore";
+
+	ViewTwoController *moreView = [[ViewTwoController alloc] init];
+	moreView.title = @"More";
+
+	[tabBarController setViewControllers: [NSArray arrayWithObjects: youView, createAddView, exploreView,moreView,nil]];
+
+	[mainWindow addSubview: tabBarController.view];
 }
 
 // Override to allow orientations other than the default portrait orientation.

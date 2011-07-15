@@ -12,14 +12,16 @@
 @implementation NellodeeAppDelegate
 
 @synthesize window;
-
 #pragma mark -
 #pragma mark Application lifecycle
 
 - (void)applicationDidFinishLaunching:(UIApplication *)application {    
     
-	NSLog(@"Nellodee did finish");
+	NSLog(@"APP did finish");
     // Override point for customization after app launch
+	//[mainViewController viewWillAppear: YES];
+	//[window addSubview: mainViewController.view];
+	//[mainViewController.view removeFromSuperview];
 	[window makeKeyAndVisible];
 }
 

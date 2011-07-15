@@ -6,10 +6,10 @@
 //
 //
 
-#import "TabViewController.h"
+#import "ViewTwoController.h"
 
 
-@implementation TabViewController
+@implementation ViewTwoController
 
 /*
  // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
@@ -53,7 +53,6 @@
 - (void)dealloc {
     [super dealloc];
 }
-
 
 
 @end

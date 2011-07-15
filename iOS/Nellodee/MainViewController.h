@@ -7,17 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "TabViewController.h"
-
+#import "ViewTwoController.h"
 
 @class LoginViewController;
 
 @interface MainViewController : UIViewController {
 	IBOutlet UIWindow *mainWindow;
-
+	UITabBarController *tabBarController;
+	
 	LoginViewController *loginView;
 }
-
 
 -(void)showDashboard;
 
