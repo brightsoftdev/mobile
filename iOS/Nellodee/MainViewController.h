@@ -10,12 +10,14 @@
 #import "ViewTwoController.h"
 
 @class LoginViewController;
+@class URLViewController;
 
 @interface MainViewController : UIViewController {
 	IBOutlet UIWindow *mainWindow;
 	UITabBarController *tabBarController;
 	
 	LoginViewController *loginView;
+    URLViewController *urlView;
 }
 
 -(void)showDashboard;

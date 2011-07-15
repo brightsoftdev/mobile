@@ -8,6 +8,7 @@
 
 #import "MainViewController.h"
 #import "LoginViewController.h"
+#import "URLViewController.h"
 #import "User.h"
 
 @implementation MainViewController
@@ -31,10 +32,14 @@
 	// This is where we load in our first view. Simply changing this code will allow
 	//  us to change which view is presented first. You can have logic that determines
 	//  if ViewOne should be loaded, or another view first.
-	loginView = [[LoginViewController alloc] initWithNibName: @"LoginViewController" bundle:nil];
-	loginView.mainViewController = self;
+    urlView =[[URLViewController alloc] initWithNibName:@"URLViewController" bundle:nil];
+    urlView.mainViewController= self;
+    [mainWindow addSubview: urlView.view];
+    
+	//loginView = [[LoginViewController alloc] initWithNibName: @"LoginViewController" bundle:nil];
+	//loginView.mainViewController = self;
 	
-	[mainWindow addSubview: loginView.view];
+	//[mainWindow addSubview: loginView.view];
 }
 
 

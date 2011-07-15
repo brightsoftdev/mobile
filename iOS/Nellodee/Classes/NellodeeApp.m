@@ -11,6 +11,6 @@
 
 @implementation NellodeeApp
 
-@synthesize sakaiURL;
+@synthesize sakaiURL, cookies;
 
 @end
