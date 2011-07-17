@@ -7,7 +7,7 @@
 //
 
 #import "MeService.h"
-
+#import "JSONParser.h"
 
 @implementation MeService
 
@@ -55,7 +55,9 @@
 	NSLog(@"didReceiveData");
 	NSString *theResponseString = [[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding] autorelease];
 	NSLog(@"Response : %@", theResponseString);
-    [responseData appendData:data];  
+    //JSONParser *parser;
+    //[parser meService:theResponseString];
+    //[responseData appendData:data];  
 }  
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {  
@@ -64,7 +66,7 @@
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {  
 	NSLog(@"connectionDidFinishLoading");
-	
+
     [connection release];  
     [responseData release];  
 	

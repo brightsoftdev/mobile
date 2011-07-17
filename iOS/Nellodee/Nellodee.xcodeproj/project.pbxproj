@@ -19,6 +19,7 @@
 		605F08E613D34D7400E9935A /* About.m in Sources */ = {isa = PBXBuildFile; fileRef = 605F08E513D34D7400E9935A /* About.m */; };
 		605F08E913D34D9000E9935A /* Categories.m in Sources */ = {isa = PBXBuildFile; fileRef = 605F08E813D34D9000E9935A /* Categories.m */; };
 		605F08EC13D34DC900E9935A /* Publications.m in Sources */ = {isa = PBXBuildFile; fileRef = 605F08EB13D34DC900E9935A /* Publications.m */; };
+		605F08F013D35EB400E9935A /* JSONParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 605F08EF13D35EB400E9935A /* JSONParser.m */; };
 		6071B77713D304F700E32321 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6071B77213D304F700E32321 /* LoginViewController.m */; };
 		6071B77813D304F700E32321 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6071B77313D304F700E32321 /* LoginViewController.xib */; };
 		6071B77913D304F700E32321 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6071B77513D304F700E32321 /* MainViewController.m */; };
@@ -66,6 +67,8 @@
 		605F08E813D34D9000E9935A /* Categories.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Categories.m; sourceTree = "<group>"; };
 		605F08EA13D34DC900E9935A /* Publications.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Publications.h; sourceTree = "<group>"; };
 		605F08EB13D34DC900E9935A /* Publications.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Publications.m; sourceTree = "<group>"; };
+		605F08EE13D35EB400E9935A /* JSONParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONParser.h; sourceTree = "<group>"; };
+		605F08EF13D35EB400E9935A /* JSONParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONParser.m; sourceTree = "<group>"; };
 		6071B77113D304F700E32321 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		6071B77213D304F700E32321 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		6071B77313D304F700E32321 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoginViewController.xib; path = Classes/LoginViewController.xib; sourceTree = "<group>"; };
@@ -73,7 +76,7 @@
 		6071B77513D304F700E32321 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		6071B77613D304F700E32321 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainViewController.xib; path = Classes/MainViewController.xib; sourceTree = "<group>"; };
 		6071B77B13D3055500E32321 /* ViewTwoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ViewTwoController.xib; path = Classes/ViewTwoController.xib; sourceTree = "<group>"; };
-		6071B77D13D3056100E32321 /* MeService.h */ = {isa = PBXFileReference; fileEncoding = 4; path = MeService.h; sourceTree = "<group>"; };
+		6071B77D13D3056100E32321 /* MeService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeService.h; sourceTree = "<group>"; };
 		6071B77E13D3056100E32321 /* MeService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeService.m; sourceTree = "<group>"; };
 		6086D62F13D0162E00718AAF /* ViewTwoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewTwoController.m; sourceTree = "<group>"; };
 		6086D63113D0163E00718AAF /* ViewTwoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewTwoController.h; sourceTree = "<group>"; };
@@ -201,6 +204,8 @@
 				1D3623250D0F684500981E51 /* NellodeeAppDelegate.m */,
 				60893FB813B75DA2008DCDF0 /* NellodeeApp.h */,
 				60893FB913B75DA2008DCDF0 /* NellodeeApp.m */,
+				605F08EE13D35EB400E9935A /* JSONParser.h */,
+				605F08EF13D35EB400E9935A /* JSONParser.m */,
 			);
 			name = Kernel;
 			sourceTree = "<group>";
@@ -371,6 +376,7 @@
 				605F08E613D34D7400E9935A /* About.m in Sources */,
 				605F08E913D34D9000E9935A /* Categories.m in Sources */,
 				605F08EC13D34DC900E9935A /* Publications.m in Sources */,
+				605F08F013D35EB400E9935A /* JSONParser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
