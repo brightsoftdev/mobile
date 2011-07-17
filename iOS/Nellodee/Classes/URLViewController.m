@@ -22,6 +22,7 @@
     NSString *urlSakai = [url text];
     
     //Store the data
+    //TODO: I SHOULD CHECK IF THE URL IS CORRECT BEFORE SAVE THE DATA
     NSUserDefaults *defaults =[NSUserDefaults standardUserDefaults];
     [defaults setObject:urlSakai forKey:@"url"];
     [defaults synchronize];

@@ -55,8 +55,9 @@
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
         NSString *url = [defaults objectForKey:@"url"];
         NSLog(@" URL: %@",url);
-        sakaiURL = [[NSString alloc] initWithString:url];
-        
+        if(url){
+            sakaiURL = [[NSString alloc] initWithString:url];
+        }
     }
     return self;
 }
