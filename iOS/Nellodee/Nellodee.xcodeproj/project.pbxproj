@@ -31,6 +31,8 @@
 		60893FBA13B75DA2008DCDF0 /* NellodeeApp.m in Sources */ = {isa = PBXBuildFile; fileRef = 60893FB913B75DA2008DCDF0 /* NellodeeApp.m */; };
 		608AC8D113CA5D9F004A0693 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 608AC8D013CA5D9F004A0693 /* User.m */; };
 		60ACE0DA13B50E6600764BEF /* Authorization.m in Sources */ = {isa = PBXBuildFile; fileRef = 60ACE0D913B50E6600764BEF /* Authorization.m */; };
+		60F65C2113D2DF6A00B4EAAD /* URLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F65C1F13D2DF6A00B4EAAD /* URLViewController.m */; };
+		60F65C2213D2DF6A00B4EAAD /* URLViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60F65C2013D2DF6A00B4EAAD /* URLViewController.xib */; };
 		B725505F1118D2A00016AD41 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B725505D1118D2A00016AD41 /* LoginViewController.m */; };
 		B72550601118D2A00016AD41 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B725505E1118D2A00016AD41 /* LoginViewController.xib */; };
 		B7F6524110FFD98E0008748C /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7F6523F10FFD98E0008748C /* MainViewController.m */; };
@@ -82,6 +84,9 @@
 		608AC8D013CA5D9F004A0693 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = ../User.m; sourceTree = "<group>"; };
 		60ACE0D813B50E6600764BEF /* Authorization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Authorization.h; sourceTree = "<group>"; };
 		60ACE0D913B50E6600764BEF /* Authorization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Authorization.m; sourceTree = "<group>"; };
+		60F65C1E13D2DF6A00B4EAAD /* URLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URLViewController.h; sourceTree = "<group>"; };
+		60F65C1F13D2DF6A00B4EAAD /* URLViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URLViewController.m; sourceTree = "<group>"; };
+		60F65C2013D2DF6A00B4EAAD /* URLViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = URLViewController.xib; path = Classes/URLViewController.xib; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Nellodee-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Nellodee-Info.plist"; sourceTree = "<group>"; };
 		B725505C1118D2A00016AD41 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = ../LoginViewController.h; sourceTree = "<group>"; };
 		B725505D1118D2A00016AD41 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = ../LoginViewController.m; sourceTree = "<group>"; };
@@ -153,6 +158,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				60F65C2013D2DF6A00B4EAAD /* URLViewController.xib */,
 				6086D63213D0165E00718AAF /* ViewTwoController.xib */,
 				B725505E1118D2A00016AD41 /* LoginViewController.xib */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
@@ -217,10 +223,12 @@
 		60893EDE13B5F9F0008DCDF0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				6086D63113D0163E00718AAF /* ViewTwoController.h */,
-				6086D62F13D0162E00718AAF /* ViewTwoController.m */,
+				60F65C1E13D2DF6A00B4EAAD /* URLViewController.h */,
+				60F65C1F13D2DF6A00B4EAAD /* URLViewController.m */,
 				B725505C1118D2A00016AD41 /* LoginViewController.h */,
 				B725505D1118D2A00016AD41 /* LoginViewController.m */,
+				6086D63113D0163E00718AAF /* ViewTwoController.h */,
+				6086D62F13D0162E00718AAF /* ViewTwoController.m */,
 				B7F6523E10FFD98E0008748C /* MainViewController.h */,
 				B7F6523F10FFD98E0008748C /* MainViewController.m */,
 			);
@@ -289,6 +297,7 @@
 				B7F6524210FFD98E0008748C /* MainViewController.xib in Resources */,
 				B72550601118D2A00016AD41 /* LoginViewController.xib in Resources */,
 				6086D63313D0165E00718AAF /* ViewTwoController.xib in Resources */,
+				60F65C2213D2DF6A00B4EAAD /* URLViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,6 +328,7 @@
 				60893FBA13B75DA2008DCDF0 /* NellodeeApp.m in Sources */,
 				608AC8D113CA5D9F004A0693 /* User.m in Sources */,
 				6086D63013D0162E00718AAF /* ViewTwoController.m in Sources */,
+				60F65C2113D2DF6A00B4EAAD /* URLViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

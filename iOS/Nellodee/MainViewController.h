@@ -20,7 +20,7 @@
     URLViewController *urlView;
 }
 
--(void)showDashboard;
-
+-(void) showTabs;
+-(void) showLogin;
 
 @end

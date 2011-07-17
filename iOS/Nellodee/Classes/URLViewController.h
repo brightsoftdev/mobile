@@ -13,7 +13,7 @@
 @interface URLViewController : UIViewController {
     MainViewController *mainViewController;
 	IBOutlet UITextField *url;
-
+    
 }
 
 

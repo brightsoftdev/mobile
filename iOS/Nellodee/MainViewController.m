@@ -23,15 +23,12 @@
 }
 */
 
-
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad
 {
 	[super viewDidLoad];
 	
-	// This is where we load in our first view. Simply changing this code will allow
-	//  us to change which view is presented first. You can have logic that determines
-	//  if ViewOne should be loaded, or another view first.
+	// This is where we load in our first view.
     urlView =[[URLViewController alloc] initWithNibName:@"URLViewController" bundle:nil];
     urlView.mainViewController= self;
     [mainWindow addSubview: urlView.view];
@@ -44,7 +41,7 @@
 
 
 // Function to load and display our Dashboard programmatically
--(void)showDashboard
+-(void)showTabs
 {
 	// Remove the previous view. In this case, viewOne
 	[self.view removeFromSuperview];
@@ -72,6 +69,23 @@
 
 	[mainWindow addSubview: tabBarController.view];
 }
+
+
+// Function to load and display our Dashboard programmatically
+-(void)showLogin
+{
+	// Remove the previous view. In this case, viewOne
+	[self.view removeFromSuperview];
+	[urlView release];
+	    
+    loginView = [[LoginViewController alloc] initWithNibName: @"LoginViewController" bundle:nil];
+	loginView.mainViewController = self;
+	
+	[mainWindow addSubview: loginView.view];
+}
+
+
+
 
 // Override to allow orientations other than the default portrait orientation.
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {

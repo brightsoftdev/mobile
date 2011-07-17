@@ -29,7 +29,7 @@
 	
 	// Assuming it was successful, tell MainViewController to show the Tab Bar
 	if([auth formBasedAuth:user:pass]){
-		[mainViewController showDashboard];
+		[mainViewController showTabs];
 
 	}
 	else {

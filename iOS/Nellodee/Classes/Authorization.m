@@ -28,12 +28,12 @@
 
 
 	//Creating the request
-	NSMutableURLRequest *request = [NSMutableURLRequest 
-									requestWithURL:[NSURL URLWithString:@"http://10.211.55.2:8080/system/sling/formlogin"]];
 	//NSMutableURLRequest *request = [NSMutableURLRequest 
-	//								requestWithURL:[NSURL URLWithString:@"http://sakai3-demo.uits.indiana.edu:8080/system/sling/formlogin"]];
+	//								requestWithURL:[NSURL URLWithString:@"http://10.211.55.2:8080/system/sling/formlogin"]];
+	NSMutableURLRequest *request = [NSMutableURLRequest 
+									requestWithURL:[NSURL URLWithString:@"http://sakai3-demo.uits.indiana.edu:8080/system/sling/formlogin"]];
 	[request setHTTPMethod:@"POST"];
-	[request addValue:@"http://10.211.55.2:8080/system/sling/formlogin" forHTTPHeaderField:@"Referer"];
+	[request addValue:@"http://sakai3-demo.uits.indiana.edu:8080/system/sling/formlogin" forHTTPHeaderField:@"Referer"];
 	[request setValue:postLength forHTTPHeaderField:@"Content-Length"];
 	[request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
 	[request setHTTPBody:postData];
@@ -43,7 +43,6 @@
 	NSURLResponse *response =[[NSURLResponse alloc]init];
 	NSError *error = nil;
 	
-	//WARNING (TO MYSELF): I SHOULD IMPLEMENT THE DELEGATE METHODS.
 	//Calling the web service
 	@try {
 		
@@ -56,11 +55,11 @@
 		if (status == 200) {
 			// Get an array with all the cookies 
 			self.currentCookies =[NSHTTPCookie cookiesWithResponseHeaderFields:[httpResponse allHeaderFields]
-																		forURL:[NSURL URLWithString:@"http://10.211.55.2:8080"]];
+																		forURL:[NSURL URLWithString:@"http://sakai3-demo.uits.indiana.edu:8080"]];
 			// Add the array of cookies in the shared cookie storage instance 
 			[[NSHTTPCookieStorage sharedHTTPCookieStorage]
 			 setCookies:self.currentCookies
-			 forURL:[NSURL URLWithString:@"http://10.211.55.2:8080"]
+			 forURL:[NSURL URLWithString:@"http://sakai3-demo.uits.indiana.edu:8080"]
 			 mainDocumentURL:nil];
 			
 			for (NSHTTPCookie* cookie in self.currentCookies)

@@ -16,12 +16,12 @@
 -(BOOL) meService{
 	NSLog(@" ---- me Service ---");
 	NSMutableURLRequest *request = [NSMutableURLRequest
-									requestWithURL:[NSURL URLWithString:@"http://10.211.55.2:8080/system/me"]];
+									requestWithURL:[NSURL URLWithString:@"http://sakai3-demo.uits.indiana.edu:8080/system/me"]];
 	[request setHTTPMethod: @"GET"];
 	[request setHTTPShouldHandleCookies:NO];
-	[request addValue:@"http://10.211.55.2:8080/system/me" forHTTPHeaderField:@"Referer"];
+	[request addValue:@"http://sakai3-demo.uits.indiana.edu:8080/system/me" forHTTPHeaderField:@"Referer"];
 	NSArray* cookies = [[NSHTTPCookieStorage sharedHTTPCookieStorage]
-						cookiesForURL:[NSURL URLWithString:@"http://10.211.55.2:8080"]];
+						cookiesForURL:[NSURL URLWithString:@"http://sakai3-demo.uits.indiana.edu:8080"]];
 	NSDictionary* headers = [NSHTTPCookie requestHeaderFieldsWithCookies:cookies];
 	
 	if(cookies != nil){
