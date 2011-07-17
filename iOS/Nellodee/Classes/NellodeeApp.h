@@ -21,7 +21,7 @@
 //Shared info
 @property (nonatomic, retain) NSArray *cookies;
 
-+ (id)sharedManager;
++ (id)sharedNellodeeData;
 
 
 @end
