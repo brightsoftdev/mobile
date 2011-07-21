@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+@class SBJsonStreamParser;
+@class SBJsonStreamParserAdapter;
 
 @interface MeService : NSObject {
 	NSMutableData *responseData;

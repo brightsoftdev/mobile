@@ -7,7 +7,8 @@
 //
 
 #import "MeService.h"
-#import "JSONParser.h"
+#import "SBJson.h"
+#import "BasicInfo.h"
 
 @implementation MeService
 
@@ -52,12 +53,31 @@
 }  
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {  
+    BasicInfo * basic = [[BasicInfo alloc]init];
+    
 	NSLog(@"didReceiveData");
-	NSString *theResponseString = [[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding] autorelease];
-	NSLog(@"Response : %@", theResponseString);
-    //JSONParser *parser;
-    //[parser meService:theResponseString];
-    //[responseData appendData:data];  
+	//NSString *theResponseString = [[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding] autorelease];
+	//NSLog(@"Response : %@", theResponseString);
+    
+    
+    // Store incoming data into a string
+    NSString *jsonString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    
+    // Create a dictionary from the JSON string
+    NSDictionary *results = [jsonString JSONValue];
+    NSDictionary * properties = [[results objectForKey:@"user"] objectForKey:@"properties"];
+    NSLog(@"Dictionary value for \"foo\" is \"%@\"",properties);
+    
+    [basic setFirstName:[properties objectForKey:@"firstName"]];
+    [basic setLastName:[properties objectForKey:@"lastName"]];
+    [basic setPrefName:[properties objectForKey:@"preferredName"]];
+    [basic setRol:[properties objectForKey:@"role"]];
+    [basic setDepartament:[properties objectForKey:@"department"]];
+    [basic setCollege:[properties objectForKey:@"college"]];
+    [basic setTags:[properties objectForKey:@"tags"]];
+    
+
+    
 }  
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {  
