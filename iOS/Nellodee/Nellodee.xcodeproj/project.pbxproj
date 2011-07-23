@@ -16,6 +16,8 @@
 		28D801B40F44B63D00FB423F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28D801B30F44B63D00FB423F /* CoreData.framework */; };
 		6011E7E913D89C4700941B02 /* UserNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6011E7E713D89C4700941B02 /* UserNavController.m */; };
 		6011E7EA13D89C4700941B02 /* UserNavController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6011E7E813D89C4700941B02 /* UserNavController.xib */; };
+		6011E7EE13D8A1DD00941B02 /* UserTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6011E7EC13D8A1DC00941B02 /* UserTableViewController.m */; };
+		6011E7EF13D8A1DD00941B02 /* UserTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6011E7ED13D8A1DC00941B02 /* UserTableViewController.xib */; };
 		605F08E013D34D4A00E9935A /* Profile.m in Sources */ = {isa = PBXBuildFile; fileRef = 605F08DF13D34D4A00E9935A /* Profile.m */; };
 		605F08E313D34D6500E9935A /* BasicInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 605F08E213D34D6500E9935A /* BasicInfo.m */; };
 		605F08E613D34D7400E9935A /* About.m in Sources */ = {isa = PBXBuildFile; fileRef = 605F08E513D34D7400E9935A /* About.m */; };
@@ -62,6 +64,9 @@
 		6011E7E613D89C4700941B02 /* UserNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserNavController.h; sourceTree = "<group>"; };
 		6011E7E713D89C4700941B02 /* UserNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserNavController.m; sourceTree = "<group>"; };
 		6011E7E813D89C4700941B02 /* UserNavController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = UserNavController.xib; path = Classes/UserNavController.xib; sourceTree = "<group>"; };
+		6011E7EB13D8A1DC00941B02 /* UserTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserTableViewController.h; sourceTree = "<group>"; };
+		6011E7EC13D8A1DC00941B02 /* UserTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserTableViewController.m; sourceTree = "<group>"; };
+		6011E7ED13D8A1DC00941B02 /* UserTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = UserTableViewController.xib; path = Classes/UserTableViewController.xib; sourceTree = "<group>"; };
 		605F08DE13D34D4A00E9935A /* Profile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Profile.h; sourceTree = "<group>"; };
 		605F08DF13D34D4A00E9935A /* Profile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Profile.m; sourceTree = "<group>"; };
 		605F08E113D34D6500E9935A /* BasicInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicInfo.h; sourceTree = "<group>"; };
@@ -181,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				6071B77B13D3055500E32321 /* ViewTwoController.xib */,
+				6011E7ED13D8A1DC00941B02 /* UserTableViewController.xib */,
 				60F65C2013D2DF6A00B4EAAD /* URLViewController.xib */,
 				6071B77313D304F700E32321 /* LoginViewController.xib */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
@@ -260,8 +266,6 @@
 		60893EDE13B5F9F0008DCDF0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				6011E7E613D89C4700941B02 /* UserNavController.h */,
-				6011E7E713D89C4700941B02 /* UserNavController.m */,
 				6071B77113D304F700E32321 /* LoginViewController.h */,
 				6071B77213D304F700E32321 /* LoginViewController.m */,
 				60F65C1E13D2DF6A00B4EAAD /* URLViewController.h */,
@@ -270,6 +274,10 @@
 				6086D62F13D0162E00718AAF /* ViewTwoController.m */,
 				6071B77413D304F700E32321 /* MainViewController.h */,
 				6071B77513D304F700E32321 /* MainViewController.m */,
+				6011E7E613D89C4700941B02 /* UserNavController.h */,
+				6011E7E713D89C4700941B02 /* UserNavController.m */,
+				6011E7EB13D8A1DC00941B02 /* UserTableViewController.h */,
+				6011E7EC13D8A1DC00941B02 /* UserTableViewController.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -349,6 +357,7 @@
 				6071B77A13D304F700E32321 /* MainViewController.xib in Resources */,
 				6071B77C13D3055500E32321 /* ViewTwoController.xib in Resources */,
 				6011E7EA13D89C4700941B02 /* UserNavController.xib in Resources */,
+				6011E7EF13D8A1DD00941B02 /* UserTableViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,6 +396,7 @@
 				605F08EC13D34DC900E9935A /* Publications.m in Sources */,
 				605F08F013D35EB400E9935A /* JSONParser.m in Sources */,
 				6011E7E913D89C4700941B02 /* UserNavController.m in Sources */,
+				6011E7EE13D8A1DD00941B02 /* UserTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
