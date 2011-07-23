@@ -9,9 +9,12 @@
 #import "MainViewController.h"
 #import "LoginViewController.h"
 #import "URLViewController.h"
-#import "User.h"
+#import "MeService.h"
 
 @implementation MainViewController
+
+@synthesize mainWindow;
+
 
 /*
  // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
@@ -27,16 +30,23 @@
 - (void)viewDidLoad
 {
 	[super viewDidLoad];
-	
-	// This is where we load in our first view.
-    urlView =[[URLViewController alloc] initWithNibName:@"URLViewController" bundle:nil];
-    urlView.mainViewController= self;
-    [mainWindow addSubview: urlView.view];
     
-	//loginView = [[LoginViewController alloc] initWithNibName: @"LoginViewController" bundle:nil];
-	//loginView.mainViewController = self;
+    // This is where we load in our first view.
+	sharedNell = [NellodeeApp sharedNellodeeData];
+    NSLog(@"Sakai url: %@",[sharedNell sakaiURL]);
+
+    if( [[sharedNell sakaiURL] length] == 0){
+        urlView =[[URLViewController alloc] initWithNibName:@"URLViewController" bundle:nil];
+        urlView.mainViewController= self;
+        [mainWindow addSubview: urlView.view];
+    }
+    else{
+        loginView = [[LoginViewController alloc] initWithNibName: @"LoginViewController" bundle:nil];
+        loginView.mainViewController = self;
 	
-	//[mainWindow addSubview: loginView.view];
+        [mainWindow addSubview: loginView.view];
+    }
+    
 }
 
 
@@ -50,8 +60,14 @@
 	tabBarController = [[UITabBarController alloc] init];
 	[tabBarController setHidesBottomBarWhenPushed:YES];
 	
-	User *u =[[User alloc] init];
+	MeService *u =[[MeService alloc] init];
 	[u meService];
+    
+    
+    //userNavController = [[UINavigationController alloc] init];
+    //userNavController.navigationBar.barStyle = UIBarStyleBlack;
+    //userNavController.delegate=self;
+    //userNavController.title =@"You";
 	
 	ViewTwoController *youView = [[ViewTwoController alloc] init];
 	youView.title = @"You";
@@ -108,6 +124,7 @@
 
 
 - (void)dealloc {
+    //All views should be realesed
     [super dealloc];
 }
 

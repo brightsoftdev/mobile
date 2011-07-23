@@ -8,7 +8,6 @@
 
 #import "LoginViewController.h"
 #import "Authorization.h"
-#import "User.h"
 
 @implementation LoginViewController
 
