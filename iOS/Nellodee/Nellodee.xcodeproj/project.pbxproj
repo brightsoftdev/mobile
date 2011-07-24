@@ -14,6 +14,8 @@
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
 		28D801B40F44B63D00FB423F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28D801B30F44B63D00FB423F /* CoreData.framework */; };
+		601CC3DC13DC1C5100777B89 /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 601CC3DA13DC1C5100777B89 /* UserViewController.m */; };
+		601CC3DD13DC1C5100777B89 /* UserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 601CC3DB13DC1C5100777B89 /* UserViewController.xib */; };
 		605F08E013D34D4A00E9935A /* Profile.m in Sources */ = {isa = PBXBuildFile; fileRef = 605F08DF13D34D4A00E9935A /* Profile.m */; };
 		605F08E313D34D6500E9935A /* BasicInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 605F08E213D34D6500E9935A /* BasicInfo.m */; };
 		605F08E613D34D7400E9935A /* About.m in Sources */ = {isa = PBXBuildFile; fileRef = 605F08E513D34D7400E9935A /* About.m */; };
@@ -57,6 +59,9 @@
 		28D801B30F44B63D00FB423F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* Nellodee_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Nellodee_Prefix.pch; sourceTree = "<group>"; };
+		601CC3D913DC1C5100777B89 /* UserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserViewController.h; sourceTree = "<group>"; };
+		601CC3DA13DC1C5100777B89 /* UserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserViewController.m; sourceTree = "<group>"; };
+		601CC3DB13DC1C5100777B89 /* UserViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = UserViewController.xib; path = Classes/UserViewController.xib; sourceTree = "<group>"; };
 		605F08DE13D34D4A00E9935A /* Profile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Profile.h; sourceTree = "<group>"; };
 		605F08DF13D34D4A00E9935A /* Profile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Profile.m; sourceTree = "<group>"; };
 		605F08E113D34D6500E9935A /* BasicInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicInfo.h; sourceTree = "<group>"; };
@@ -177,6 +182,7 @@
 			children = (
 				6071B77B13D3055500E32321 /* ViewTwoController.xib */,
 				60F65C2013D2DF6A00B4EAAD /* URLViewController.xib */,
+				601CC3DB13DC1C5100777B89 /* UserViewController.xib */,
 				6071B77313D304F700E32321 /* LoginViewController.xib */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
 				6071B77613D304F700E32321 /* MainViewController.xib */,
@@ -262,6 +268,8 @@
 				6086D62F13D0162E00718AAF /* ViewTwoController.m */,
 				6071B77413D304F700E32321 /* MainViewController.h */,
 				6071B77513D304F700E32321 /* MainViewController.m */,
+				601CC3D913DC1C5100777B89 /* UserViewController.h */,
+				601CC3DA13DC1C5100777B89 /* UserViewController.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -340,6 +348,7 @@
 				6071B77813D304F700E32321 /* LoginViewController.xib in Resources */,
 				6071B77A13D304F700E32321 /* MainViewController.xib in Resources */,
 				6071B77C13D3055500E32321 /* ViewTwoController.xib in Resources */,
+				601CC3DD13DC1C5100777B89 /* UserViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,6 +386,7 @@
 				605F08E913D34D9000E9935A /* Categories.m in Sources */,
 				605F08EC13D34DC900E9935A /* Publications.m in Sources */,
 				605F08F013D35EB400E9935A /* JSONParser.m in Sources */,
+				601CC3DC13DC1C5100777B89 /* UserViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

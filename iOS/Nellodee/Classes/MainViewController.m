@@ -10,10 +10,10 @@
 #import "LoginViewController.h"
 #import "URLViewController.h"
 #import "MeService.h"
-
+#import "UserViewController.h"
 @implementation MainViewController
 
-@synthesize mainWindow;
+@synthesize mainWindow,userNavController;
 
 
 /*
@@ -63,15 +63,18 @@
 	MeService *u =[[MeService alloc] init];
 	[u meService];
     
-    
-    //userNavController = [[UINavigationController alloc] init];
-    //userNavController.navigationBar.barStyle = UIBarStyleBlack;
-    //userNavController.delegate=self;
-    //userNavController.title =@"You";
-	
+    UserViewController *userView;
+    userView =[[[UserViewController alloc] init] autorelease];
+
 	ViewTwoController *youView = [[ViewTwoController alloc] init];
 	youView.title = @"You";
+    
+    userNavController = [[UINavigationController alloc] init];
+    userNavController.navigationBar.barStyle = UIBarStyleBlack;
+    [userNavController pushViewController:userView animated:NO];
+    userNavController.title =@"You";
 	
+    
 	ViewTwoController *createAddView = [[ViewTwoController alloc] init];
 	createAddView.title = @"Create + Add";
 
@@ -81,7 +84,7 @@
 	ViewTwoController *moreView = [[ViewTwoController alloc] init];
 	moreView.title = @"More";
 
-	[tabBarController setViewControllers: [NSArray arrayWithObjects: youView, createAddView, exploreView,moreView,nil]];
+	[tabBarController setViewControllers: [NSArray arrayWithObjects: userNavController, createAddView, exploreView,moreView,nil]];
 
 	[mainWindow addSubview: tabBarController.view];
 }
@@ -125,6 +128,7 @@
 
 - (void)dealloc {
     //All views should be realesed
+    [userNavController release];
     [super dealloc];
 }
 
