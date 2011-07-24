@@ -7383,7 +7383,7 @@
 		<string>PrimaryDocumentVisibleCharacterRange</string>
 		<string>HideAllIssues</string>
 		<string>PrimaryDocumentSelectedCharacterRange</string>
-		<real>333240215.677549</real>
+		<real>333242210.48207301</real>
 		<string>{0, 375}</string>
 		<string>{267, 0}</string>
 		<dict>
@@ -9096,27 +9096,27 @@
     c =     (
                 {
             l = DetailViewController;
-            r = "{5522, 24}";
+            r = "{5714, 24}";
             s = 1;
         },
                 {
             l = DetailViewController;
-            r = "{5573, 24}";
+            r = "{5765, 24}";
             s = 1;
         },
                 {
             l = "Nib name";
-            r = "{5623, 12}";
+            r = "{5815, 12}";
             s = 1;
         }
     );
-    r = "{0, 5863}";
+    r = "{0, 6055}";
     s = 0;
 }</string>
 		</dict>
-		<real>333240215.67721403</real>
-		<string>{2340, 1265}</string>
-		<string>{3154, 0}</string>
+		<real>333242210.48173398</real>
+		<string>{3345, 2694}</string>
+		<string>{4156, 0}</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -12091,7 +12091,7 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>262</integer>
+					<integer>913</integer>
 				</dict>
 			</array>
 		</dict>
@@ -12345,7 +12345,7 @@
 				<integer>929</integer>
 			</dict>
 			<key>NS.time</key>
-			<real>333240159.99298298</real>
+			<real>333242176.90448302</real>
 		</dict>
 		<dict>
 			<key>$classes</key>
@@ -12356,7 +12356,7 @@
 			<key>$classname</key>
 			<string>NSDate</string>
 		</dict>
-		<string>Today at 00:42</string>
+		<string>Today at 01:16</string>
 		<integer>106</integer>
 		<dict>
 			<key>$class</key>
@@ -14317,7 +14317,7 @@
 				</dict>
 			</array>
 		</dict>
-		<real>333240215.68144399</real>
+		<real>333242210.48580003</real>
 		<string>{0, 375}</string>
 		<string>{267, 0}</string>
 		<string>@interface UserViewController</string>
@@ -21769,7 +21769,7 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>127</integer>
+					<integer>21</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -22166,28 +22166,28 @@
     c =     (
                 {
             l = DetailViewController;
-            r = "{5522, 24}";
+            r = "{5714, 24}";
             s = 1;
         },
                 {
             l = DetailViewController;
-            r = "{5573, 24}";
+            r = "{5765, 24}";
             s = 1;
         },
                 {
             l = "Nib name";
-            r = "{5623, 12}";
+            r = "{5815, 12}";
             s = 1;
         }
     );
-    r = "{0, 5863}";
+    r = "{0, 6055}";
     s = 0;
 }</string>
 		</dict>
-		<real>333240215.67865002</real>
-		<string>{2340, 1265}</string>
-		<string>{3154, 0}</string>
-		<string>-numberOfSectionsInTableView:</string>
+		<real>333242210.48320597</real>
+		<string>{3345, 2694}</string>
+		<string>{4156, 0}</string>
+		<string>-tableView:accessoryTypeForRowWithIndexPath:</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -22220,7 +22220,7 @@
 				</dict>
 			</array>
 		</dict>
-		<string>{{0, 0}, {1286, 663}}</string>
+		<string>{{0, 0}, {1286, 956}}</string>
 		<dict>
 			<key>$class</key>
 			<dict>
