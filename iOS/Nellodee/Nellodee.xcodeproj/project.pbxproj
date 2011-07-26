@@ -28,6 +28,8 @@
 		6071B77A13D304F700E32321 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6071B77613D304F700E32321 /* MainViewController.xib */; };
 		6071B77C13D3055500E32321 /* ViewTwoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6071B77B13D3055500E32321 /* ViewTwoController.xib */; };
 		6071B77F13D3056100E32321 /* MeService.m in Sources */ = {isa = PBXBuildFile; fileRef = 6071B77E13D3056100E32321 /* MeService.m */; };
+		6085710413DF221200E884D1 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6085710213DF221200E884D1 /* ProfileViewController.m */; };
+		6085710513DF221200E884D1 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6085710313DF221200E884D1 /* ProfileViewController.xib */; };
 		6086D63013D0162E00718AAF /* ViewTwoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6086D62F13D0162E00718AAF /* ViewTwoController.m */; };
 		60893ED013B5F78F008DCDF0 /* NSObject+SBJson.m in Sources */ = {isa = PBXBuildFile; fileRef = 60893EB813B5F78E008DCDF0 /* NSObject+SBJson.m */; };
 		60893ED113B5F78F008DCDF0 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 60893EBB13B5F78E008DCDF0 /* SBJsonParser.m */; };
@@ -83,6 +85,9 @@
 		6071B77B13D3055500E32321 /* ViewTwoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ViewTwoController.xib; path = Classes/ViewTwoController.xib; sourceTree = "<group>"; };
 		6071B77D13D3056100E32321 /* MeService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeService.h; sourceTree = "<group>"; };
 		6071B77E13D3056100E32321 /* MeService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeService.m; sourceTree = "<group>"; };
+		6085710113DF221200E884D1 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		6085710213DF221200E884D1 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		6085710313DF221200E884D1 /* ProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ProfileViewController.xib; path = Classes/ProfileViewController.xib; sourceTree = "<group>"; };
 		6086D62F13D0162E00718AAF /* ViewTwoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewTwoController.m; sourceTree = "<group>"; };
 		6086D63113D0163E00718AAF /* ViewTwoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewTwoController.h; sourceTree = "<group>"; };
 		60893EB713B5F78E008DCDF0 /* NSObject+SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJson.h"; sourceTree = "<group>"; };
@@ -187,6 +192,7 @@
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
 				6071B77613D304F700E32321 /* MainViewController.xib */,
 				B7F6524010FFD98E0008748C /* MainViewController.xib */,
+				6085710313DF221200E884D1 /* ProfileViewController.xib */,
 				8D1107310486CEB800E47090 /* Nellodee-Info.plist */,
 			);
 			name = Resources;
@@ -264,12 +270,14 @@
 				6071B77213D304F700E32321 /* LoginViewController.m */,
 				60F65C1E13D2DF6A00B4EAAD /* URLViewController.h */,
 				60F65C1F13D2DF6A00B4EAAD /* URLViewController.m */,
-				6086D63113D0163E00718AAF /* ViewTwoController.h */,
 				6086D62F13D0162E00718AAF /* ViewTwoController.m */,
+				6086D63113D0163E00718AAF /* ViewTwoController.h */,
 				6071B77413D304F700E32321 /* MainViewController.h */,
 				6071B77513D304F700E32321 /* MainViewController.m */,
 				601CC3D913DC1C5100777B89 /* UserViewController.h */,
 				601CC3DA13DC1C5100777B89 /* UserViewController.m */,
+				6085710113DF221200E884D1 /* ProfileViewController.h */,
+				6085710213DF221200E884D1 /* ProfileViewController.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -349,6 +357,7 @@
 				6071B77A13D304F700E32321 /* MainViewController.xib in Resources */,
 				6071B77C13D3055500E32321 /* ViewTwoController.xib in Resources */,
 				601CC3DD13DC1C5100777B89 /* UserViewController.xib in Resources */,
+				6085710513DF221200E884D1 /* ProfileViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,6 +396,7 @@
 				605F08EC13D34DC900E9935A /* Publications.m in Sources */,
 				605F08F013D35EB400E9935A /* JSONParser.m in Sources */,
 				601CC3DC13DC1C5100777B89 /* UserViewController.m in Sources */,
+				6085710413DF221200E884D1 /* ProfileViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
