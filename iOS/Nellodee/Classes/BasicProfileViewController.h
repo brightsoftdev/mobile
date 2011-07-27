@@ -10,7 +10,7 @@
 
 
 @interface BasicProfileViewController : UIViewController {
-
+    
 }
 
 @end

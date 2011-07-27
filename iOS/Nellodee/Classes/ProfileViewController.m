@@ -72,18 +72,24 @@
     return cell;
 }
 
-
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-	BasicProfileViewController *basicProfileViewController;
+        
+    
+    
+    UIViewController *nextCntlr;
 
-	basicProfileViewController = [[BasicProfileViewController alloc] initWithNibName:@"RedViewController" bundle:nil];
-	basicProfileViewController.title = @"You Chose Red";
-            
-      
+    nextCntlr = [[BasicProfileViewController alloc] init];
+    nextCntlr.title = @"Basic Profile";
+    [[self navigationController] pushViewController:nextCntlr animated:YES];
+    
     // THIS IS THE MAGIC PART 2
     UIViewController *topVC = (UIViewController *)self.navigationController.delegate;
-	[topVC.navigationController pushViewController:basicProfileViewController animated:YES];
-	[basicProfileViewController release];
+	[topVC.navigationController pushViewController:nextCntlr animated:YES];
+	[nextCntlr release];
 }
+
+
+
+
 
 @end
