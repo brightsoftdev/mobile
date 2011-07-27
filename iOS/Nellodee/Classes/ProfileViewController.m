@@ -7,7 +7,7 @@
 //
 
 #import "ProfileViewController.h"
-
+#import "BasicProfileViewController.h"
 
 @implementation ProfileViewController
 
@@ -58,21 +58,32 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
+
 	static NSString *CellIdentifier = @"CellIdentifier";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     
     
-    //cell.textLabel.text = [[self.options objectAtIndex:indexPath.row] description];
-cell.textLabel.text =@"Celda";
+    cell.textLabel.text = [[self.options objectAtIndex:indexPath.row] description];
+	//cell.textLabel.text =@"Celda";
     return cell;
 }
 
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+	BasicProfileViewController *basicProfileViewController;
 
+	basicProfileViewController = [[BasicProfileViewController alloc] initWithNibName:@"RedViewController" bundle:nil];
+	basicProfileViewController.title = @"You Chose Red";
+            
+      
+    // THIS IS THE MAGIC PART 2
+    UIViewController *topVC = (UIViewController *)self.navigationController.delegate;
+	[topVC.navigationController pushViewController:basicProfileViewController animated:YES];
+	[basicProfileViewController release];
+}
 
 @end

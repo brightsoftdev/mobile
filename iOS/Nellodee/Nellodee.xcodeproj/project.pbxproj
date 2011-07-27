@@ -45,6 +45,8 @@
 		60893EDB13B5F78F008DCDF0 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 60893ECF13B5F78F008DCDF0 /* SBJsonWriter.m */; };
 		60893FBA13B75DA2008DCDF0 /* NellodeeApp.m in Sources */ = {isa = PBXBuildFile; fileRef = 60893FB913B75DA2008DCDF0 /* NellodeeApp.m */; };
 		60ACE0DA13B50E6600764BEF /* Authorization.m in Sources */ = {isa = PBXBuildFile; fileRef = 60ACE0D913B50E6600764BEF /* Authorization.m */; };
+		60DFEB5613DF7C70005FAF22 /* BasicProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60DFEB5413DF7C70005FAF22 /* BasicProfileViewController.m */; };
+		60DFEB5713DF7C70005FAF22 /* BasicProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60DFEB5513DF7C70005FAF22 /* BasicProfileViewController.xib */; };
 		60F65C2113D2DF6A00B4EAAD /* URLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F65C1F13D2DF6A00B4EAAD /* URLViewController.m */; };
 		60F65C2213D2DF6A00B4EAAD /* URLViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60F65C2013D2DF6A00B4EAAD /* URLViewController.xib */; };
 		B7F6524210FFD98E0008748C /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7F6524010FFD98E0008748C /* MainViewController.xib */; };
@@ -119,6 +121,9 @@
 		60893FB913B75DA2008DCDF0 /* NellodeeApp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NellodeeApp.m; sourceTree = "<group>"; };
 		60ACE0D813B50E6600764BEF /* Authorization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Authorization.h; sourceTree = "<group>"; };
 		60ACE0D913B50E6600764BEF /* Authorization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Authorization.m; sourceTree = "<group>"; };
+		60DFEB5313DF7C70005FAF22 /* BasicProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicProfileViewController.h; sourceTree = "<group>"; };
+		60DFEB5413DF7C70005FAF22 /* BasicProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicProfileViewController.m; sourceTree = "<group>"; };
+		60DFEB5513DF7C70005FAF22 /* BasicProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = BasicProfileViewController.xib; path = Classes/BasicProfileViewController.xib; sourceTree = "<group>"; };
 		60F65C1E13D2DF6A00B4EAAD /* URLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URLViewController.h; sourceTree = "<group>"; };
 		60F65C1F13D2DF6A00B4EAAD /* URLViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URLViewController.m; sourceTree = "<group>"; };
 		60F65C2013D2DF6A00B4EAAD /* URLViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = URLViewController.xib; path = Classes/URLViewController.xib; sourceTree = "<group>"; };
@@ -185,6 +190,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				60DFEB5513DF7C70005FAF22 /* BasicProfileViewController.xib */,
 				6071B77B13D3055500E32321 /* ViewTwoController.xib */,
 				60F65C2013D2DF6A00B4EAAD /* URLViewController.xib */,
 				601CC3DB13DC1C5100777B89 /* UserViewController.xib */,
@@ -272,6 +278,8 @@
 				60F65C1F13D2DF6A00B4EAAD /* URLViewController.m */,
 				6086D62F13D0162E00718AAF /* ViewTwoController.m */,
 				6086D63113D0163E00718AAF /* ViewTwoController.h */,
+				60DFEB5313DF7C70005FAF22 /* BasicProfileViewController.h */,
+				60DFEB5413DF7C70005FAF22 /* BasicProfileViewController.m */,
 				6071B77413D304F700E32321 /* MainViewController.h */,
 				6071B77513D304F700E32321 /* MainViewController.m */,
 				601CC3D913DC1C5100777B89 /* UserViewController.h */,
@@ -358,6 +366,7 @@
 				6071B77C13D3055500E32321 /* ViewTwoController.xib in Resources */,
 				601CC3DD13DC1C5100777B89 /* UserViewController.xib in Resources */,
 				6085710513DF221200E884D1 /* ProfileViewController.xib in Resources */,
+				60DFEB5713DF7C70005FAF22 /* BasicProfileViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,6 +406,7 @@
 				605F08F013D35EB400E9935A /* JSONParser.m in Sources */,
 				601CC3DC13DC1C5100777B89 /* UserViewController.m in Sources */,
 				6085710413DF221200E884D1 /* ProfileViewController.m in Sources */,
+				60DFEB5613DF7C70005FAF22 /* BasicProfileViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
