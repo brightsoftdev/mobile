@@ -27,8 +27,8 @@
     NellodeeApp *sharedNell;
 }
 
--(void) showTabs;
 -(void) showLogin;
+-(void) showTabs;
 
 @property (nonatomic, retain) IBOutlet UIWindow *mainWindow;
 @property (nonatomic, retain) UINavigationController *userNavController;

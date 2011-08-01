@@ -7,12 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
-
+@class BasicInfo;
 
 @interface NellodeeApp : NSObject {
 	NSString *sakaiURL;
 	NSArray *cookies;
-
+    
+    BasicInfo *basicInfo;
 }
 
 //Nellodee config properties
@@ -21,7 +22,9 @@
 //Shared info
 @property (nonatomic, retain) NSArray *cookies;
 
+//Data downloaded
+@property (nonatomic, retain) BasicInfo *basicInfo;
+
 + (id)sharedNellodeeData;
-
-
+- (void) callMeService;
 @end

@@ -9,10 +9,11 @@
 #import "MeService.h"
 #import "SBJson.h"
 #import "BasicInfo.h"
+#import "NellodeeApp.h"
 
 @implementation MeService
 
-@synthesize responseData;
+@synthesize responseData,basicInfo;
 
 -(BOOL) meService{
 	NSLog(@" ---- me Service ---");
@@ -53,7 +54,7 @@
 }  
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {  
-    BasicInfo * basic = [[BasicInfo alloc]init];
+    basicInfo = [[BasicInfo alloc]init];
     
 	NSLog(@"didReceiveData");
 	//NSString *theResponseString = [[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding] autorelease];
@@ -67,15 +68,18 @@
     NSDictionary *results = [jsonString JSONValue];
     NSDictionary * properties = [[results objectForKey:@"user"] objectForKey:@"properties"];
     NSLog(@"Dictionary value for \"foo\" is \"%@\"",properties);
+
+    [basicInfo setFirstName:[properties objectForKey:@"firstName"]];
+    [basicInfo setLastName:[properties objectForKey:@"lastName"]];
+    [basicInfo setPrefName:[properties objectForKey:@"preferredName"]];
+    [basicInfo setEmail:[properties objectForKey:@"email"]];
+    [basicInfo setRol:[properties objectForKey:@"role"]];
+    [basicInfo setDepartament:[properties objectForKey:@"department"]];
+    [basicInfo setCollege:[properties objectForKey:@"college"]];
+    [basicInfo setTags:[properties objectForKey:@"tags"]];
     
-    [basic setFirstName:[properties objectForKey:@"firstName"]];
-    [basic setLastName:[properties objectForKey:@"lastName"]];
-    [basic setPrefName:[properties objectForKey:@"preferredName"]];
-    [basic setRol:[properties objectForKey:@"role"]];
-    [basic setDepartament:[properties objectForKey:@"department"]];
-    [basic setCollege:[properties objectForKey:@"college"]];
-    [basic setTags:[properties objectForKey:@"tags"]];
-    
+    [[NellodeeApp sharedNellodeeData] setBasicInfo:basicInfo];
+
 
     
 }  
@@ -86,11 +90,15 @@
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {  
 	NSLog(@"connectionDidFinishLoading");
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"meServiceNotification" object:self];
+
 
     [connection release];  
     [responseData release];  
 	
 }  
+
+
 
 
 @end

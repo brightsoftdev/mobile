@@ -8,6 +8,7 @@
 
 #import "ProfileViewController.h"
 #import "BasicProfileViewController.h"
+#import "MeService.h"
 
 @implementation ProfileViewController
 
@@ -74,21 +75,37 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
         
-    
-    
-    UIViewController *nextCntlr;
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(receiveTestNotification:) 
+                                                 name:@"meServiceNotification"
+                                               object:nil];
+    MeService *me =[[MeService alloc] init];
+    [me meService];
 
-    nextCntlr = [[BasicProfileViewController alloc] init];
-    nextCntlr.title = @"Basic Profile";
-    [[self navigationController] pushViewController:nextCntlr animated:YES];
     
-    // THIS IS THE MAGIC PART 2
-    UIViewController *topVC = (UIViewController *)self.navigationController.delegate;
-	[topVC.navigationController pushViewController:nextCntlr animated:YES];
-	[nextCntlr release];
+
 }
 
+- (void) receiveTestNotification:(NSNotification *) notification{
 
+    
+    if ([[notification name] isEqualToString:@"meServiceNotification"]){
+        NSLog (@"Successfully received the test notification!");
+        //NSString  *nombre = [[[NellodeeApp sharedNellodeeData] basicInfo] firstName];
+        
+        
+        UIViewController *nextCntlr;
+        
+        nextCntlr = [[BasicProfileViewController alloc] init];
+        nextCntlr.title = @"Basic Profile";
+        [[self navigationController] pushViewController:nextCntlr animated:YES];
+        
+        UIViewController *topVC = (UIViewController *)self.navigationController.delegate;
+        [topVC.navigationController pushViewController:nextCntlr animated:YES];
+        [nextCntlr release];
+    
+    }
+}
 
 
 
