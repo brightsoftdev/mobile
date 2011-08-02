@@ -10,7 +10,7 @@
 
 @class BasicInfo;
 
-@interface BasicProfileViewController : UIViewController {
+@interface BasicProfileViewController : UITableViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate>{
     IBOutlet UIImageView * imageView;
     IBOutlet UITextField * firstName;
 	IBOutlet UITextField * lastName;
@@ -20,6 +20,9 @@
 	IBOutlet UITextField * departament;
     IBOutlet UITextField * college;
 	IBOutlet UITextField * tags;
+    
+    UIView *tableHeaderView;    
+
 }
 @property (nonatomic, retain) UITextField *firstName;
 @property (nonatomic, retain) UITextField *lastName;
@@ -29,5 +32,8 @@
 @property (nonatomic, retain) UITextField *departament;
 @property (nonatomic, retain) UITextField *college;
 @property (nonatomic, retain) UITextField *tags;
+
+@property (nonatomic, retain) IBOutlet UIView *tableHeaderView;
+
 
 @end

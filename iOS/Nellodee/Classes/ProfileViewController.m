@@ -88,7 +88,7 @@
 
 - (void) receiveTestNotification:(NSNotification *) notification{
 
-    
+
     if ([[notification name] isEqualToString:@"meServiceNotification"]){
         NSLog (@"Successfully received the test notification!");
         //NSString  *nombre = [[[NellodeeApp sharedNellodeeData] basicInfo] firstName];
@@ -96,7 +96,7 @@
         
         UIViewController *nextCntlr;
         
-        nextCntlr = [[BasicProfileViewController alloc] init];
+        nextCntlr = [[BasicProfileViewController alloc] initWithStyle:UITableViewStyleGrouped];
         nextCntlr.title = @"Basic Profile";
         [[self navigationController] pushViewController:nextCntlr animated:YES];
         

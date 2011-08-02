@@ -16,6 +16,9 @@
 		28D801B40F44B63D00FB423F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28D801B30F44B63D00FB423F /* CoreData.framework */; };
 		601CC3DC13DC1C5100777B89 /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 601CC3DA13DC1C5100777B89 /* UserViewController.m */; };
 		601CC3DD13DC1C5100777B89 /* UserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 601CC3DB13DC1C5100777B89 /* UserViewController.xib */; };
+		60214E1313E86928005CD90C /* TagsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60214E1113E86927005CD90C /* TagsViewController.m */; };
+		60214E1413E86928005CD90C /* TagsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60214E1213E86927005CD90C /* TagsViewController.xib */; };
+		60214E1813E871F4005CD90C /* RolTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60214E1613E871F3005CD90C /* RolTableViewController.m */; };
 		605F08E013D34D4A00E9935A /* Profile.m in Sources */ = {isa = PBXBuildFile; fileRef = 605F08DF13D34D4A00E9935A /* Profile.m */; };
 		605F08E313D34D6500E9935A /* BasicInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 605F08E213D34D6500E9935A /* BasicInfo.m */; };
 		605F08E613D34D7400E9935A /* About.m in Sources */ = {isa = PBXBuildFile; fileRef = 605F08E513D34D7400E9935A /* About.m */; };
@@ -66,6 +69,11 @@
 		601CC3D913DC1C5100777B89 /* UserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserViewController.h; sourceTree = "<group>"; };
 		601CC3DA13DC1C5100777B89 /* UserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserViewController.m; sourceTree = "<group>"; };
 		601CC3DB13DC1C5100777B89 /* UserViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = UserViewController.xib; path = Classes/UserViewController.xib; sourceTree = "<group>"; };
+		60214E1013E86927005CD90C /* TagsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TagsViewController.h; sourceTree = "<group>"; };
+		60214E1113E86927005CD90C /* TagsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TagsViewController.m; sourceTree = "<group>"; };
+		60214E1213E86927005CD90C /* TagsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TagsViewController.xib; path = Classes/TagsViewController.xib; sourceTree = "<group>"; };
+		60214E1513E871F3005CD90C /* RolTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RolTableViewController.h; sourceTree = "<group>"; };
+		60214E1613E871F3005CD90C /* RolTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RolTableViewController.m; sourceTree = "<group>"; };
 		605F08DE13D34D4A00E9935A /* Profile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Profile.h; sourceTree = "<group>"; };
 		605F08DF13D34D4A00E9935A /* Profile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Profile.m; sourceTree = "<group>"; };
 		605F08E113D34D6500E9935A /* BasicInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicInfo.h; sourceTree = "<group>"; };
@@ -190,6 +198,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				60214E1213E86927005CD90C /* TagsViewController.xib */,
 				6071B77B13D3055500E32321 /* ViewTwoController.xib */,
 				60E196AF13E07D15001C0471 /* BasicProfileViewController.xib */,
 				60F65C2013D2DF6A00B4EAAD /* URLViewController.xib */,
@@ -274,6 +283,10 @@
 			children = (
 				60E196AD13E07D15001C0471 /* BasicProfileViewController.h */,
 				60E196AE13E07D15001C0471 /* BasicProfileViewController.m */,
+				60214E1013E86927005CD90C /* TagsViewController.h */,
+				60214E1113E86927005CD90C /* TagsViewController.m */,
+				60214E1513E871F3005CD90C /* RolTableViewController.h */,
+				60214E1613E871F3005CD90C /* RolTableViewController.m */,
 				6071B77113D304F700E32321 /* LoginViewController.h */,
 				6071B77213D304F700E32321 /* LoginViewController.m */,
 				60F65C1E13D2DF6A00B4EAAD /* URLViewController.h */,
@@ -367,6 +380,7 @@
 				601CC3DD13DC1C5100777B89 /* UserViewController.xib in Resources */,
 				6085710513DF221200E884D1 /* ProfileViewController.xib in Resources */,
 				60E196B113E07D15001C0471 /* BasicProfileViewController.xib in Resources */,
+				60214E1413E86928005CD90C /* TagsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,6 +421,8 @@
 				601CC3DC13DC1C5100777B89 /* UserViewController.m in Sources */,
 				6085710413DF221200E884D1 /* ProfileViewController.m in Sources */,
 				60E196B013E07D15001C0471 /* BasicProfileViewController.m in Sources */,
+				60214E1313E86928005CD90C /* TagsViewController.m in Sources */,
+				60214E1813E871F4005CD90C /* RolTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
