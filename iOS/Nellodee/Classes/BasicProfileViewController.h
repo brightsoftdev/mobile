@@ -22,6 +22,14 @@
 	IBOutlet UITextField * tags;
     
     UIView *tableHeaderView;    
+    
+@private
+    UIButton *photoButton;
+    UITextField *firstNameTextField;
+    UITextField *lastNameTextField;
+    UITextField *prefNameTextField;
+    UITextField *prepTimeTextField;
+
 
 }
 @property (nonatomic, retain) UITextField *firstName;
@@ -34,6 +42,11 @@
 @property (nonatomic, retain) UITextField *tags;
 
 @property (nonatomic, retain) IBOutlet UIView *tableHeaderView;
+@property (nonatomic, retain) IBOutlet UIButton *photoButton;
+@property (nonatomic, retain) IBOutlet UITextField *firstNameTextField;
+@property (nonatomic, retain) IBOutlet UITextField *lastNameTextField;
+@property (nonatomic, retain) IBOutlet UITextField *prefNameTextField;
+//@property (nonatomic, retain) IBOutlet UITextField *emailTextField;
 
 
 @end

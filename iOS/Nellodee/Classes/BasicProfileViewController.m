@@ -18,12 +18,12 @@
 @synthesize tableHeaderView;
 @synthesize firstName, lastName, prefName,email;
 @synthesize rol, departament, college;
-@synthesize tags;
+@synthesize tags,lastNameTextField,prefNameTextField,firstNameTextField;
 
-
-#define ROL 0
-#define ACADEMIC 1
-#define TAGS 2
+#define USER 0
+#define ROL 1
+#define ACADEMIC 2
+#define TAGS 3
 
 
 /*- (id) init{
@@ -91,6 +91,8 @@
 
 
 - (void)viewWillAppear:(BOOL)animated {
+    
+    self.navigationItem.rightBarButtonItem = self.editButtonItem;
 
     // Update the view with current data before it is displayed.
     [super viewWillAppear:animated];
@@ -98,8 +100,18 @@
     // Scroll the table view to the top before it appears
     [self.tableView reloadData];
     [self.tableView setContentOffset:CGPointZero animated:YES];
-    self.title = @"Profile";
+    self.title = @"Basic Profile";
+    
+        
+    // Create and set the table header view.
+    if (tableHeaderView == nil) {
+        [[NSBundle mainBundle] loadNibNamed:@"DetailHeaderView" owner:self options:nil];
+        self.tableView.tableHeaderView = tableHeaderView;
+        self.tableView.allowsSelectionDuringEditing = YES;
+    }
 }
+
+
 
 
 #pragma mark -
@@ -107,7 +119,7 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // There are three sections, for rol, college info, and tags, in that order.
-    return 3;
+    return 4;
 }
 
 
@@ -115,6 +127,9 @@
     
     NSInteger rows = 0;
     switch (section) {
+        case USER:
+            rows = 2;
+            break;
         case ROL:
             rows = 1;
             break;
@@ -136,6 +151,9 @@
     NSString *title = nil;
     // Return a title or nil as appropriate for the section.
     switch (section) {
+        case USER:
+            title = @"User Information";
+            break;
         case ROL:
             title = @"Rol";
             break;
@@ -165,13 +183,16 @@
     
     
     switch (indexPath.section) {
-        case ROL: 
+        case USER: 
             cell.textLabel.text =@"Celda 0";
-            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-            cell.editingAccessoryType = UITableViewCellAccessoryNone;
-            break;
-        case ACADEMIC: // instructions
+            break;    
+        case ROL: 
             cell.textLabel.text =@"Celda 1";
+            cell.accessoryType = UITableViewCellAccessoryNone;
+            cell.editingAccessoryType = UITableViewCellAccessoryDisclosureIndicator;
+            break;
+        case ACADEMIC: 
+            cell.textLabel.text =@"Celda 2";
             break;
         case TAGS:
             cell.textLabel.text =@"Tags";
@@ -196,6 +217,9 @@
      For Type, Instructions, and Ingredients, create and push a new view controller of the type appropriate for the next screen.
      */
     switch (section) {
+        case USER:
+            break;
+            
         case ROL:
             nextViewController = [[RolTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
             //((TypeSelectionViewController *)nextViewController).recipe = recipe;

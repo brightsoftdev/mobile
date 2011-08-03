@@ -25,6 +25,8 @@
 		605F08E913D34D9000E9935A /* Categories.m in Sources */ = {isa = PBXBuildFile; fileRef = 605F08E813D34D9000E9935A /* Categories.m */; };
 		605F08EC13D34DC900E9935A /* Publications.m in Sources */ = {isa = PBXBuildFile; fileRef = 605F08EB13D34DC900E9935A /* Publications.m */; };
 		605F08F013D35EB400E9935A /* JSONParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 605F08EF13D35EB400E9935A /* JSONParser.m */; };
+		605FFB4D13E9491600E2ADAB /* DetailHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 605FFB4C13E9491600E2ADAB /* DetailHeaderView.xib */; };
+		605FFB4F13E9493900E2ADAB /* DetailHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 605FFB4E13E9493900E2ADAB /* DetailHeaderView.xib */; };
 		6071B77713D304F700E32321 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6071B77213D304F700E32321 /* LoginViewController.m */; };
 		6071B77813D304F700E32321 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6071B77313D304F700E32321 /* LoginViewController.xib */; };
 		6071B77913D304F700E32321 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6071B77513D304F700E32321 /* MainViewController.m */; };
@@ -86,6 +88,8 @@
 		605F08EB13D34DC900E9935A /* Publications.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Publications.m; sourceTree = "<group>"; };
 		605F08EE13D35EB400E9935A /* JSONParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONParser.h; sourceTree = "<group>"; };
 		605F08EF13D35EB400E9935A /* JSONParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONParser.m; sourceTree = "<group>"; };
+		605FFB4C13E9491600E2ADAB /* DetailHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailHeaderView.xib; sourceTree = "<group>"; };
+		605FFB4E13E9493900E2ADAB /* DetailHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DetailHeaderView.xib; path = Classes/DetailHeaderView.xib; sourceTree = "<group>"; };
 		6071B77113D304F700E32321 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		6071B77213D304F700E32321 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		6071B77313D304F700E32321 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoginViewController.xib; path = Classes/LoginViewController.xib; sourceTree = "<group>"; };
@@ -177,6 +181,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				605FFB4C13E9491600E2ADAB /* DetailHeaderView.xib */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
@@ -198,6 +203,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				605FFB4E13E9493900E2ADAB /* DetailHeaderView.xib */,
 				60214E1213E86927005CD90C /* TagsViewController.xib */,
 				6071B77B13D3055500E32321 /* ViewTwoController.xib */,
 				60E196AF13E07D15001C0471 /* BasicProfileViewController.xib */,
@@ -381,6 +387,8 @@
 				6085710513DF221200E884D1 /* ProfileViewController.xib in Resources */,
 				60E196B113E07D15001C0471 /* BasicProfileViewController.xib in Resources */,
 				60214E1413E86928005CD90C /* TagsViewController.xib in Resources */,
+				605FFB4D13E9491600E2ADAB /* DetailHeaderView.xib in Resources */,
+				605FFB4F13E9493900E2ADAB /* DetailHeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
