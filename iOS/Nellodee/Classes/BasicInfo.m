@@ -11,7 +11,8 @@
 
 @implementation BasicInfo
 
-@synthesize firstName, lastName, prefName,email;
+@synthesize username, email;
+@synthesize firstName, lastName, prefName;
 @synthesize rol, departament, college;
 @synthesize tags;
 

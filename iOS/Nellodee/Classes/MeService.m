@@ -56,16 +56,15 @@
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {  
     basicInfo = [[BasicInfo alloc]init];
     
-	NSLog(@"didReceiveData");
-	//NSString *theResponseString = [[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding] autorelease];
-	//NSLog(@"Response : %@", theResponseString);
-    
+	NSLog(@"didReceiveData");    
     
     // Store incoming data into a string
     NSString *jsonString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
     
     // Create a dictionary from the JSON string
     NSDictionary *results = [jsonString JSONValue];
+
+    [basicInfo setUsername:[[results objectForKey:@"user"] objectForKey:@"userid"]];
     NSDictionary * properties = [[results objectForKey:@"user"] objectForKey:@"properties"];
     NSLog(@"Dictionary value for \"foo\" is \"%@\"",properties);
 

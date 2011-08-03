@@ -69,7 +69,6 @@
     
     
     cell.textLabel.text = [[self.options objectAtIndex:indexPath.row] description];
-	//cell.textLabel.text =@"Celda";
     return cell;
 }
 

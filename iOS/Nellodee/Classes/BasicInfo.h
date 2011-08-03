@@ -24,6 +24,7 @@
 */
 
 @interface BasicInfo : NSObject {
+    NSString *username;
     NSString *firstName;
     NSString *lastName;
     NSString *prefName;
@@ -34,7 +35,7 @@
     NSArray *tags;
 
 }
-
+@property (nonatomic, retain) NSString *username;
 @property (nonatomic, retain) NSString *firstName;
 @property (nonatomic, retain) NSString *lastName;
 @property (nonatomic, retain) NSString *prefName;

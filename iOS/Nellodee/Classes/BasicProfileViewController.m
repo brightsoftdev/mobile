@@ -16,9 +16,8 @@
 @implementation BasicProfileViewController
 
 @synthesize tableHeaderView;
-@synthesize firstName, lastName, prefName,email;
-@synthesize rol, departament, college;
-@synthesize tags,lastNameTextField,prefNameTextField,firstNameTextField;
+@synthesize firstNameTextField, lastNameTextField,prefNameTextField,photoButton;
+
 
 #define USER 0
 #define ROL 1
@@ -91,27 +90,34 @@
 
 
 - (void)viewWillAppear:(BOOL)animated {
-    
-    self.navigationItem.rightBarButtonItem = self.editButtonItem;
-
-    // Update the view with current data before it is displayed.
-    [super viewWillAppear:animated];
-    
-    // Scroll the table view to the top before it appears
-    [self.tableView reloadData];
-    [self.tableView setContentOffset:CGPointZero animated:YES];
-    self.title = @"Basic Profile";
-    
-        
     // Create and set the table header view.
     if (tableHeaderView == nil) {
         [[NSBundle mainBundle] loadNibNamed:@"DetailHeaderView" owner:self options:nil];
         self.tableView.tableHeaderView = tableHeaderView;
         self.tableView.allowsSelectionDuringEditing = YES;
     }
+    
+    //Get user information
+    basic = [[NellodeeApp sharedNellodeeData] basicInfo] ; 
+    
+    self.navigationItem.rightBarButtonItem = self.editButtonItem;
+
+    // Update the view with current data before it is displayed.
+    [super viewWillAppear:animated];
+    
+    // Scroll the table view to the top before it appears  
+    [self.tableView setContentOffset:CGPointZero animated:YES];
+    self.title = @"Basic Profile";
+    
+    
+    firstNameTextField.text =[basic firstName];
+    lastNameTextField.text = [basic lastName];
+    prefNameTextField.text = [basic prefName];
+    
+
+    [self.tableView reloadData]; 
+
 }
-
-
 
 
 #pragma mark -
@@ -175,6 +181,9 @@
     
     
 	static NSString *CellIdentifier = @"CellIdentifier";
+    static NSString *UserCellIdentifier = @"UserCellIdentifier";
+    static NSString *AcademicCellIdentifier = @"AcademicCellIdentifier";
+
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
@@ -184,16 +193,61 @@
     
     switch (indexPath.section) {
         case USER: 
-            cell.textLabel.text =@"Celda 0";
+			
+			cell = [tableView dequeueReusableCellWithIdentifier:UserCellIdentifier];
+			
+			if (cell == nil) {
+				cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:UserCellIdentifier] autorelease];
+				cell.accessoryType = UITableViewCellAccessoryNone;
+			}
+            if(indexPath.row ==0){
+                cell.textLabel.text = [basic username];
+                cell.detailTextLabel.text = @"username";
+            }
+            else{
+                cell.textLabel.text = [basic email];
+                cell.detailTextLabel.text = @"email";
+            }
+
             break;    
         case ROL: 
-            cell.textLabel.text =@"Celda 1";
+            
+            if([basic rol] == nil){
+                cell.textLabel.text = @"No rol assigned";
+            }
+            else{
+                cell.textLabel.text =[basic rol];
+            }
             cell.accessoryType = UITableViewCellAccessoryNone;
             cell.editingAccessoryType = UITableViewCellAccessoryDisclosureIndicator;
             break;
         case ACADEMIC: 
-            cell.textLabel.text =@"Celda 2";
-            break;
+			cell = [tableView dequeueReusableCellWithIdentifier:AcademicCellIdentifier];
+			
+			if (cell == nil) {
+				cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:AcademicCellIdentifier] autorelease];
+				cell.accessoryType = UITableViewCellAccessoryNone;
+			}
+            if(indexPath.row ==0){
+                if([basic departament] == nil){
+                    cell.textLabel.text = @"No departament assigned";
+                }
+                else{
+                    cell.textLabel.text = [basic departament];
+                }
+                cell.detailTextLabel.text = @"Department";
+            }
+            else{
+                if([basic college] == nil){
+                    cell.textLabel.text = @"No college assigned";
+                }
+                else{
+                    cell.textLabel.text = [basic college];
+                }
+                cell.detailTextLabel.text = @"College";
+            }
+            
+            break;             
         case TAGS:
             cell.textLabel.text =@"Tags";
             cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
