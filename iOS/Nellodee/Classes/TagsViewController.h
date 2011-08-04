@@ -11,7 +11,8 @@
 
 @interface TagsViewController : UIViewController {
     UITextView *labelText;
+    NSString *tags;
 }
 @property (nonatomic, retain) IBOutlet UITextView *labelText;
-
+@property (nonatomic, retain) NSString *tags;
 @end

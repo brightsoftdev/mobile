@@ -8,6 +8,7 @@
 
 #import "ProfileViewController.h"
 #import "BasicProfileViewController.h"
+#import "AboutViewController.h"
 #import "MeService.h"
 
 @implementation ProfileViewController
@@ -93,10 +94,16 @@
         //NSString  *nombre = [[[NellodeeApp sharedNellodeeData] basicInfo] firstName];
         
         
-        UIViewController *nextCntlr;
+        /*UIViewController *nextCntlr;
         
         nextCntlr = [[BasicProfileViewController alloc] initWithStyle:UITableViewStyleGrouped];
         nextCntlr.title = @"Basic Profile";
+        [[self navigationController] pushViewController:nextCntlr animated:YES];*/
+        
+        UIViewController *nextCntlr;
+        
+        nextCntlr = [[AboutViewController alloc] initWithStyle:UITableViewStyleGrouped];
+        nextCntlr.title = @"About me";
         [[self navigationController] pushViewController:nextCntlr animated:YES];
         
         UIViewController *topVC = (UIViewController *)self.navigationController.delegate;

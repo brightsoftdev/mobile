@@ -10,5 +10,6 @@
 
 
 @implementation About
+@synthesize aboutMe,academicInterests,personalInterests,hobbies;
 
 @end

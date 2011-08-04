@@ -24,6 +24,7 @@
 */
 
 @interface BasicInfo : NSObject {
+    NSString *picturePath;
     NSString *username;
     NSString *firstName;
     NSString *lastName;
@@ -32,9 +33,10 @@
     NSString *rol;
     NSString *departament;
     NSString *college;
-    NSArray *tags;
+    NSString *tags;
 
 }
+@property (nonatomic, retain) NSString *picturePath;
 @property (nonatomic, retain) NSString *username;
 @property (nonatomic, retain) NSString *firstName;
 @property (nonatomic, retain) NSString *lastName;
@@ -43,7 +45,7 @@
 @property (nonatomic, retain) NSString *rol;
 @property (nonatomic, retain) NSString *departament;
 @property (nonatomic, retain) NSString *college;
-@property (nonatomic, retain) NSArray *tags;
+@property (nonatomic, retain) NSString *tags;
 
 
 

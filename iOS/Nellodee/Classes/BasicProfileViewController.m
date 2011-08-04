@@ -15,6 +15,7 @@
 
 @implementation BasicProfileViewController
 
+@synthesize basic;
 @synthesize tableHeaderView;
 @synthesize firstNameTextField, lastNameTextField,prefNameTextField,photoButton;
 
@@ -23,66 +24,6 @@
 #define ROL 1
 #define ACADEMIC 2
 #define TAGS 3
-
-
-/*- (id) init{
-    self=[super init];
-
-    return self;
-
-}
-
-
-
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    return self;
-}
-
-- (void)dealloc {
-    [super dealloc];
-}
-
-- (void)didReceiveMemoryWarning
-{
-    // Releases the view if it doesn't have a superview.
-    [super didReceiveMemoryWarning];
-    
-    // Release any cached data, images, etc that aren't in use.
-}
-
-#pragma mark - View lifecycle
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    BasicInfo * basic = [[NellodeeApp sharedNellodeeData] basicInfo] ;    
-    [firstName setText:[basic firstName]];
-    [lastName setText:[basic lastName]];
-    [prefName setText:[basic prefName]];
-    [email setText:[basic email]];
-    [rol setText:[basic rol]];
-    [departament setText:[basic departament]];
-    [college setText:[basic college]];
-   
-}
-
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
-}
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    // Return YES for supported orientations
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
-
-*/
 
 
 #pragma mark -
@@ -216,7 +157,8 @@
                 cell.textLabel.text = @"No rol assigned";
             }
             else{
-                cell.textLabel.text =[basic rol];
+                NSString* rol = [[basic rol] stringByReplacingOccurrencesOfString:@"_" withString:@" "];
+                cell.textLabel.text =rol;
             }
             cell.accessoryType = UITableViewCellAccessoryNone;
             cell.editingAccessoryType = UITableViewCellAccessoryDisclosureIndicator;
@@ -276,11 +218,12 @@
             
         case ROL:
             nextViewController = [[RolTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
-            //((TypeSelectionViewController *)nextViewController).recipe = recipe;
             break;
 			
         case TAGS:
             nextViewController = [[TagsViewController alloc] initWithNibName:@"TagsViewController" bundle:nil];
+            ((TagsViewController *)nextViewController).tags = [basic tags];
+            NSLog(@"Tags: ", [basic tags]);
             break;
 			
         case ACADEMIC:

@@ -11,7 +11,7 @@
 
 @implementation TagsViewController
 
-@synthesize labelText;
+@synthesize labelText,tags;
 
 
 - (void)viewDidLoad {
@@ -29,7 +29,7 @@
 
 - (void)viewWillAppear:(BOOL)animated {    
     // Update the views appropriately
-    labelText.text = @"Aquí van las etiquetas de la personita \n que usa Sakai OAE";    
+    labelText.text = tags;
 }
 
 

@@ -20,11 +20,11 @@
     UITextField *firstNameTextField;
     UITextField *lastNameTextField;
     UITextField *prefNameTextField;
-    UITextField *prepTimeTextField;
 
 
 }
 
+@property (nonatomic, retain) BasicInfo * basic;
 @property (nonatomic, retain) IBOutlet UIView *tableHeaderView;
 @property (nonatomic, retain) IBOutlet UIButton *photoButton;
 @property (nonatomic, retain) IBOutlet UITextField *firstNameTextField;

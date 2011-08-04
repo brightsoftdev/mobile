@@ -13,7 +13,7 @@
 @implementation NellodeeApp
 
 @synthesize sakaiURL, cookies;
-@synthesize basicInfo;
+@synthesize basicInfo,aboutMe;
 
 
 #pragma mark Singleton Methods
@@ -64,29 +64,7 @@
     return self;
 }
 
-- (void) callMeService{
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(receiveTestNotification:) 
-                                                 name:@"TestNotification"
-                                               object:nil];
 
-    MeService *me =[[MeService alloc] init];
-    [me meService];
-}
-
-- (BOOL) receiveTestNotification:(NSNotification *) notification
-{
-    // [notification name] should always be @"TestNotification"
-    // unless you use this method for observation of other notifications
-    // as well.
-    
-    if ([[notification name] isEqualToString:@"TestNotification"]){
-        NSLog (@"Successfully received the test notification!");        
-        return YES;
-        
-    }
-    return NO;
-}
 - (void)dealloc {
     // Should never be called, but just here for clarity really.
     [sakaiURL release];

@@ -9,11 +9,13 @@
 #import "MeService.h"
 #import "SBJson.h"
 #import "BasicInfo.h"
+#import "About.h"
 #import "NellodeeApp.h"
 
 @implementation MeService
 
-@synthesize responseData,basicInfo;
+@synthesize responseData;
+@synthesize basicInfo,about;
 
 -(BOOL) meService{
 	NSLog(@" ---- me Service ---");
@@ -63,11 +65,25 @@
     
     // Create a dictionary from the JSON string
     NSDictionary *results = [jsonString JSONValue];
+    NSLog(@"Dictionary value for \"results\" is \"%@\"",results);
 
     [basicInfo setUsername:[[results objectForKey:@"user"] objectForKey:@"userid"]];
+    NSString *userStoragePrefix = [[results objectForKey:@"user"] objectForKey:@"userStoragePrefix"];
+    
+
     NSDictionary * properties = [[results objectForKey:@"user"] objectForKey:@"properties"];
     NSLog(@"Dictionary value for \"foo\" is \"%@\"",properties);
-
+    
+    //Since picture is not a dictionary property I get the substring with the name of the picture and build the path to the picture
+    //I should have used a regex
+    NSString * pic = [properties objectForKey:@"picture"];
+    NSRange ini = [pic rangeOfString: @"name"];
+    NSRange end = [pic rangeOfString: @"_name"];
+    
+    NSString *picture=[pic substringWithRange:NSMakeRange(ini.location+ini.length+2, end.location-(ini.location+ini.length)-4)];
+    NSString *pathPicture = [[userStoragePrefix stringByAppendingString:@"profile/"] stringByAppendingString:picture];
+    NSLog(@"Picture path: %@", pathPicture);
+    
     [basicInfo setFirstName:[properties objectForKey:@"firstName"]];
     [basicInfo setLastName:[properties objectForKey:@"lastName"]];
     [basicInfo setPrefName:[properties objectForKey:@"preferredName"]];
@@ -75,12 +91,18 @@
     [basicInfo setRol:[properties objectForKey:@"role"]];
     [basicInfo setDepartament:[properties objectForKey:@"department"]];
     [basicInfo setCollege:[properties objectForKey:@"college"]];
-    [basicInfo setTags:[properties objectForKey:@"tags"]];
+    [basicInfo setTags:[properties objectForKey:@"sakai:tags"]];
     
     [[NellodeeApp sharedNellodeeData] setBasicInfo:basicInfo];
-
-
     
+    about = [[About alloc] init];
+    [about setAboutMe:@"me"];
+    [about setAcademicInterests:@"academic"];
+    [about setPersonalInterests:@"personal"];
+    [about setHobbies:@"hobbies"];
+
+    [[NellodeeApp sharedNellodeeData] setAbout:about];
+
 }  
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {  
@@ -97,6 +119,13 @@
 	
 }  
 
+
+- (void)dealloc {
+    [about dealloc];
+    [basicInfo dealloc];
+    [responseData dealloc];
+    [super dealloc];
+}
 
 
 
