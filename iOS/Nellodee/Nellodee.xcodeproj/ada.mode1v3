@@ -229,6 +229,8 @@
 			<key>Layout</key>
 			<array>
 				<dict>
+					<key>BecomeActive</key>
+					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -311,8 +313,6 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -330,7 +330,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>60DFEB8913DFEDB2005FAF22</string>
+										<string>60DFEBAE13E13EB8005FAF22</string>
 										<key>history</key>
 										<array>
 											<string>60CF5D3E13A45F02006A9300</string>
@@ -341,7 +341,6 @@
 											<string>6006F1B813CB82AF006527F6</string>
 											<string>6006F1D313CB8387006527F6</string>
 											<string>6006F25213CCAFFA006527F6</string>
-											<string>6006F25313CCAFFA006527F6</string>
 											<string>6006F25413CCAFFA006527F6</string>
 											<string>6006F2A513CCBD6F006527F6</string>
 											<string>6006F2B713CCC13A006527F6</string>
@@ -351,11 +350,12 @@
 											<string>60DFEB5A13DF7C7B005FAF22</string>
 											<string>60DFEB6E13DF7E1A005FAF22</string>
 											<string>60DFEB7813DF7E88005FAF22</string>
-											<string>60DFEB7913DF7E88005FAF22</string>
-											<string>60DFEB7A13DF7E88005FAF22</string>
 											<string>60DFEB7B13DF7E88005FAF22</string>
 											<string>60DFEB7C13DF7E88005FAF22</string>
-											<string>60DFEB8513DF7F37005FAF22</string>
+											<string>60DFEB8F13E07252005FAF22</string>
+											<string>60DFEB9013E07252005FAF22</string>
+											<string>60DFEB9813E072A0005FAF22</string>
+											<string>60DFEB9913E072A0005FAF22</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -566,6 +566,8 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>60DFEB9B13E072A0005FAF22</string>
+		<string>60DFEB9D13E072A0005FAF22</string>
 		<string>1C78EAAD065D492600B07095</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>60E8DCEB13A3F1E400181578</string>

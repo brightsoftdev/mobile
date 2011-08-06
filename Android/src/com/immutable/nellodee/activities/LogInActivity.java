@@ -61,7 +61,16 @@ public class LogInActivity extends Activity {
     			Log.v("CREDENTIALS: ", "URL: "+ url); 
             	Authorization auth = new Authorization(url,username,password);
             	try {
-            		auth.formBasedAuth(app);
+            		if(auth.formBasedAuth(app)){
+            			Log.w("CREDENTIALS: ", "Authentication worked");
+            			notLogin();
+
+            		}
+            		else{
+            			Log.w("CREDENTIALS: ", "Authentication has failed");
+            			notLogin();
+
+            		}
             	} catch (Exception e) {
             		e.printStackTrace();
             	}

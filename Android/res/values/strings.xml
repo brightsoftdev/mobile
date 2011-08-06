@@ -20,4 +20,10 @@
     <string name="password">Password: </string>
 	<string name="sign_in">Sign in</string>
 
+   <!-- WARNINGS and ERRORS  -->    
+    <string name="missing">There are missing fields</string>
+    <string name="noLogin">You shall never pass!</string>
+    <string name="noLoginDialog">Sorry, but user name or password don\'t seem right, try again?</string>
+    <string name="serverFail">Sorry, but we can\'t reach the server.</string>
+
 </resources>

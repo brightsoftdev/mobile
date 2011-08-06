@@ -37,13 +37,19 @@ public final class R {
          */
         public static final int OK=0x7f040002;
         public static final int app_name=0x7f040001;
+        /**  WARNINGS and ERRORS  
+         */
+        public static final int missing=0x7f04000d;
         public static final int next=0x7f040004;
+        public static final int noLogin=0x7f04000e;
+        public static final int noLoginDialog=0x7f04000f;
         public static final int noURL=0x7f040006;
         public static final int noURL_message=0x7f040007;
         public static final int noValid=0x7f040008;
         public static final int noValid_message=0x7f040009;
         public static final int password=0x7f04000b;
         public static final int remember=0x7f040005;
+        public static final int serverFail=0x7f040010;
         public static final int sign_in=0x7f04000c;
         /**  URL Activity 
          */

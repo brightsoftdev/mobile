@@ -58,41 +58,35 @@ public class Authorization {
 	}
 
 
-	public void formBasedAuth(NellodeeApplication app) throws Exception{
+	public boolean formBasedAuth(NellodeeApplication app) throws Exception{
 		//DefaultHttpClient client  = app.getClient();
 		DefaultHttpClient client  = new DefaultHttpClient();
 		HttpPost request = new HttpPost();
-		BufferedReader in = null;
-		try{
+		//BufferedReader in = null;
+		//try{
 			Log.i("URL",url);
 			
 			String uri = url + "/system/sling/formlogin";
 			Log.i("URL",uri);
 			request.setURI(new URI(uri));
-			//request.setURI(new URI("http://10.0.2.2:8080/system/sling/formlogin"));
 			
 			List<NameValuePair> postParameters = new ArrayList<NameValuePair>(); 
 
-			/* postParameters.add(new BasicNameValuePair("sakaiauth:un", "ada")); 
-			postParameters.add(new BasicNameValuePair("sakaiauth:pw", "babagge")); 
-			postParameters.add(new BasicNameValuePair("sakaiauth:login", "1"));*/
 			postParameters.add(new BasicNameValuePair("sakaiauth:un", user)); 
 			postParameters.add(new BasicNameValuePair("sakaiauth:pw", pass)); 
 			postParameters.add(new BasicNameValuePair("sakaiauth:login", "1")); 
 
-			
 			UrlEncodedFormEntity formEntity = new UrlEncodedFormEntity(postParameters);
 			request.setEntity(formEntity);
 					    
 			//Add referer
 			request.addHeader("Referer", url);
-			//request.addHeader("Referer", "http://10.0.2.2:8080");
 			
 			HttpResponse response = client.execute(request);
 			int status = response.getStatusLine().getStatusCode();
 			Log.i("STATUS", String.valueOf(status));
 			
-
+			//Store cookies
 			List<Cookie> cookies = client.getCookieStore().getCookies();
 			CookieStore store = new BasicCookieStore();
 			if (cookies.isEmpty()) {
@@ -105,7 +99,17 @@ public class Authorization {
             }
 			client.setCookieStore(store);
 			
-			HttpGet requestGET = new HttpGet();
+			if(status==200){
+                Log.i("AUTH", "Working");
+				return true;
+			}
+			else{
+                Log.i("AUTH", "None");
+				return false;
+			}
+			
+			//Me service
+			/*HttpGet requestGET = new HttpGet();
 			uri = url + "/system/me";
 			Log.i("URL",uri);
 			requestGET.setURI(new URI(uri));
@@ -121,7 +125,7 @@ public class Authorization {
 			in.close();
 			String jString = sb.toString();
 			System.out.println("JSON:" + jString);
-			
+			*/
 			//Parse Json response 
 			/*JSONObject jObject;
 			jObject = new JSONObject(jString); 
@@ -197,7 +201,7 @@ public class Authorization {
 			*/
 			
 			
-		}
+		/*}
 		finally{
 			if(in!=null){
 				try{
@@ -207,7 +211,7 @@ public class Authorization {
 					e.printStackTrace();
 				}
 			}
-		}
+		}*/
 	}
 	
 	

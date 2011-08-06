@@ -1,7 +1,7 @@
 TNellodee
 v7
 r0
-t333442488.173099
+t333476447.927179
 cCheck dependencies
 cProcessInfoPlistFile /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator/Nellodee.app/Info.plist Nellodee-Info.plist
 cCompileXIB /Users/ada/GSoC/Nellodee/iOS/Nellodee/MainWindow.xib
@@ -626,7 +626,7 @@ t1310711392
 s16982
 
 N/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator/Nellodee.app
-t1311749688
+t1311783647
 s476
 
 N/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator/Nellodee.app.dSYM
@@ -646,7 +646,7 @@ t1311717998
 s4762
 
 N/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator/Nellodee.app/MainViewController.nib
-t1311749683
+t1311783647
 s1231
 
 N/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator/Nellodee.app/MainWindow.nib
@@ -835,7 +835,7 @@ s909
 
 CCheck dependencies
 r0
-lSLF07#2@18"Check dependencies333442480#333442480#0(0"0(0#1#0"8612832672#0"0#
+lSLF07#2@18"Check dependencies333476447#333476447#0(0"0(0#1#0"8617814624#0"0#
 
 CCompileC build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Objects-normal/i386/About.o /Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/About.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s333410808.941894
@@ -1288,12 +1288,12 @@ x/Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/LoginViewController.xib
 lSLF07#2@42"CompileXIB Classes/LoginViewController.xib333410796#333410798#0(0"0(0#0#69"/Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/LoginViewController.xib8605660480#594"    cd /Users/ada/GSoC/Nellodee/iOS/Nellodee    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.3    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator/Nellodee.app/LoginViewController.nib /Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/LoginViewController.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk0#
 
 CCompileXIB /Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/MainViewController.xib
-s333414198.261019
-e333414198.777028
+s333476447.424278
+e333476447.920809
 r1
 xCompileXIB
 x/Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/MainViewController.xib
-lSLF07#2@41"CompileXIB Classes/MainViewController.xib333414198#333414198#0(0"0(0#0#68"/Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/MainViewController.xib8619449472#592"    cd /Users/ada/GSoC/Nellodee/iOS/Nellodee    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.3    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator/Nellodee.app/MainViewController.nib /Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/MainViewController.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk0#
+lSLF07#2@41"CompileXIB Classes/MainViewController.xib333476447#333476447#0(0"0(0#0#68"/Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/MainViewController.xib8604961184#592"    cd /Users/ada/GSoC/Nellodee/iOS/Nellodee    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.3    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator/Nellodee.app/MainViewController.nib /Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/MainViewController.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk0#
 
 CCompileXIB /Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/ProfileViewController.xib
 s333410798.334626
@@ -1335,12 +1335,12 @@ x/Users/ada/GSoC/Nellodee/iOS/Nellodee/LoginViewController.xib
 lSLF07#2@34"CompileXIB LoginViewController.xib332404981#332404982#0(0"0(0#0#61"/Users/ada/GSoC/Nellodee/iOS/Nellodee/LoginViewController.xib8613561184#586"    cd /Users/ada/GSoC/Nellodee/iOS/Nellodee    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.3    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator/Nellodee.app/LoginViewController.nib /Users/ada/GSoC/Nellodee/iOS/Nellodee/LoginViewController.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk0#
 
 CCompileXIB /Users/ada/GSoC/Nellodee/iOS/Nellodee/MainViewController.xib
-s333442480.095178
-e333442484.035633
+s333476434.017839
+e333476434.562187
 r1
 xCompileXIB
 x/Users/ada/GSoC/Nellodee/iOS/Nellodee/MainViewController.xib
-lSLF07#2@33"CompileXIB MainViewController.xib333442480#333442484#0(0"0(0#0#60"/Users/ada/GSoC/Nellodee/iOS/Nellodee/MainViewController.xib8617350400#584"    cd /Users/ada/GSoC/Nellodee/iOS/Nellodee    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.3    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator/Nellodee.app/MainViewController.nib /Users/ada/GSoC/Nellodee/iOS/Nellodee/MainViewController.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk0#
+lSLF07#2@33"CompileXIB MainViewController.xib333476434#333476434#0(0"0(0#0#60"/Users/ada/GSoC/Nellodee/iOS/Nellodee/MainViewController.xib8606142848#584"    cd /Users/ada/GSoC/Nellodee/iOS/Nellodee    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.3    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator/Nellodee.app/MainViewController.nib /Users/ada/GSoC/Nellodee/iOS/Nellodee/MainViewController.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk0#
 
 CCompileXIB /Users/ada/GSoC/Nellodee/iOS/Nellodee/MainWindow.xib
 s333410789.140833
@@ -1403,10 +1403,10 @@ xcom.apple.compilers.gcc.4_2
 lSLF07#2@30"Precompile Nellodee_Prefix.pch333410799#333410805#0(0"0(0#0#57"/Users/ada/GSoC/Nellodee/iOS/Nellodee/Nellodee_Prefix.pch8605653088#1815"    cd /Users/ada/GSoC/Nellodee/iOS/Nellodee    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Nellodee-generated-files.hmap -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Nellodee-own-target-headers.hmap -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Nellodee-all-target-headers.hmap -iquote /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/Nellodee-project-headers.hmap -F/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator/include -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/DerivedSources/i386 -I/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Nellodee.build/Debug-iphonesimulator/Nellodee.build/DerivedSources -c /Users/ada/GSoC/Nellodee/iOS/Nellodee/Nellodee_Prefix.pch -o /var/folders/2m/2m-ROx2eE94ZRPRBWv04I++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Nellodee_Prefix-ewwipovpamrtoafjwdbrrrsnzxxo/Nellodee_Prefix.pch.gch0#
 
 CTouch /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator/Nellodee.app
-s333442488.121890
-e333442488.173045
+s333476447.923971
+e333476447.927133
 r1
 xTouch
 x/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator/Nellodee.app
-lSLF07#2@84"Touch /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator/Nellodee.app333442488#333442488#0(0"0(0#0#0"8619712512#277"    cd /Users/ada/GSoC/Nellodee/iOS/Nellodee    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator/Nellodee.app0#
+lSLF07#2@84"Touch /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator/Nellodee.app333476447#333476447#0(0"0(0#0#0"8619772704#277"    cd /Users/ada/GSoC/Nellodee/iOS/Nellodee    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator/Nellodee.app0#
 

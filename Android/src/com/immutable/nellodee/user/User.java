@@ -10,7 +10,6 @@ public class User {
 	private String userStoragePrefix;
 	private String userProfilePath;
 	private Boolean superUser;
-	private Properties properties;
 	private ArrayList<String> subjects;
 	private Locale locale;
 		
@@ -21,25 +20,11 @@ public class User {
 		this.userStoragePrefix = "";
 		this.userProfilePath = "";
 		this.superUser = false;
-		this.properties = new Properties();
 		this.subjects = new ArrayList<String>();
 		this.locale = new Locale();
 
 	}
 	
-	public User(String userid, String userStoragePrefix,
-			String userProfilePath, Boolean superUser, Properties properties, 
-			ArrayList<String> subjects, Locale locale) {
-		super();
-		this.userid = userid;
-		this.userStoragePrefix = userStoragePrefix;
-		this.userProfilePath = userProfilePath;
-		this.superUser = superUser;
-		this.properties = properties;
-		this.subjects = subjects;
-		this.locale = locale;
-
-	}
 
 	public String getUserid() {
 		return userid;
@@ -71,14 +56,6 @@ public class User {
 
 	public void setSuperUser(Boolean superUser) {
 		this.superUser = superUser;
-	}
-
-	public Properties getProperties() {
-		return properties;
-	}
-
-	public void setProperties(Properties properties) {
-		this.properties = properties;
 	}
 
 	public ArrayList<String> getSubjects() {
