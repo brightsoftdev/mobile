@@ -8,6 +8,8 @@
 
 #import "UserViewController.h"
 #import "ProfileViewController.h"
+#import "TagsViewController.h"
+
 
 @implementation UserViewController
 
@@ -196,16 +198,32 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-
+    if([indexPath row] == 0){
     
     /*
      When a row is selected, create the detail view controller and set its detail item to the item associated with the selected row.
      */
+        
+        
     ProfileViewController *profileViewController = [[ProfileViewController alloc] initWithStyle:UITableViewStyleGrouped];
     
     // Push the detail view controller.
     [[self navigationController] pushViewController:profileViewController animated:YES];
     [profileViewController release];
+
+    }
+    else{
+        
+        /*
+         When a row is selected, create the detail view controller and set its detail item to the item associated with the selected row.
+         */
+        TagsViewController *profileViewController = [[TagsViewController alloc] init];
+        
+        // Push the detail view controller.
+        [[self navigationController] pushViewController:profileViewController animated:YES];
+        [profileViewController release];
+        
+    }
 
 }
 

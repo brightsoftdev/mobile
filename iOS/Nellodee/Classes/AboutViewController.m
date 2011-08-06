@@ -8,6 +8,7 @@
 
 #import "AboutViewController.h"
 #import "NellodeeApp.h"
+#import "About.h"
 
 @implementation AboutViewController
 @synthesize about;
@@ -22,22 +23,46 @@
 #pragma mark View lifecycle
 
 
-- (void)viewWillAppear:(BOOL)animated {
-    
-    //Get user information
-    //about = [[NellodeeApp sharedNellodeeData] about] ; 
-    
-    self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
-    // Update the view with current data before it is displayed.
-    [super viewWillAppear:animated];
-    
-    // Scroll the table view to the top before it appears  
-    [self.tableView setContentOffset:CGPointZero animated:YES];
-    self.title = @"About Me";
-    
-    
+- (id)initWithStyle:(UITableViewStyle)style
+{
+    self = [super initWithStyle:style];
+    if (self) {
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(loadAboutMeView:) 
+                                                     name:@"meServiceNotification"
+                                                   object:nil];    
+    }
+    return self;
 }
+
+
+
+- (void) loadAboutMeView:(NSNotification *) notification{
+    
+    
+    if ([[notification name] isEqualToString:@"meServiceNotification"]){
+        NSLog (@"[ABOUT ME] Successfully received the test notification!");
+        
+        
+        self.navigationItem.rightBarButtonItem = self.editButtonItem;
+        
+        //Get user information
+        about = [[NellodeeApp sharedNellodeeData] aboutMe] ; 
+
+
+        // Update the view with current data before it is displayed.
+        [super viewWillAppear:YES];
+        
+        // Scroll the table view to the top before it appears  
+        [self.tableView setContentOffset:CGPointZero animated:YES];
+        self.title = @"About Me";
+        
+        [self.tableView reloadData]; 
+        
+    }
+}
+
+
 
 
 #pragma mark -
@@ -83,9 +108,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     
-	static NSString *CellIdentifier = @"CellIdentifier";
-
-    
+	static NSString *CellIdentifier = @"CellIdentifier";    
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
@@ -95,25 +118,25 @@
     
     switch (indexPath.section) {
         case ME: 
-            cell.textLabel.text = @"me";
+            cell.textLabel.text = [about aboutMe];
             cell.accessoryType = UITableViewCellAccessoryNone;
             cell.editingAccessoryType = UITableViewCellAccessoryDisclosureIndicator;
             break;
             
         case ACADEMIC: 
-            cell.textLabel.text = @"academic";
+            cell.textLabel.text = [about academicInterests];
             cell.accessoryType = UITableViewCellAccessoryNone;
             cell.editingAccessoryType = UITableViewCellAccessoryDisclosureIndicator;
             break;
             
         case PERSONAL: 
-            cell.textLabel.text = @"me";
+            cell.textLabel.text = [about personalInterests];
             cell.accessoryType = UITableViewCellAccessoryNone;
             cell.editingAccessoryType = UITableViewCellAccessoryDisclosureIndicator;
             break;
             
         case HOBBIES:
-            cell.textLabel.text = @"hobbies";
+            cell.textLabel.text = [about hobbies];
             cell.accessoryType = UITableViewCellAccessoryNone;
             cell.editingAccessoryType = UITableViewCellAccessoryDisclosureIndicator;
             break;
@@ -132,7 +155,96 @@
 }
 
 
+@end
 
 
+/*
+#pragma mark -
+#pragma mark View lifecycle
+
+
+- (void)viewWillAppear:(BOOL)animated {
+    
+    // Scroll the table view to the top before it appears
+    [self.tableView reloadData];
+    [self.tableView setContentOffset:CGPointZero animated:NO];
+    self.title = @"About me";
+}
+
+- (UITableViewCellAccessoryType)tableView:(UITableView *)tv accessoryTypeForRowWithIndexPath:(NSIndexPath *)indexPath{
+    
+    return UITableViewCellAccessoryDisclosureIndicator;
+}
+
+#pragma mark -
+#pragma mark Table view data source
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    // There are three sections, for date, genre, and characters, in that order.
+    return 4;
+}
+
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    
+    return 1;
+}
+
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    NSString *title = nil;
+    // Return a title or nil as appropriate for the section.
+    switch (section) {
+        case ME:
+            title = @"About me";
+            break;
+        case ACADEMIC:
+            title = @"Academic Interests";
+            break;
+        case PERSONAL:
+            title = @"Personal Interests";
+            break;
+        case HOBBIES:
+            title = @"Hobbies";
+            break;    
+        default:
+            break;
+    }
+    return title;;
+}
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    
+	static NSString *CellIdentifier = @"CellIdentifier";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+    }
+    
+    
+    cell.textLabel.text = @"Cell";
+    return cell;
+    
+
+    
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+
+        
+    
+}
+
+
+#pragma mark -
+#pragma mark Memory management
+
+- (void)dealloc {
+    [super dealloc];
+}
 
 @end
+*/

@@ -29,35 +29,56 @@
 #pragma mark -
 #pragma mark View lifecycle
 
-
-- (void)viewWillAppear:(BOOL)animated {
-    // Create and set the table header view.
-    if (tableHeaderView == nil) {
-        [[NSBundle mainBundle] loadNibNamed:@"DetailHeaderView" owner:self options:nil];
-        self.tableView.tableHeaderView = tableHeaderView;
-        self.tableView.allowsSelectionDuringEditing = YES;
+- (id)initWithStyle:(UITableViewStyle)style
+{
+    self = [super initWithStyle:style];
+    if (self) {
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(loadBasicProfileView:) 
+                                                     name:@"meServiceNotification"
+                                                   object:nil];    
     }
-    
-    //Get user information
-    basic = [[NellodeeApp sharedNellodeeData] basicInfo] ; 
-    
-    self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    return self;
+}
 
-    // Update the view with current data before it is displayed.
-    [super viewWillAppear:animated];
-    
-    // Scroll the table view to the top before it appears  
-    [self.tableView setContentOffset:CGPointZero animated:YES];
-    self.title = @"Basic Profile";
-    
-    
-    firstNameTextField.text =[basic firstName];
-    lastNameTextField.text = [basic lastName];
-    prefNameTextField.text = [basic prefName];
-    
 
-    [self.tableView reloadData]; 
 
+- (void) loadBasicProfileView:(NSNotification *) notification{
+    
+    
+    if ([[notification name] isEqualToString:@"meServiceNotification"]){
+        NSLog (@"[BASIC PROFILE] Successfully received the test notification!");
+        
+        
+        
+        // Create and set the table header view.
+        if (tableHeaderView == nil) {
+            [[NSBundle mainBundle] loadNibNamed:@"DetailHeaderView" owner:self options:nil];
+            self.tableView.tableHeaderView = tableHeaderView;
+            self.tableView.allowsSelectionDuringEditing = YES;
+        }
+        
+        //Get user information
+        basic = [[NellodeeApp sharedNellodeeData] basicInfo] ; 
+        
+        self.navigationItem.rightBarButtonItem = self.editButtonItem;
+        
+        // Update the view with current data before it is displayed.
+        [super viewWillAppear:YES];
+        
+        // Scroll the table view to the top before it appears  
+        [self.tableView setContentOffset:CGPointZero animated:YES];
+        self.title = @"Basic Profile";
+        
+        
+        firstNameTextField.text =[basic firstName];
+        lastNameTextField.text = [basic lastName];
+        prefNameTextField.text = [basic prefName];
+        
+        
+        [self.tableView reloadData]; 
+        
+    }
 }
 
 
@@ -150,7 +171,8 @@
                 cell.detailTextLabel.text = @"email";
             }
 
-            break;    
+            break;  
+            
         case ROL: 
             
             if([basic rol] == nil){
@@ -163,6 +185,7 @@
             cell.accessoryType = UITableViewCellAccessoryNone;
             cell.editingAccessoryType = UITableViewCellAccessoryDisclosureIndicator;
             break;
+            
         case ACADEMIC: 
 			cell = [tableView dequeueReusableCellWithIdentifier:AcademicCellIdentifier];
 			
@@ -189,7 +212,8 @@
                 cell.detailTextLabel.text = @"College";
             }
             
-            break;             
+            break; 
+            
         case TAGS:
             cell.textLabel.text =@"Tags";
             cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
@@ -223,7 +247,7 @@
         case TAGS:
             nextViewController = [[TagsViewController alloc] initWithNibName:@"TagsViewController" bundle:nil];
             ((TagsViewController *)nextViewController).tags = [basic tags];
-            NSLog(@"Tags: ", [basic tags]);
+            NSLog(@"Tags: %@", [basic tags]);
             break;
 			
         case ACADEMIC:
@@ -247,8 +271,18 @@
     }
 }
 
+#pragma mark -
+#pragma mark dealloc
 
-
+- (void)dealloc {
+    [tableHeaderView release];
+    [photoButton release];
+    [basic release];
+    [firstNameTextField release];
+    [lastNameTextField release];
+    [prefNameTextField release];
+    [super dealloc];
+}
 
 
 @end

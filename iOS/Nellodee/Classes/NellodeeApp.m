@@ -8,6 +8,7 @@
 
 #import "NellodeeApp.h"
 #import "BasicInfo.h"
+#import "About.h"
 #import "MeService.h"
 
 @implementation NellodeeApp
