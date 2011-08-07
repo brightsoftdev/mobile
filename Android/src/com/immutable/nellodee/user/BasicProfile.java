@@ -3,6 +3,7 @@ package com.immutable.nellodee.user;
 import java.util.ArrayList;
 
 public class BasicProfile {
+	private String username;
 	private String firstName;
 	private String lastName;
 	private String prefName;
@@ -10,10 +11,12 @@ public class BasicProfile {
 	private String rol;
 	private String department;
 	private String college;
-	private ArrayList<String> tags;
+	private String tags;
+	private String picPath;
 
 	public BasicProfile() {
 		super();
+		this.username = "";
 		this.firstName = "";
 		this.lastName = "";
 		this.prefName = "";
@@ -21,13 +24,15 @@ public class BasicProfile {
 		this.rol = "";
 		this.department = "";
 		this.college = "";
-		this.tags = new ArrayList<String>();
+		this.tags = "";
+		this.picPath = "";
 	}
 	
-	public BasicProfile(String firstName, String lastName, String prefName,
+	public BasicProfile(String username, String firstName, String lastName, String prefName,
 			String email, String rol, String department, String college,
-			ArrayList<String> tags) {
+			String tags, String picPath) {
 		super();
+		this.username = username;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.prefName = prefName;
@@ -36,6 +41,15 @@ public class BasicProfile {
 		this.department = department;
 		this.college = college;
 		this.tags = tags;
+		this.picPath = picPath;
+	}
+
+	public String getUsername() {
+		return username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
 	}
 
 	public String getFirstName() {
@@ -94,12 +108,20 @@ public class BasicProfile {
 		this.college = college;
 	}
 
-	public ArrayList<String> getTags() {
+	public String getTags() {
 		return tags;
 	}
 
-	public void setTags(ArrayList<String> tags) {
+	public void setTags(String tags) {
 		this.tags = tags;
+	}
+
+	public String getPicPath() {
+		return picPath;
+	}
+
+	public void setPicPath(String picPath) {
+		this.picPath = picPath;
 	}
 	
 	

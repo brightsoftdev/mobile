@@ -9,10 +9,13 @@
 #import "MeService.h"
 #import "SBJson.h"
 #import "BasicInfo.h"
+#import "About.h"
+#import "NellodeeApp.h"
 
 @implementation MeService
 
 @synthesize responseData;
+@synthesize basicInfo,about;
 
 -(BOOL) meService{
 	NSLog(@" ---- me Service ---");
@@ -53,31 +56,63 @@
 }  
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {  
-    BasicInfo * basic = [[BasicInfo alloc]init];
+    basicInfo = [[BasicInfo alloc]init];
     
-	NSLog(@"didReceiveData");
-	//NSString *theResponseString = [[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding] autorelease];
-	//NSLog(@"Response : %@", theResponseString);
-    
+	NSLog(@"didReceiveData");    
     
     // Store incoming data into a string
     NSString *jsonString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
     
     // Create a dictionary from the JSON string
     NSDictionary *results = [jsonString JSONValue];
+    NSLog(@"Dictionary value for \"results\" is \"%@\"",results);
+
+    [basicInfo setUsername:[[results objectForKey:@"user"] objectForKey:@"userid"]];
+    NSString *userStoragePrefix = [[results objectForKey:@"user"] objectForKey:@"userStoragePrefix"];
+    
+
     NSDictionary * properties = [[results objectForKey:@"user"] objectForKey:@"properties"];
     NSLog(@"Dictionary value for \"foo\" is \"%@\"",properties);
     
-    [basic setFirstName:[properties objectForKey:@"firstName"]];
-    [basic setLastName:[properties objectForKey:@"lastName"]];
-    [basic setPrefName:[properties objectForKey:@"preferredName"]];
-    [basic setRol:[properties objectForKey:@"role"]];
-    [basic setDepartament:[properties objectForKey:@"department"]];
-    [basic setCollege:[properties objectForKey:@"college"]];
-    [basic setTags:[properties objectForKey:@"tags"]];
+    //Since picture is not a dictionary property I get the substring with the name of the picture and build the path to the picture
+    //I should have used a regex
+    NSString * pic = [properties objectForKey:@"picture"];
+    if (pic != nil){
+        NSRange ini = [pic rangeOfString: @"name"];
+        NSRange end = [pic rangeOfString: @"_name"];
     
+        NSString *picture=[pic substringWithRange:NSMakeRange(ini.location+ini.length+2, end.location-(ini.location+ini.length)-4)];
+        NSString *pathPicture = [[userStoragePrefix stringByAppendingString:@"profile/"] stringByAppendingString:picture];
+        NSLog(@"Picture path: %@", pathPicture);
+    }
+    [basicInfo setFirstName:[properties objectForKey:@"firstName"]];
+    [basicInfo setLastName:[properties objectForKey:@"lastName"]];
+    [basicInfo setPrefName:[properties objectForKey:@"preferredName"]];
+    [basicInfo setEmail:[properties objectForKey:@"email"]];
+    [basicInfo setRol:[properties objectForKey:@"role"]];
+    [basicInfo setDepartament:[properties objectForKey:@"department"]];
+    [basicInfo setCollege:[properties objectForKey:@"college"]];
+    [basicInfo setTags:[properties objectForKey:@"sakai:tags"]];
+    
+    [[NellodeeApp sharedNellodeeData] setBasicInfo:basicInfo];
+    
+    
+    NSDictionary * aboutMeDic = [[[results objectForKey:@"profile"] objectForKey:@"aboutme"] objectForKey:@"elements"];
+    NSLog(@"Dictionary value for \"about\" is \"%@\"",aboutMeDic);
 
     
+    about = [[About alloc] init];
+    NSLog(@"Dictionary value for \"aboutme\" is \"%@\"",[aboutMeDic objectForKey:@"aboutme"]);
+    NSLog(@"Dictionary value for \"aboutme\" is \"%@\"",[[aboutMeDic objectForKey:@"aboutme"] objectForKey:@"value"]);
+
+    [about setAboutMe:[[aboutMeDic objectForKey:@"aboutme"] objectForKey:@"value"]];
+    [about setAcademicInterests:[[aboutMeDic objectForKey:@"academicinterests"] objectForKey:@"value"]];
+    [about setPersonalInterests:[[aboutMeDic objectForKey:@"personalinterests"] objectForKey:@"value"]];
+    [about setHobbies:[[aboutMeDic objectForKey:@"hobbies"] objectForKey:@"value"]];
+
+    NellodeeApp *nell = [NellodeeApp sharedNellodeeData];
+    [nell setAboutMe:about];
+
 }  
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {  
@@ -86,11 +121,22 @@
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {  
 	NSLog(@"connectionDidFinishLoading");
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"meServiceNotification" object:self];
+
 
     [connection release];  
     [responseData release];  
 	
 }  
+
+
+- (void)dealloc {
+    [about dealloc];
+    [basicInfo dealloc];
+    [responseData dealloc];
+    [super dealloc];
+}
+
 
 
 @end

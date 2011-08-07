@@ -26,5 +26,9 @@
 		<activity android:name=".activities.LogInActivity" 
 			android:label="@string/app_name">
 		</activity>
+		
+		<activity android:name=".activities.BasicProfileActivity" 
+			android:label="@string/app_name">
+		</activity>
     </application>
 </manifest>

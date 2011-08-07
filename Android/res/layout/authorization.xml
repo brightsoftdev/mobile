@@ -49,11 +49,12 @@
 			android:inputType="textImeMultiLine|textPassword">
 		</EditText>
 
-		<CheckBox android:id="@+id/rememberMe" 
-			android:text="@string/remember"
-			android:layout_width="wrap_content" 
-			android:layout_height="wrap_content">
-		</CheckBox>
+<!-- 		<CheckBox android:id="@+id/rememberMe"  -->
+<!-- 			android:text="@string/remember" -->
+<!-- 			android:layout_width="wrap_content"  -->
+<!-- 			android:layout_height="wrap_content"> -->
+<!-- 		</CheckBox> -->
+
 	</LinearLayout>
 	
 	<Button 

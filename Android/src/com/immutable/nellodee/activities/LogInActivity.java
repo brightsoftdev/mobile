@@ -12,6 +12,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Application;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
@@ -62,9 +63,8 @@ public class LogInActivity extends Activity {
             	Authorization auth = new Authorization(url,username,password);
             	try {
             		if(auth.formBasedAuth(app)){
-            			Log.w("CREDENTIALS: ", "Authentication worked");
-            			notLogin();
-
+            			//Log.w("CREDENTIALS: ", "Authentication worked");
+            			loadBasicProfile();
             		}
             		else{
             			Log.w("CREDENTIALS: ", "Authentication has failed");
@@ -90,5 +90,9 @@ public class LogInActivity extends Activity {
 		alertDialog.show();
 
 	}
-  
+	private void loadBasicProfile(){
+		Intent intent = new Intent(this,BasicProfileActivity.class);
+		startActivity(intent);
+	}
+	
 }

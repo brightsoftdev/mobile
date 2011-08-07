@@ -8,9 +8,28 @@
 
 #import <UIKit/UIKit.h>
 
+@class BasicInfo;
 
-@interface BasicProfileViewController : UIViewController {
+@interface BasicProfileViewController : UITableViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate>{
+    
+    BasicInfo * basic;
+    
+@private
+    UIView *tableHeaderView;    
+    UIButton *photoButton;
+    UITextField *firstNameTextField;
+    UITextField *lastNameTextField;
+    UITextField *prefNameTextField;
+
 
 }
+
+@property (nonatomic, retain) BasicInfo * basic;
+@property (nonatomic, retain) IBOutlet UIView *tableHeaderView;
+@property (nonatomic, retain) IBOutlet UIButton *photoButton;
+@property (nonatomic, retain) IBOutlet UITextField *firstNameTextField;
+@property (nonatomic, retain) IBOutlet UITextField *lastNameTextField;
+@property (nonatomic, retain) IBOutlet UITextField *prefNameTextField;
+
 
 @end

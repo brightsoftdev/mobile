@@ -7,11 +7,14 @@
 //
 
 #import "NellodeeApp.h"
-
+#import "BasicInfo.h"
+#import "About.h"
+#import "MeService.h"
 
 @implementation NellodeeApp
 
 @synthesize sakaiURL, cookies;
+@synthesize basicInfo,aboutMe;
 
 
 #pragma mark Singleton Methods
@@ -61,6 +64,8 @@
     }
     return self;
 }
+
+
 - (void)dealloc {
     // Should never be called, but just here for clarity really.
     [sakaiURL release];

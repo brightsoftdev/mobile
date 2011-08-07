@@ -2,7 +2,9 @@ package com.immutable.nellodee;
 
 import org.apache.http.client.CookieStore;
 import org.apache.http.impl.client.BasicCookieStore;
-import org.apache.http.impl.client.DefaultHttpClient;
+
+import com.immutable.nellodee.user.AboutMe;
+import com.immutable.nellodee.user.BasicProfile;
 
 import android.app.Application;
 import android.content.Context;
@@ -11,34 +13,39 @@ import android.content.SharedPreferences;
 public class NellodeeApplication extends Application {
 
 	private static final String PREFS_NAME = "SakaiPrefs";
-	private DefaultHttpClient client;
 	private CookieStore store;
+	private BasicProfile basic;
+	private AboutMe	about;
 	
 	
 	public NellodeeApplication() {
-		this.client = new DefaultHttpClient();
 		this.store = new BasicCookieStore();
+		this.basic = new BasicProfile();
+		this.about = new AboutMe();
 	}
 
-	public DefaultHttpClient getClient() {
-		return client;
-	}
-
-	public void setClient(DefaultHttpClient client) {
-		this.client = client;
-	}
-
+	/*	GETTERS AND SETTERS */
 	public CookieStore getStore() {
 		return store;
 	}
-
 	public void setStore(CookieStore store) {
 		this.store = store;
 	}
 	public static String getPrefsName() {
 		return PREFS_NAME;
 	}
-	
+	public BasicProfile getBasic() {
+		return basic;
+	}
+	public void setBasic(BasicProfile basic) {
+		this.basic = basic;
+	}
+	public AboutMe getAbout() {
+		return about;
+	}
+	public void setAbout(AboutMe about) {
+		this.about = about;
+	}
 	
 	/* MANAGE PREFERENCES */
 	public boolean isFirstTime(Context context) {
@@ -52,5 +59,6 @@ public class NellodeeApplication extends Application {
 	public String getURL(Context context) {
 		return context.getSharedPreferences(getPrefsName(),MODE_PRIVATE).getString("url", "");
     }
+
 
 }

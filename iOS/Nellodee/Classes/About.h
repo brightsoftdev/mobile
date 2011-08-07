@@ -10,7 +10,15 @@
 
 
 @interface About : NSObject {
+    NSString *aboutMe;
+    NSString *academicInterests;
+    NSString *personalInterests;
+    NSString *hobbies;
     
 }
+@property (nonatomic,retain) NSString *aboutMe;
+@property (nonatomic,retain) NSString *academicInterests;
+@property (nonatomic,retain) NSString *personalInterests;
+@property (nonatomic,retain) NSString *hobbies;
 
 @end

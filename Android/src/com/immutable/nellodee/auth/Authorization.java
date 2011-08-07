@@ -59,7 +59,6 @@ public class Authorization {
 
 
 	public boolean formBasedAuth(NellodeeApplication app) throws Exception{
-		//DefaultHttpClient client  = app.getClient();
 		DefaultHttpClient client  = new DefaultHttpClient();
 		HttpPost request = new HttpPost();
 		//BufferedReader in = null;
@@ -215,7 +214,7 @@ public class Authorization {
 	}
 	
 	
-	public void me() throws Exception{
+	public void meService() throws Exception{
 		
 		HttpClient client = new DefaultHttpClient();
 		HttpGet request = new HttpGet();

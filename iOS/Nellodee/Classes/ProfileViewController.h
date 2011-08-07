@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "NellodeeApp.h"
 
 @interface ProfileViewController : UITableViewController <UITableViewDataSource,UITabBarDelegate>{
     NSMutableArray * options;

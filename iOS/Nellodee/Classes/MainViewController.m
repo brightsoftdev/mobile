@@ -51,18 +51,31 @@
 
 
 // Function to load and display our Dashboard programmatically
--(void)showTabs
+-(void)showLogin
 {
 	// Remove the previous view. In this case, viewOne
+	[self.view removeFromSuperview];
+	[urlView release];
+    
+    loginView = [[LoginViewController alloc] initWithNibName: @"LoginViewController" bundle:nil];
+	loginView.mainViewController = self;
+	
+	[mainWindow addSubview: loginView.view];
+}
+
+// Function to load and display our Dashboard programmatically
+-(void)showTabs
+{
+    //Loading data
+	//[sharedNell populateBasicInfo];
+    
+    // Remove the previous view. In this case, loginView
 	[self.view removeFromSuperview];
 	[loginView release];
 	
 	tabBarController = [[UITabBarController alloc] init];
 	[tabBarController setHidesBottomBarWhenPushed:YES];
-	
-	MeService *u =[[MeService alloc] init];
-	[u meService];
-    
+
     UserViewController *userView;
     userView =[[[UserViewController alloc] init] autorelease];
 
@@ -90,18 +103,7 @@
 }
 
 
-// Function to load and display our Dashboard programmatically
--(void)showLogin
-{
-	// Remove the previous view. In this case, viewOne
-	[self.view removeFromSuperview];
-	[urlView release];
-	    
-    loginView = [[LoginViewController alloc] initWithNibName: @"LoginViewController" bundle:nil];
-	loginView.mainViewController = self;
-	
-	[mainWindow addSubview: loginView.view];
-}
+
 
 
 

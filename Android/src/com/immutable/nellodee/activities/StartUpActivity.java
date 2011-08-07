@@ -16,14 +16,10 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
-import android.widget.Button;
-import android.widget.CheckBox;
-import android.widget.EditText;
+
 
 public class StartUpActivity extends Activity {
 
-	private AlertDialog alertDialog;
 	private NellodeeApplication app;	
 
 	/* Called when the activity is first created. */
@@ -40,16 +36,6 @@ public class StartUpActivity extends Activity {
 		else{
 			beginAuthorization();
 		}
-		/*else if (!app.isSavedUser()){
-			beginAuthorization();
-		}
-		else{
-			try {
-				beginSakai();
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
-		}*/
 		
 	}
  
