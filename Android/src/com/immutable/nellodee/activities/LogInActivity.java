@@ -1,9 +1,10 @@
 package com.immutable.nellodee.activities;
 
 
+import org.apache.http.client.CookieStore;
+
 import com.immutable.nellodee.NellodeeApplication;
 import com.immutable.nellodee.R;
-import com.immutable.nellodee.R.id;
 import com.immutable.nellodee.R.layout;
 import com.immutable.nellodee.auth.Authorization;
 
@@ -25,9 +26,9 @@ public class LogInActivity extends Activity {
 
 	private AlertDialog alertDialog;
 	private Button loginButton;
-	private CheckBox rememberButton;
-	private SharedPreferences settings;
+	//private CheckBox rememberButton;
 	private NellodeeApplication app;
+
 
 
 	/** Called when the activity is first created. */
@@ -56,19 +57,21 @@ public class LogInActivity extends Activity {
 			Log.v("CREDENTIALS: ", "Clicked the sign in button. This is the username: "+ username+ " and pass:" + password);
 
 			if(username_EditText == null || password_EditText == null){
-				notLogin();
+				notLogin(0);
             }else{
             	String url = app.getURL(app.getApplicationContext());
     			Log.v("CREDENTIALS: ", "URL: "+ url); 
             	Authorization auth = new Authorization(url,username,password);
             	try {
-            		if(auth.formBasedAuth(app)){
-            			//Log.w("CREDENTIALS: ", "Authentication worked");
+        			CookieStore store = auth.formBasedAuth();
+            		if(store!=null){
+            			Log.w("CREDENTIALS: ", "Authentication worked");
             			loadBasicProfile();
+            			saveCookies(store);
             		}
             		else{
             			Log.w("CREDENTIALS: ", "Authentication has failed");
-            			notLogin();
+            			notLogin(1);
 
             		}
             	} catch (Exception e) {
@@ -78,10 +81,15 @@ public class LogInActivity extends Activity {
 		}
 	};
 	
-	public void  notLogin(){
+	public void  notLogin(int error){
 		alertDialog = new AlertDialog.Builder(this).create();
 		alertDialog.setTitle("Not login");
-		alertDialog.setMessage("There are missing fields");
+		if(error == 0){
+			alertDialog.setMessage("There are missing fields");			
+		}
+		else{
+			alertDialog.setMessage("Authentification has failed");
+		}
 		alertDialog.setButton("OK", new DialogInterface.OnClickListener() {
              public void onClick(DialogInterface dialog, int which) {
                      return;
@@ -90,9 +98,16 @@ public class LogInActivity extends Activity {
 		alertDialog.show();
 
 	}
+
+	
 	private void loadBasicProfile(){
 		Intent intent = new Intent(this,BasicProfileActivity.class);
 		startActivity(intent);
 	}
 	
+	private Boolean saveCookies(CookieStore cookies){
+		app.setCookies(cookies);
+		Log.i("CREDENTIALS", "Saved cookies");
+		return true;
+	}
 }

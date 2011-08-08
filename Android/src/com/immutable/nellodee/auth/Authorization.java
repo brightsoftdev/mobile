@@ -20,21 +20,13 @@ import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.cookie.Cookie;
-import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.BasicCookieStore;
 import org.apache.http.impl.client.DefaultHttpClient;
-import org.apache.http.message.BasicHeader;
 import org.apache.http.message.BasicNameValuePair;
-import org.apache.http.params.BasicHttpParams;
-import org.apache.http.params.HttpConnectionParams;
-import org.apache.http.params.HttpParams;
-import org.apache.http.protocol.HTTP;
-import org.apache.http.util.EntityUtils;
-import org.json.JSONObject;
 
 import com.immutable.nellodee.NellodeeApplication;
 
-import android.net.Credentials;
+import android.content.SharedPreferences;
 import android.util.Log;
 
 public class Authorization {
@@ -42,6 +34,7 @@ public class Authorization {
     private String url;
     private String user;
     private String pass;
+
     
 	public Authorization() {
 		super();
@@ -58,15 +51,20 @@ public class Authorization {
 	}
 
 
-	public boolean formBasedAuth(NellodeeApplication app) throws Exception{
+	public CookieStore formBasedAuth() throws Exception{
+		// If the class hasn't got an URL I can't call the web service
+		if (this.url == ""){
+			return null;
+		}
+		
 		DefaultHttpClient client  = new DefaultHttpClient();
 		HttpPost request = new HttpPost();
 		//BufferedReader in = null;
 		//try{
-			Log.i("URL",url);
+			Log.i("ATUHT","Saved URL: " + url);
 			
 			String uri = url + "/system/sling/formlogin";
-			Log.i("URL",uri);
+			Log.i("AUTH","Service URL: " + uri);
 			request.setURI(new URI(uri));
 			
 			List<NameValuePair> postParameters = new ArrayList<NameValuePair>(); 
@@ -99,12 +97,12 @@ public class Authorization {
 			client.setCookieStore(store);
 			
 			if(status==200){
-                Log.i("AUTH", "Working");
-				return true;
+                Log.i("AUTH", "Logged in.");
+				return store;
 			}
 			else{
-                Log.i("AUTH", "None");
-				return false;
+                Log.e("AUTH", "Not logged in.");
+				return null;
 			}
 			
 			//Me service
@@ -320,3 +318,5 @@ public class Authorization {
 	
 	
 }
+
+

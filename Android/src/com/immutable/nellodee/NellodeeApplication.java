@@ -13,23 +13,23 @@ import android.content.SharedPreferences;
 public class NellodeeApplication extends Application {
 
 	private static final String PREFS_NAME = "SakaiPrefs";
-	private CookieStore store;
+	private CookieStore cookies;
 	private BasicProfile basic;
 	private AboutMe	about;
 	
 	
 	public NellodeeApplication() {
-		this.store = new BasicCookieStore();
+		this.cookies = new BasicCookieStore();
 		this.basic = new BasicProfile();
 		this.about = new AboutMe();
 	}
 
 	/*	GETTERS AND SETTERS */
-	public CookieStore getStore() {
-		return store;
+	public CookieStore getCookies() {
+		return cookies;
 	}
-	public void setStore(CookieStore store) {
-		this.store = store;
+	public void setCookies(CookieStore cookies) {
+		this.cookies = cookies;
 	}
 	public static String getPrefsName() {
 		return PREFS_NAME;

@@ -2,18 +2,9 @@ package com.immutable.nellodee.activities;
 
 
 import com.immutable.nellodee.NellodeeApplication;
-import com.immutable.nellodee.R;
-import com.immutable.nellodee.R.id;
-import com.immutable.nellodee.R.layout;
-import com.immutable.nellodee.auth.Authorization;
-
 
 import android.app.Activity;
-import android.app.AlertDialog;
-import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 
@@ -31,9 +22,11 @@ public class StartUpActivity extends Activity {
 	protected void onResume() {
  		super.onResume();
 		if(app.isFirstTime(this.getApplicationContext())){
+			Log.i("START UP", "This is the first time");
 			beginConfig();
 		}
 		else{
+			Log.i("START UP", "This is NOT the first time");
 			beginAuthorization();
 		}
 		
@@ -50,10 +43,14 @@ public class StartUpActivity extends Activity {
 		startActivity(intent);
 	}
 	
-	private void beginSakai() throws Exception{
+	/*
+	 *  This method should be created when the app could store the user's credentials
+	 *  
+	 * private void beginSakai() throws Exception{
+	 
 		Intent intent = new Intent(this,LogInActivity.class);
 		startActivity(intent);
-	}
+	}*/
 
 
  
