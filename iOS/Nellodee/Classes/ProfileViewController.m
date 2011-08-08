@@ -98,7 +98,7 @@
 
         
     }
-    else if ([indexPath row] == ABOUT){
+    else if ([indexPath row] == ABOUT   ){
         AboutViewController *aboutView = [[AboutViewController alloc] initWithStyle:UITableViewStyleGrouped];
         
         // Push the detail view controller.

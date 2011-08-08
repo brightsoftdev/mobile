@@ -31,6 +31,8 @@ public class BasicProfileActivity extends Activity {
     	CookieStore cookies = app.getCookies();
     	
     	MeService me = new MeService(url,cookies);
+  
+    	
     	BasicProfile basic = me.callService();
     	
     	TextView usernameTV = (TextView) findViewById(R.id.txt_userName);
