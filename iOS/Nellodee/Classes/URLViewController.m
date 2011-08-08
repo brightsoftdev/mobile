@@ -7,7 +7,7 @@
 //
 
 #import "URLViewController.h"
-
+#import "Authorization.h"
 
 @implementation URLViewController
 
@@ -19,16 +19,29 @@
     [url resignFirstResponder];
     
     //Crete the string to store the url
-    NSString *urlSakai = [url text];
     
-    //Store the data
-    //TODO: I SHOULD CHECK IF THE URL IS CORRECT BEFORE SAVE THE DATA
-    NSUserDefaults *defaults =[NSUserDefaults standardUserDefaults];
-    [defaults setObject:urlSakai forKey:@"url"];
-    [defaults synchronize];
-    
-    NSLog(@"Saved Data");
-    [mainViewController showLogin];
+	if ([[url text] length]>1){
+		NSString *urlSakai = [url text];
+		Authorization* auth =[[Authorization alloc] init]; 
+		if([auth checkURL:urlSakai]){
+			//Store the data
+			NSUserDefaults *defaults =[NSUserDefaults standardUserDefaults];
+			[defaults setObject:urlSakai forKey:@"url"];
+			[defaults synchronize];
+		
+			NSLog(@"[URL VIEW CONTROLLER] URL saved: %@",urlSakai );
+			[mainViewController showLogin];
+		}
+		else{
+			NSLog(@"[URL VIEW CONTROLLER] The URL is not valid.");
+		}
+	}
+	else {
+		NSLog(@"[URL VIEW CONTROLLER] There is no URL.");
+	}
+
+	
+
 }
 
 

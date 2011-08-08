@@ -85,13 +85,12 @@
         prefNameTextField.text = [basic prefName];
 		
 		NellodeeApp *sharedNell = [NellodeeApp sharedNellodeeData];
-		NSLog(@"Sakai url: %@",[sharedNell sakaiURL]);
 		NSString *imagePath = [[sharedNell sakaiURL] stringByAppendingString:[basic picturePath]];
-
+		NSLog(@"[BASIC PROFILE] Image Path: %@",imagePath);
 
 		if([basic picturePath] != nil){
 			NSError *error=nil;			
-			NSData* imageData = [[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:@"http://sakai3-demo.uits.indiana.edu:8080/~ada/public/profile/256x256_tmp1312825696059.jpg"] options:0 error:&error];
+			NSData* imageData = [[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:imagePath] options:0 error:&error];
 			UIImage* image = [[UIImage alloc] initWithData:imageData];
 			[photoButton setImage:image forState:UIControlStateNormal];
 			//[self updatePhotoButton];

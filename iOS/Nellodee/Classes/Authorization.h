@@ -12,6 +12,7 @@
 	NSArray *currentCookies;
 }
 
+- (BOOL) checkURL:(NSString *)url;
 - (BOOL) formBasedAuth:(NSString*)username:(NSString*)password;
 
 @property (nonatomic, retain) NSMutableData *responseData;

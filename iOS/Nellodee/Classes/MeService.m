@@ -21,14 +21,14 @@
 	NSLog(@" ---- me Service ---");
 	NellodeeApp *sharedNell = [NellodeeApp sharedNellodeeData];
 	NSString *meServiceURL = [[sharedNell sakaiURL]	stringByAppendingString:@"/system/me"];
-	NSLog(@"Sakai url: %@",[sharedNell sakaiURL]);
+	NSLog(@"Sakai url: %@",meServiceURL);
 
 	
 	NSMutableURLRequest *request = [NSMutableURLRequest
 									requestWithURL:[NSURL URLWithString:meServiceURL]];
 	[request setHTTPMethod: @"GET"];
 	[request setHTTPShouldHandleCookies:NO];
-	[request addValue:@"http://sakai3-demo.uits.indiana.edu:8080/system/me" forHTTPHeaderField:@"Referer"];
+	[request addValue:meServiceURL forHTTPHeaderField:@"Referer"];
 	NSArray* cookies = [[NSHTTPCookieStorage sharedHTTPCookieStorage]
 						cookiesForURL:[NSURL URLWithString:[sharedNell sakaiURL]]];
 	NSDictionary* headers = [NSHTTPCookie requestHeaderFieldsWithCookies:cookies];
@@ -87,7 +87,9 @@
         NSRange end = [pic rangeOfString: @"_name"];
     
         NSString *picture=[pic substringWithRange:NSMakeRange(ini.location+ini.length+3, end.location-(ini.location+ini.length)-6)];
-        NSString *pathPicture = [[userStoragePrefix stringByAppendingString:@"public/profile/"] stringByAppendingString:picture];
+        NSString *pathPicture = [@"/" 
+								 stringByAppendingString:[[userStoragePrefix stringByAppendingString:@"public/profile/"] 
+														  stringByAppendingString:picture]];
         NSLog(@"Picture path: %@", pathPicture);
 		[basicInfo setPicturePath:pathPicture];
     }
