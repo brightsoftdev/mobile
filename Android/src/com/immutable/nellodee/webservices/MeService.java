@@ -106,7 +106,7 @@ public class MeService {
 			basic.setPrefName(propertiesObject.getString("preferredName"));
 			basic.setEmail(propertiesObject.getString("email"));
 			basic.setDepartment(propertiesObject.getString("department"));
-			basic.setCollege(propertiesObject.getString("college"));
+			basic.setCollege(prope rtiesObject.getString("college"));
 			basic.setTags(propertiesObject.getString("tags"));
 			
 			return basic;
