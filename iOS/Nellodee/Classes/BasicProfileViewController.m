@@ -13,6 +13,13 @@
 #import "TagsViewController.h"
 #import "RolTableViewController.h"
 
+
+@interface BasicProfileViewController (PrivateMethods)
+- (void)updatePhotoButton;
+@end
+
+
+
 @implementation BasicProfileViewController
 
 @synthesize basic;
@@ -47,7 +54,9 @@
     
     
     if ([[notification name] isEqualToString:@"meServiceNotification"]){
-        NSLog (@"[BASIC PROFILE] Successfully received the test notification!");
+		[super viewWillAppear:YES];
+
+		NSLog (@"[BASIC PROFILE] Successfully received the test notification!");
         
         
         
@@ -74,9 +83,31 @@
         firstNameTextField.text =[basic firstName];
         lastNameTextField.text = [basic lastName];
         prefNameTextField.text = [basic prefName];
-        
-        
-        [self.tableView reloadData]; 
+		
+		NellodeeApp *sharedNell = [NellodeeApp sharedNellodeeData];
+		NSString *imagePath;
+		if([basic picturePath] != nil){
+			imagePath = [[sharedNell sakaiURL] stringByAppendingString:[basic picturePath]];
+			NSLog(@"[BASIC PROFILE] Image Path: %@",imagePath);
+		}
+		else {
+			imagePath = @"defaultIcon.png";
+			NSLog(@"[BASIC PROFILE] Image Path: %@",imagePath);
+		}
+		[imagePath release];
+		[sharedNell release];
+		
+		if([basic picturePath] != nil){
+			NSError *error=nil;			
+			NSData* imageData = [[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:imagePath] options:0 error:&error];
+			UIImage* image = [[UIImage alloc] initWithData:imageData];
+			[photoButton setImage:image forState:UIControlStateNormal];
+			//[self updatePhotoButton];
+			[image release];
+			[imageData release];
+		}
+		
+        [self.tableView reloadData];
         
     }
 }
@@ -241,7 +272,7 @@
             break;
             
         case ROL:
-            nextViewController = [[RolTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
+            //nextViewController = [[RolTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
             break;
 			
         case TAGS:
@@ -270,6 +301,94 @@
         [nextViewController release];
     }
 }
+
+
+
+
+#pragma mark -
+#pragma mark Photo
+
+- (IBAction)photoTapped {
+    // If in editing state, then display an image picker; if not, create and push a photo view controller.
+	if (self.editing) {
+		UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
+		imagePicker.delegate = self;
+		[self presentModalViewController:imagePicker animated:YES];
+		[imagePicker release];
+	} else {	
+		/*RecipePhotoViewController *recipePhotoViewController = [[RecipePhotoViewController alloc] init];
+        recipePhotoViewController.hidesBottomBarWhenPushed = YES;
+		recipePhotoViewController.recipe = recipe;
+		[self.navigationController pushViewController:recipePhotoViewController animated:YES];
+		[recipePhotoViewController release];*/
+	}
+}
+
+
+/*- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)selectedImage editingInfo:(NSDictionary *)editingInfo {
+	
+	// Delete any existing image.
+	NSManagedObject *oldImage = recipe.image;
+	if (oldImage != nil) {
+		[recipe.managedObjectContext deleteObject:oldImage];
+	}
+	
+    // Create an image object for the new image.
+	NSManagedObject *image = [NSEntityDescription insertNewObjectForEntityForName:@"Image" inManagedObjectContext:recipe.managedObjectContext];
+	recipe.image = image;
+	
+	// Set the image for the image managed object.
+	[image setValue:selectedImage forKey:@"image"];
+	
+	// Create a thumbnail version of the image for the recipe object.
+	CGSize size = selectedImage.size;
+	CGFloat ratio = 0;
+	if (size.width > size.height) {
+		ratio = 44.0 / size.width;
+	} else {
+		ratio = 44.0 / size.height;
+	}
+	CGRect rect = CGRectMake(0.0, 0.0, ratio * size.width, ratio * size.height);
+	
+	UIGraphicsBeginImageContext(rect.size);
+	[selectedImage drawInRect:rect];
+	recipe.thumbnailImage = UIGraphicsGetImageFromCurrentImageContext();
+	UIGraphicsEndImageContext();
+	
+    [self dismissModalViewControllerAnimated:YES];
+}
+
+*/
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+    [self dismissModalViewControllerAnimated:YES];
+}
+
+
+- (void)updatePhotoButton {
+	/*
+	 How to present the photo button depends on the editing state and whether the recipe has a thumbnail image.
+	 * If the recipe has a thumbnail, set the button's highlighted state to the same as the editing state (it's highlighted if editing).
+	 * If the recipe doesn't have a thumbnail, then: if editing, enable the button and show an image that says "Choose Photo" or similar; if not editing then disable the button and show nothing.  
+	 */
+	BOOL editing = self.editing;
+	
+	/*if (recipe.thumbnailImage != nil) {
+		photoButton.highlighted = editing;
+	} else {*/
+		photoButton.enabled = editing;
+		
+		if (editing) {
+			[photoButton setImage:[UIImage imageNamed:@"defaultIcon.png"] forState:UIControlStateNormal];
+		} else {
+			[photoButton setImage:nil forState:UIControlStateNormal];
+		}
+	//}
+}
+
+
+
+
 
 #pragma mark -
 #pragma mark dealloc

@@ -32,7 +32,28 @@
 
 	}
 	else {
+		UIAlertView *message;
+		
+		if(([user length]== 0) || ([pass length]==0)){
+			message = [[UIAlertView alloc] initWithTitle:@"Authentification failed"  
+												 message:@"The are missing fields.Please try again."  
+												delegate:nil  
+									   cancelButtonTitle:@"OK"  
+									   otherButtonTitles:nil];
+			[message show];  
+			
+		}
+		else{
+		message = [[UIAlertView alloc] initWithTitle:@"Authentification failed"  
+														  message:@"The username and/or the password are not correct.Please try again."  
+														 delegate:nil  
+												cancelButtonTitle:@"OK"  
+												otherButtonTitles:nil];
+		[message show];  
+		}
 		NSLog(@"User no authenticated");
+		[message release]; 
+
 	}
 }
 
