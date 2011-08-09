@@ -18,10 +18,13 @@
     //Dismiss the keyboard
     [url resignFirstResponder];
     
-    //Crete the string to store the url
-    
+	UIAlertView *message;
+	
 	if ([[url text] length]>1){
+		//Crete the string to store the url
 		NSString *urlSakai = [url text];
+		
+		//Load the class to check if the URL is valid
 		Authorization* auth =[[Authorization alloc] init]; 
 		if([auth checkURL:urlSakai]){
 			//Store the data
@@ -33,14 +36,28 @@
 			[mainViewController showLogin];
 		}
 		else{
+			message = [[UIAlertView alloc] initWithTitle:@"Failed URL"  
+												 message:@"The URL is not valid.Please try again."  
+												delegate:nil  
+									   cancelButtonTitle:@"OK"  
+									   otherButtonTitles:nil];
+			[message show];  
+			
 			NSLog(@"[URL VIEW CONTROLLER] The URL is not valid.");
 		}
 	}
 	else {
+		message = [[UIAlertView alloc] initWithTitle:@"Failed URL"  
+											 message:@"You should introiduce a valid URL"  
+											delegate:nil  
+								   cancelButtonTitle:@"OK"  
+								   otherButtonTitles:nil];
+		[message show];  
+		
 		NSLog(@"[URL VIEW CONTROLLER] There is no URL.");
 	}
 
-	
+	[message release];
 
 }
 

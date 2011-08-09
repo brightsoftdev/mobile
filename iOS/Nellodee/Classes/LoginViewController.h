@@ -24,7 +24,6 @@
 
 - (IBAction) attemptLogin; // action to be performed when login button is touched
 
-
 @property (nonatomic, retain) MainViewController *mainViewController;
 @property (nonatomic, retain) UITextField *username;
 @property (nonatomic, retain) UITextField *password;

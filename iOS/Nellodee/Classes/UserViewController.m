@@ -15,6 +15,12 @@
 
 @synthesize options,profileNavController;
 
+#define MESSAGES 0
+#define PROFILE 1
+#define LIB 2
+#define MEMBER 3
+#define CONTACTS 4
+
 + (NSArray *) defaultOptions{
     return [NSArray arrayWithObjects:@"My messages", @"My profile", @"My library", @"My membership", @"My contacts",nil];
 }
@@ -196,22 +202,27 @@
 
 #pragma mark - Table view delegate
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if([indexPath row] == 0){
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+	
+	// When a row is selected, create the detail view controller and set its detail item to the item associated with the selected row.
+    if([indexPath row] == MESSAGES){
     
-    /*
-     When a row is selected, create the detail view controller and set its detail item to the item associated with the selected row.
-     */
         
         
-    ProfileViewController *profileViewController = [[ProfileViewController alloc] initWithStyle:UITableViewStyleGrouped];
     
-    // Push the detail view controller.
-    [[self navigationController] pushViewController:profileViewController animated:YES];
-    [profileViewController release];
-
     }
+	else if([indexPath row] == PROFILE){
+		ProfileViewController *profileViewController = [[ProfileViewController alloc] initWithStyle:UITableViewStyleGrouped];
+		
+		// Push the detail view controller.
+		[[self navigationController] pushViewController:profileViewController animated:YES];
+		[profileViewController release];
+		
+	}
+	else if([indexPath row] == LIB){
+	}
+	else if([indexPath row] == MEMBER){
+	}
     else{
         
         /*

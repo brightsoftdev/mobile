@@ -85,9 +85,18 @@
         prefNameTextField.text = [basic prefName];
 		
 		NellodeeApp *sharedNell = [NellodeeApp sharedNellodeeData];
-		NSString *imagePath = [[sharedNell sakaiURL] stringByAppendingString:[basic picturePath]];
-		NSLog(@"[BASIC PROFILE] Image Path: %@",imagePath);
-
+		NSString *imagePath;
+		if([basic picturePath] != nil){
+			imagePath = [[sharedNell sakaiURL] stringByAppendingString:[basic picturePath]];
+			NSLog(@"[BASIC PROFILE] Image Path: %@",imagePath);
+		}
+		else {
+			imagePath = @"defaultIcon.png";
+			NSLog(@"[BASIC PROFILE] Image Path: %@",imagePath);
+		}
+		[imagePath release];
+		[sharedNell release];
+		
 		if([basic picturePath] != nil){
 			NSError *error=nil;			
 			NSData* imageData = [[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:imagePath] options:0 error:&error];
@@ -98,7 +107,7 @@
 			[imageData release];
 		}
 		
-        [self.tableView reloadData]; 
+        [self.tableView reloadData];
         
     }
 }
@@ -263,7 +272,7 @@
             break;
             
         case ROL:
-            nextViewController = [[RolTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
+            //nextViewController = [[RolTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
             break;
 			
         case TAGS:
