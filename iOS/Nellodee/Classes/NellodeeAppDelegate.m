@@ -7,19 +7,25 @@
 //
 
 #import "NellodeeAppDelegate.h"
-
+#import "DataController.h"
+#import "Category.h"
 
 @implementation NellodeeAppDelegate
 
-@synthesize window;
+@synthesize window,dataController;
 
 #pragma mark -
 #pragma mark Application lifecycle
 
 - (void)applicationDidFinishLaunching:(UIApplication *)application {    
     
-	NSLog(@"Nellodee did finish");
-    // Override point for customization after app launch
+	NSLog(@"[NELLODEE APP DELEGATE] Nellodee did finish");
+    
+	// Create the data controller.
+    DataController *controller = [[DataController alloc] init];
+    self.dataController = controller;
+    [controller release];
+
 	[window makeKeyAndVisible];
 }
 

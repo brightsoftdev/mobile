@@ -100,6 +100,21 @@
     [basicInfo setRol:[properties objectForKey:@"role"]];
     [basicInfo setDepartament:[properties objectForKey:@"department"]];
     [basicInfo setCollege:[properties objectForKey:@"college"]];
+	NSString *tagsString = [properties objectForKey:@"sakai:tags"];
+	NSString *tags;
+	NSArray *tagsArray = [tagsString componentsSeparatedByString:@","];
+	NSMutableArray *categories = [[NSMutableArray alloc] init]; 
+	for(NSString *tag in tagsArray){
+		if([tag hasPrefix:@"directory/"]){
+			[categories addObject:tag];
+		}
+		else{
+			tags = tag;
+			
+		}
+	}
+	
+
     [basicInfo setTags:[properties objectForKey:@"sakai:tags"]];
     
     [[NellodeeApp sharedNellodeeData] setBasicInfo:basicInfo];

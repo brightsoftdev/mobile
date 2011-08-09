@@ -10,7 +10,7 @@
 
 
 @interface Categories : NSObject {
-    
+
 }
 
 @end
