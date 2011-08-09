@@ -1,7 +1,5 @@
 package com.immutable.nellodee.user;
 
-import java.util.ArrayList;
-
 public class BasicProfile {
 	private String username;
 	private String firstName;

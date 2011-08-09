@@ -5715,7 +5715,7 @@
     s = 0;
 }</string>
 		</dict>
-		<real>334408019.40665603</real>
+		<real>334439048.05441701</real>
 		<string>{1798, 2575}</string>
 		<string>{2767, 0}</string>
 		<string>-tableView:didSelectRowAtIndexPath:</string>
@@ -46807,7 +46807,7 @@
 				</dict>
 			</array>
 		</dict>
-		<real>334408019.405922</real>
+		<real>334439048.05358702</real>
 		<string>{1798, 2575}</string>
 		<string>{2767, 0}</string>
 		<dict>
