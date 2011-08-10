@@ -101,12 +101,14 @@ public class MeService {
 			basic.setUsername(userObject.getString("userid"));
 			
 			JSONObject propertiesObject = userObject.getJSONObject("properties");
+			System.out.println("JSON:" + propertiesObject.toString());
+
 			basic.setFirstName(propertiesObject.getString("firstName"));
 			basic.setLastName(propertiesObject.getString("lastName"));
 			basic.setPrefName(propertiesObject.getString("preferredName"));
 			basic.setEmail(propertiesObject.getString("email"));
 			basic.setDepartment(propertiesObject.getString("department"));
-			basic.setCollege(prope rtiesObject.getString("college"));
+			basic.setCollege(propertiesObject.getString("college"));
 			basic.setTags(propertiesObject.getString("tags"));
 			
 			return basic;
