@@ -7,6 +7,8 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.Date;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.client.CookieStore;
@@ -99,17 +101,36 @@ public class MeService {
 			jObject = new JSONObject(jString); 
 			JSONObject userObject = jObject.getJSONObject("user");
 			basic.setUsername(userObject.getString("userid"));
+			String userStoragePrefix = userObject.has("userStoragePrefix") ? userObject.getString("userStoragePrefix") : "";
+
 			
 			JSONObject propertiesObject = userObject.getJSONObject("properties");
 			System.out.println("JSON:" + propertiesObject.toString());
 
-			basic.setFirstName(propertiesObject.getString("firstName"));
-			basic.setLastName(propertiesObject.getString("lastName"));
-			basic.setPrefName(propertiesObject.getString("preferredName"));
-			basic.setEmail(propertiesObject.getString("email"));
-			basic.setDepartment(propertiesObject.getString("department"));
-			basic.setCollege(propertiesObject.getString("college"));
-			basic.setTags(propertiesObject.getString("tags"));
+			
+			basic.setFirstName(propertiesObject.has("firstName") ? propertiesObject.getString("firstName") : "");
+			basic.setLastName(propertiesObject.has("lastName") ? propertiesObject.getString("lastName") : "");
+			basic.setPrefName(propertiesObject.has("preferredName") ? propertiesObject.getString("preferredName") : "");
+			basic.setEmail(propertiesObject.has("email") ? propertiesObject.getString("email") : "");
+			basic.setRol(propertiesObject.has("role") ? propertiesObject.getString("role").substring(0,1).toUpperCase() + propertiesObject.getString("role").substring(1).replace('_', ' ') : "");			
+			String pic = propertiesObject.has("picture") ? propertiesObject.getString("picture") : "";
+
+			if (pic.length()>1 && userStoragePrefix.length()>1){
+				Pattern p = Pattern.compile("name.{3}[a-zA-Z_0-9]+.[a-zA-Z]{3}");
+		    	Matcher m = p.matcher(pic);
+		    	String picture="";
+				if (m.find())
+					picture = m.group(0);
+				picture = picture.substring(7);
+				Log.i("[ME SERVICE]", userStoragePrefix);
+				Log.i("[ME SERVICE]", picture);
+				
+				String picPath = userStoragePrefix + "public/profile/" + picture;
+				basic.setPicPath(picPath);
+			}
+		    basic.setDepartment(propertiesObject.has("department") ? propertiesObject.getString("department") : "");
+			basic.setCollege(propertiesObject.has("college") ? propertiesObject.getString("college") : "");
+			basic.setTags(propertiesObject.has("tags") ? propertiesObject.getString("tags") : "");
 			
 			return basic;
 		
