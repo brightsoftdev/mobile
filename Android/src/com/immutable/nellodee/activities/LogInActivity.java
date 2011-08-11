@@ -66,8 +66,8 @@ public class LogInActivity extends Activity {
         			CookieStore store = auth.formBasedAuth();
             		if(store!=null){
             			Log.w("CREDENTIALS: ", "Authentication worked");
-            			loadBasicProfile();
             			saveCookies(store);
+            			loadBasicProfile();
             		}
             		else{
             			Log.w("CREDENTIALS: ", "Authentication has failed");
@@ -98,10 +98,9 @@ public class LogInActivity extends Activity {
 		alertDialog.show();
 
 	}
-
 	
 	private void loadBasicProfile(){
-		Intent intent = new Intent(this,BasicProfileActivity.class);
+		Intent intent = new Intent(this,TabsActivity.class);
 		startActivity(intent);
 	}
 	
