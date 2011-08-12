@@ -15,11 +15,15 @@ public final class R {
         public static final int icon=0x7f020001;
     }
     public static final class id {
+        public static final int button1=0x7f06001b;
+        public static final int button2=0x7f06001c;
+        public static final int button3=0x7f06001d;
+        public static final int button4=0x7f06001e;
         public static final int college=0x7f060015;
-        public static final int createAdd=0x7f06001c;
+        public static final int createAdd=0x7f060020;
         public static final int datas=0x7f060001;
         public static final int email=0x7f060011;
-        public static final int explore=0x7f06001d;
+        public static final int explore=0x7f060021;
         public static final int firstName=0x7f06000a;
         public static final int lastName=0x7f06000c;
         public static final int login_button=0x7f060007;
@@ -44,7 +48,7 @@ public final class R {
         public static final int url_button=0x7f06001a;
         public static final int username=0x7f060003;
         public static final int welcome_text=0x7f060000;
-        public static final int you=0x7f06001b;
+        public static final int you=0x7f06001f;
     }
     public static final class layout {
         public static final int authorization=0x7f030000;
