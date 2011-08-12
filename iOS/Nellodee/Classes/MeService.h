@@ -12,12 +12,14 @@
 @class SBJsonStreamParserAdapter;
 @class BasicInfo;
 @class About;
+@class Categories;
 
 @interface MeService : NSObject {
 	NSMutableData *responseData;
     
     BasicInfo *basicInfo;
     About *about;
+	Categories *categories;
 
 }
 - (BOOL) meService;
@@ -25,5 +27,6 @@
 @property (nonatomic, retain) NSMutableData *responseData;
 @property (nonatomic, retain) BasicInfo * basicInfo;
 @property (nonatomic, retain) About *about;
+@property (nonatomic, retain) Categories *categories;
 
 @end

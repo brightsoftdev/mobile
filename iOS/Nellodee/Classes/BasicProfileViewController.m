@@ -94,20 +94,19 @@
 			imagePath = @"defaultIcon.png";
 			NSLog(@"[BASIC PROFILE] Image Path: %@",imagePath);
 		}
-		[imagePath release];
 		[sharedNell release];
 		
 		if([basic picturePath] != nil){
 			NSError *error=nil;			
-			NSData* imageData = [[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:imagePath] options:0 error:&error];
-			UIImage* image = [[UIImage alloc] initWithData:imageData];
+			NSData* imageData = [[[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:imagePath] options:0 error:&error] autorelease];
+			UIImage* image = [[[UIImage alloc] initWithData:imageData] autorelease];
 			[photoButton setImage:image forState:UIControlStateNormal];
 			//[self updatePhotoButton];
-			[image release];
-			[imageData release];
 		}
-		
+		[imagePath release];
+
         [self.tableView reloadData];
+
         
     }
 }

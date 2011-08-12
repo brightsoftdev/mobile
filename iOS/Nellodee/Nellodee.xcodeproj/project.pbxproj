@@ -52,9 +52,12 @@
 		60972C1813F04D89006040D5 /* defaultIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 60972C1713F04D89006040D5 /* defaultIcon.png */; };
 		60ACE0DA13B50E6600764BEF /* Authorization.m in Sources */ = {isa = PBXBuildFile; fileRef = 60ACE0D913B50E6600764BEF /* Authorization.m */; };
 		60D15E5B13F183E8001DF7D3 /* Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D15E5A13F183E8001DF7D3 /* Category.m */; };
-		60D15E5E13F18466001DF7D3 /* DataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D15E5D13F18466001DF7D3 /* DataController.m */; };
+		60D15E5E13F18466001DF7D3 /* CategoriesDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D15E5D13F18466001DF7D3 /* CategoriesDataController.m */; };
+		60DD477913F3AB2B000E4E7F /* Rol.m in Sources */ = {isa = PBXBuildFile; fileRef = 60DD477813F3AB2B000E4E7F /* Rol.m */; };
 		60E196B013E07D15001C0471 /* BasicProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E196AE13E07D15001C0471 /* BasicProfileViewController.m */; };
 		60E196B113E07D15001C0471 /* BasicProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60E196AF13E07D15001C0471 /* BasicProfileViewController.xib */; };
+		60F1E77713F4655900C55D90 /* CategoriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F1E77513F4655900C55D90 /* CategoriesViewController.m */; };
+		60F1E77813F4655900C55D90 /* CategoriesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60F1E77613F4655900C55D90 /* CategoriesViewController.xib */; };
 		60F65C2113D2DF6A00B4EAAD /* URLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F65C1F13D2DF6A00B4EAAD /* URLViewController.m */; };
 		60F65C2213D2DF6A00B4EAAD /* URLViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60F65C2013D2DF6A00B4EAAD /* URLViewController.xib */; };
 		B7F6524210FFD98E0008748C /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7F6524010FFD98E0008748C /* MainViewController.xib */; };
@@ -139,11 +142,16 @@
 		60ACE0D913B50E6600764BEF /* Authorization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Authorization.m; sourceTree = "<group>"; };
 		60D15E5913F183E8001DF7D3 /* Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Category.h; sourceTree = "<group>"; };
 		60D15E5A13F183E8001DF7D3 /* Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Category.m; sourceTree = "<group>"; };
-		60D15E5C13F18466001DF7D3 /* DataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataController.h; sourceTree = "<group>"; };
-		60D15E5D13F18466001DF7D3 /* DataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataController.m; sourceTree = "<group>"; };
+		60D15E5C13F18466001DF7D3 /* CategoriesDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoriesDataController.h; sourceTree = "<group>"; };
+		60D15E5D13F18466001DF7D3 /* CategoriesDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoriesDataController.m; sourceTree = "<group>"; };
+		60DD477713F3AB2B000E4E7F /* Rol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rol.h; sourceTree = "<group>"; };
+		60DD477813F3AB2B000E4E7F /* Rol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Rol.m; sourceTree = "<group>"; };
 		60E196AD13E07D15001C0471 /* BasicProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicProfileViewController.h; sourceTree = "<group>"; };
 		60E196AE13E07D15001C0471 /* BasicProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicProfileViewController.m; sourceTree = "<group>"; };
 		60E196AF13E07D15001C0471 /* BasicProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BasicProfileViewController.xib; path = Classes/BasicProfileViewController.xib; sourceTree = "<group>"; };
+		60F1E77413F4655900C55D90 /* CategoriesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoriesViewController.h; sourceTree = "<group>"; };
+		60F1E77513F4655900C55D90 /* CategoriesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoriesViewController.m; sourceTree = "<group>"; };
+		60F1E77613F4655900C55D90 /* CategoriesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CategoriesViewController.xib; path = Classes/CategoriesViewController.xib; sourceTree = "<group>"; };
 		60F65C1E13D2DF6A00B4EAAD /* URLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URLViewController.h; sourceTree = "<group>"; };
 		60F65C1F13D2DF6A00B4EAAD /* URLViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URLViewController.m; sourceTree = "<group>"; };
 		60F65C2013D2DF6A00B4EAAD /* URLViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = URLViewController.xib; path = Classes/URLViewController.xib; sourceTree = "<group>"; };
@@ -212,18 +220,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				605FFB4C13E9491600E2ADAB /* DetailHeaderView.xib */,
-				605FFB5A13EB189D00E2ADAB /* AboutViewController.xib */,
-				60214E1213E86927005CD90C /* TagsViewController.xib */,
-				6071B77B13D3055500E32321 /* ViewTwoController.xib */,
-				60E196AF13E07D15001C0471 /* BasicProfileViewController.xib */,
-				60F65C2013D2DF6A00B4EAAD /* URLViewController.xib */,
-				601CC3DB13DC1C5100777B89 /* UserViewController.xib */,
-				6071B77313D304F700E32321 /* LoginViewController.xib */,
-				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
-				6071B77613D304F700E32321 /* MainViewController.xib */,
-				B7F6524010FFD98E0008748C /* MainViewController.xib */,
-				6085710313DF221200E884D1 /* ProfileViewController.xib */,
+				60F1E77A13F4657000C55D90 /* Layout */,
 				8D1107310486CEB800E47090 /* Nellodee-Info.plist */,
 			);
 			name = Resources;
@@ -315,6 +312,8 @@
 				601CC3DA13DC1C5100777B89 /* UserViewController.m */,
 				6085710113DF221200E884D1 /* ProfileViewController.h */,
 				6085710213DF221200E884D1 /* ProfileViewController.m */,
+				60F1E77413F4655900C55D90 /* CategoriesViewController.h */,
+				60F1E77513F4655900C55D90 /* CategoriesViewController.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -351,10 +350,32 @@
 			children = (
 				60D15E5913F183E8001DF7D3 /* Category.h */,
 				60D15E5A13F183E8001DF7D3 /* Category.m */,
-				60D15E5C13F18466001DF7D3 /* DataController.h */,
-				60D15E5D13F18466001DF7D3 /* DataController.m */,
+				60D15E5C13F18466001DF7D3 /* CategoriesDataController.h */,
+				60D15E5D13F18466001DF7D3 /* CategoriesDataController.m */,
+				60DD477713F3AB2B000E4E7F /* Rol.h */,
+				60DD477813F3AB2B000E4E7F /* Rol.m */,
 			);
 			name = Data;
+			sourceTree = "<group>";
+		};
+		60F1E77A13F4657000C55D90 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				605FFB4C13E9491600E2ADAB /* DetailHeaderView.xib */,
+				605FFB5A13EB189D00E2ADAB /* AboutViewController.xib */,
+				60214E1213E86927005CD90C /* TagsViewController.xib */,
+				6071B77B13D3055500E32321 /* ViewTwoController.xib */,
+				60E196AF13E07D15001C0471 /* BasicProfileViewController.xib */,
+				60F65C2013D2DF6A00B4EAAD /* URLViewController.xib */,
+				601CC3DB13DC1C5100777B89 /* UserViewController.xib */,
+				6071B77313D304F700E32321 /* LoginViewController.xib */,
+				60F1E77613F4655900C55D90 /* CategoriesViewController.xib */,
+				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
+				6071B77613D304F700E32321 /* MainViewController.xib */,
+				B7F6524010FFD98E0008748C /* MainViewController.xib */,
+				6085710313DF221200E884D1 /* ProfileViewController.xib */,
+			);
+			name = Layout;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -419,6 +440,7 @@
 				605FFB4D13E9491600E2ADAB /* DetailHeaderView.xib in Resources */,
 				605FFB5C13EB189E00E2ADAB /* AboutViewController.xib in Resources */,
 				60972C1813F04D89006040D5 /* defaultIcon.png in Resources */,
+				60F1E77813F4655900C55D90 /* CategoriesViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -462,7 +484,9 @@
 				60214E1813E871F4005CD90C /* RolTableViewController.m in Sources */,
 				605FFB5B13EB189E00E2ADAB /* AboutViewController.m in Sources */,
 				60D15E5B13F183E8001DF7D3 /* Category.m in Sources */,
-				60D15E5E13F18466001DF7D3 /* DataController.m in Sources */,
+				60D15E5E13F18466001DF7D3 /* CategoriesDataController.m in Sources */,
+				60DD477913F3AB2B000E4E7F /* Rol.m in Sources */,
+				60F1E77713F4655900C55D90 /* CategoriesViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

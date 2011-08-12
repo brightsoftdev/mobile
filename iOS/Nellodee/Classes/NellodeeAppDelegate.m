@@ -7,12 +7,12 @@
 //
 
 #import "NellodeeAppDelegate.h"
-#import "DataController.h"
+#import "CategoriesDataController.h"
 #import "Category.h"
 
 @implementation NellodeeAppDelegate
 
-@synthesize window,dataController;
+@synthesize window,categoriesDC;
 
 #pragma mark -
 #pragma mark Application lifecycle
@@ -21,10 +21,7 @@
     
 	NSLog(@"[NELLODEE APP DELEGATE] Nellodee did finish");
     
-	// Create the data controller.
-    DataController *controller = [[DataController alloc] init];
-    self.dataController = controller;
-    [controller release];
+
 
 	[window makeKeyAndVisible];
 }

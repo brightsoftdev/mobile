@@ -10,10 +10,11 @@
 
 
 @implementation Category
-@synthesize title, subcategories;
+@synthesize title, tag, subcategories;
 
 - (void)dealloc {
 	[title release];
+	[tag release];
 	[subcategories release];
 	[super dealloc];
 }
