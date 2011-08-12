@@ -10,7 +10,7 @@
 
 @class About;
 
-@interface AboutViewController : UITableViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate>{
+@interface AboutViewController : UITableViewController <UINavigationControllerDelegate, UITextFieldDelegate>{
     @private
         About * about;
 }

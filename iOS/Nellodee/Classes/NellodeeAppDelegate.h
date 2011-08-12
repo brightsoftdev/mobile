@@ -5,14 +5,14 @@
 //  Created by May Giménez on 6/8/11.
 //
 //
-@class DataController;
+@class CategoriesDataController;
 
 @interface NellodeeAppDelegate : NSObject <UIApplicationDelegate> {
 
     NSManagedObjectModel *managedObjectModel;
     NSManagedObjectContext *managedObjectContext;	    
     NSPersistentStoreCoordinator *persistentStoreCoordinator;
-	DataController *dataController;
+	CategoriesDataController *categoriesDC;
 
 
 	IBOutlet UIViewController *mainViewController;
@@ -22,7 +22,7 @@
 @property (nonatomic, retain, readonly) NSManagedObjectModel *managedObjectModel;
 @property (nonatomic, retain, readonly) NSManagedObjectContext *managedObjectContext;
 @property (nonatomic, retain, readonly) NSPersistentStoreCoordinator *persistentStoreCoordinator;
-@property (nonatomic, retain) DataController *dataController;
+@property (nonatomic, retain) CategoriesDataController *categoriesDC;
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 

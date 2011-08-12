@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 @class BasicInfo;
 @class About;
+@class Categories;
 
 @interface NellodeeApp : NSObject {
 	NSString *sakaiURL;
@@ -16,6 +17,7 @@
     
     BasicInfo *basicInfo;
     About *aboutMe;
+	Categories *categories;
 }
 
 //Nellodee config properties
@@ -27,6 +29,7 @@
 //Data downloaded
 @property (nonatomic, retain) BasicInfo *basicInfo;
 @property (nonatomic, retain) About *aboutMe;
+@property (nonatomic, retain) Categories *categories;
 
 + (id)sharedNellodeeData;
 

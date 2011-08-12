@@ -11,10 +11,12 @@
 
 @interface Category : NSObject {
 	NSString *title;
-	NSMutableArray *subcategories;
+	NSString *tag;
+	NSDictionary *subcategories;
 }
 @property (nonatomic,retain) NSString *title;
-@property (nonatomic,retain) NSMutableArray *subcategories;
+@property (nonatomic,retain) NSString *tag;
+@property (nonatomic,retain) NSDictionary *subcategories;
 
 @end
 

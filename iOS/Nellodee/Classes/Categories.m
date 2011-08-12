@@ -11,4 +11,7 @@
 
 @implementation Categories
 
+@synthesize categories;
+
 @end
+

@@ -10,7 +10,9 @@
 
 
 @interface Categories : NSObject {
-
+	NSMutableArray *categories;
 }
+
+@property (nonatomic,retain) NSMutableArray *categories;
 
 @end
