@@ -112,7 +112,7 @@ public class MeService {
 			basic.setLastName(propertiesObject.has("lastName") ? propertiesObject.getString("lastName") : "");
 			basic.setPrefName(propertiesObject.has("preferredName") ? propertiesObject.getString("preferredName") : "");
 			basic.setEmail(propertiesObject.has("email") ? propertiesObject.getString("email") : "");
-			basic.setRol(propertiesObject.has("role") ? propertiesObject.getString("role").substring(0,1).toUpperCase() + propertiesObject.getString("role").substring(1).replace('_', ' ') : "");			
+			basic.setRol(propertiesObject.has("role") ? propertiesObject.getString("role") : "");			
 			String pic = propertiesObject.has("picture") ? propertiesObject.getString("picture") : "";
 
 			if (pic.length()>1 && userStoragePrefix.length()>1){
@@ -130,7 +130,7 @@ public class MeService {
 			}
 		    basic.setDepartment(propertiesObject.has("department") ? propertiesObject.getString("department") : "");
 			basic.setCollege(propertiesObject.has("college") ? propertiesObject.getString("college") : "");
-			basic.setTags(propertiesObject.has("tags") ? propertiesObject.getString("tags") : "");
+			basic.setTags(propertiesObject.has("sakai:tags") ? propertiesObject.getString("sakai:tags") : "");
 			
 			return basic;
 		

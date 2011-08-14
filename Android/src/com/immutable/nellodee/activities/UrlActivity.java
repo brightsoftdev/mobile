@@ -15,9 +15,10 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.webkit.URLUtil;
 import android.widget.Button;
 import android.widget.EditText;
-
+	
 //This activity controls the configuration of the url where sakai is hosted.
 public class UrlActivity extends Activity {
 	private Button nextButton;
@@ -77,10 +78,7 @@ public class UrlActivity extends Activity {
 	
 	private Boolean checkUrl(String url) {
 		try {
-			HttpURLConnection.setFollowRedirects(false);
-			HttpURLConnection con = (HttpURLConnection) new URL(url).openConnection();
-			con.setRequestMethod("HEAD");
-			return (con.getResponseCode() == HttpURLConnection.HTTP_OK);
+			return URLUtil.isValidUrl(url);
 		} catch (Exception e) {
 			e.printStackTrace();
 			return false;

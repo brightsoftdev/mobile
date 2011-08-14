@@ -26,27 +26,26 @@ public class TabsActivity extends TabActivity {
 	    TabHost tabHost = getTabHost(); 
 	    TabHost.TabSpec spec;  
 	    Intent intent;  
-
+	    
 	    // Create an Intent to launch an Activity for the tab (to be reused)
-	    intent = new Intent().setClass(this, BasicProfileActivity.class);
-
+	    intent = new Intent().setClass(this, YouGroupActivity.class);
 	    // Initialize a TabSpec for each tab and add it to the TabHost
-	    spec = tabHost.newTabSpec("you")	    			  
-	    			  .setIndicator(getString(R.string.you))
+	    spec = tabHost.newTabSpec("you")
+	    			  .setIndicator(getString(R.string.you), res.getDrawable(R.drawable.user))
 	                  .setContent(intent);
 	    tabHost.addTab(spec);
 
 	    // Do the same for the other tabs
 	    intent = new Intent().setClass(this, BasicProfileActivity.class);
 	    spec = tabHost.newTabSpec("createAdd")
-	    			  .setIndicator(getString(R.string.createAdd))
+	    			  .setIndicator(getString(R.string.createAdd), res.getDrawable(R.drawable.pencil))
 	                  .setContent(intent);
 	    tabHost.addTab(spec);
 
 	    intent = new Intent().setClass(this, BasicProfileActivity.class);
 	    spec = tabHost.newTabSpec("explore")
-	    		.setIndicator(getString(R.string.explore))
-	    		.setContent(intent);
+	    		.setIndicator(getString(R.string.explore),res.getDrawable(R.drawable.magnify))
+	    		.setContent(intent);	
 	    tabHost.addTab(spec);
 
 	    tabHost.setCurrentTab(0);

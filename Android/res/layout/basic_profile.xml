@@ -1,66 +1,171 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-  xmlns:android="http://schemas.android.com/apk/res/android"
-  android:orientation="vertical"
-  android:layout_width="fill_parent"
-  android:layout_height="fill_parent">
+
+<ScrollView 
+android:id="@+id/ScrollView01"
+xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+>
+<RelativeLayout
+	android:id="@+id/BasicProfileRL"
+	
+	android:orientation="vertical"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	
 	<ImageView
-    android:id="@+id/profile_pic"
-    android:src="@drawable/default_icon"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
-    </ImageView>
+    	android:id="@+id/profile_pic"
+    	android:src="@drawable/default_icon"
+    	android:layout_width="wrap_content"
+   		android:layout_height="wrap_content"
+   	 	android:layout_below="@id/BasicProfileRL"
+   	 	android:layout_marginTop="15dp"/>
+
     <TextView 
-		android:id="@+id/txt_firstName" 
+		android:id="@+id/firstNameTV" 
 		android:layout_height="wrap_content" 
 		android:layout_width="fill_parent" 
-		android:text="@+id/firstName">
-	</TextView>    
+		android:text="@string/firstName"
+		android:layout_toRightOf="@id/profile_pic"
+		android:layout_marginTop="15dp"
+		android:layout_marginRight="15dp"/>
+    <EditText 
+		android:id="@+id/firstNameET" 
+		android:layout_height="wrap_content" 
+		android:layout_width="fill_parent" 
+		android:layout_below="@id/firstNameTV"
+		android:layout_toRightOf="@id/profile_pic"
+		android:layout_marginRight="15dp"
+		android:singleLine="true"/>
+		
 	<TextView 
-		android:id="@+id/txt_lastName" 
+		android:id="@+id/lastNameTV" 
 		android:layout_height="wrap_content" 
 		android:layout_width="fill_parent" 
-		android:text="@+id/lastName">
-	</TextView>    
+		android:text="@string/lastName"
+		android:layout_toRightOf="@id/profile_pic"
+		android:layout_below="@id/firstNameET"
+		android:layout_marginRight="15dp"/>
+    <EditText 
+		android:id="@+id/lastNameET" 
+		android:layout_height="wrap_content" 
+		android:layout_width="fill_parent" 
+		android:layout_below="@id/lastNameTV"
+		android:layout_toRightOf="@id/profile_pic"
+		android:layout_marginRight="15dp"
+		android:singleLine="true"/>
+		
 	<TextView 
-		android:id="@+id/txt_prefName" 
+		android:id="@+id/prefNameTV" 
 		android:layout_height="wrap_content" 
 		android:layout_width="fill_parent" 
-		android:text="@+id/prefName">
-	</TextView> 
+		android:text="@string/prefName"
+		android:layout_below="@id/lastNameET"
+		android:layout_marginRight="15dp"/>
+    <EditText 
+		android:id="@+id/prefNameET" 
+		android:layout_height="wrap_content" 
+		android:layout_width="fill_parent" 
+		android:layout_below="@id/prefNameTV"
+		android:layout_marginRight="15dp"
+		android:singleLine="true"/>
+
+
+ 	<TextView 
+		android:id="@+id/usernameTV" 
+		android:layout_height="wrap_content" 
+		android:layout_width="fill_parent" 
+		android:text="@string/userName"
+		android:layout_marginTop="25dp"
+		android:layout_below="@id/prefNameET"
+		android:layout_marginRight="15dp"/>
+    <EditText 
+		android:id="@+id/usernameET" 
+		android:layout_height="wrap_content" 
+		android:layout_width="fill_parent" 
+		android:layout_below="@id/usernameTV"
+		android:layout_marginRight="15dp"
+		android:singleLine="true"/>
+		
 	<TextView 
-		android:id="@+id/txt_userName" 
+		android:id="@+id/emailTV" 
 		android:layout_height="wrap_content" 
 		android:layout_width="fill_parent" 
-		android:text="@+id/username">
-	</TextView>    
-		<TextView 
-		android:id="@+id/txt_email" 
+		android:text="@string/email"
+		android:layout_below="@id/usernameET"
+		android:layout_marginRight="15dp"/>
+    <EditText 
+		android:id="@+id/emailET" 
 		android:layout_height="wrap_content" 
 		android:layout_width="fill_parent" 
-		android:text="@+id/email">
-	</TextView>
+		android:layout_below="@id/emailTV"
+		android:layout_marginRight="15dp"
+		android:singleLine="true"/>
+
+
 	<TextView 
-		android:id="@+id/txt_rol" 
+		android:id="@+id/rolTV" 
 		android:layout_height="wrap_content" 
-		android:layout_width="fill_parent" >
-	</TextView>   
+		android:layout_width="fill_parent" 
+		android:text="@string/rol"
+		android:layout_marginTop="25dp"
+		android:layout_below="@id/emailET"
+		android:layout_marginRight="15dp"/>
+	<Spinner 
+		android:id="@+id/rolSP"
+		android:layout_height="wrap_content"  
+		android:layout_width="fill_parent"
+		android:layout_below="@id/rolTV" 
+		android:layout_marginRight="15dp"
+		android:prompt="@string/rol_prompt"/>	
+		
 	<TextView 
-		android:id="@+id/txt_department" 
+		android:id="@+id/departmentTV" 
 		android:layout_height="wrap_content" 
 		android:layout_width="fill_parent" 
-		android:text="@string/username">
-	</TextView>        
-		<TextView 
-		android:id="@+id/txt_college" 
+		android:text="@string/department"
+		android:layout_below="@id/rolSP"
+		android:layout_marginRight="15dp"/>
+    <EditText 
+		android:id="@+id/departmentET" 
 		android:layout_height="wrap_content" 
 		android:layout_width="fill_parent" 
-		android:text="@+id/college">
-	</TextView>
+		android:layout_below="@id/departmentTV"
+		android:layout_marginRight="15dp"
+		android:singleLine="true"/>		
+
 	<TextView 
-		android:id="@+id/txt_tags" 
+		android:id="@+id/collegeTV" 
 		android:layout_height="wrap_content" 
 		android:layout_width="fill_parent" 
-		android:text="@+id/tags">
-	</TextView>           
-</LinearLayout>
+		android:text="@string/college"
+		android:layout_below="@id/departmentET"
+		android:layout_marginRight="15dp"/>
+    <EditText 
+		android:id="@+id/colllegeET" 
+		android:layout_height="wrap_content" 
+		android:layout_width="fill_parent" 
+		android:layout_below="@id/collegeTV"
+		android:layout_marginRight="15dp"
+		android:singleLine="true"/>		
+
+
+	<TextView 
+		android:id="@+id/tagsTV" 
+		android:layout_height="wrap_content" 
+		android:layout_width="fill_parent" 
+		android:text="@string/tags"
+		android:layout_below="@id/colllegeET"
+		android:layout_marginTop="25dp"
+		android:layout_marginRight="15dp"/>
+    <EditText 
+		android:id="@+id/tagsET" 
+		android:layout_height="wrap_content" 
+		android:layout_width="fill_parent" 
+		android:layout_below="@id/tagsTV"
+		android:layout_marginRight="15dp"
+		android:singleLine="false"/>		
+		
+    
+</RelativeLayout>
+</ScrollView>

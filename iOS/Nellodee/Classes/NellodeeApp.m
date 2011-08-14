@@ -25,6 +25,12 @@
         if(!sharedNell)
             sharedNell = [[super allocWithZone:NULL] init];
     }
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString *url = [defaults objectForKey:@"url"];
+    NSLog(@" URL: %@",url);
+    if(url){
+        sharedNell.sakaiURL = [[NSString alloc] initWithString:url];
+    }
     return sharedNell;
 }
 

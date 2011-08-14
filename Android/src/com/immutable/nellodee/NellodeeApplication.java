@@ -16,12 +16,13 @@ public class NellodeeApplication extends Application {
 	private CookieStore cookies;
 	private BasicProfile basic;
 	private AboutMe	about;
-	
+	private DataController data;
 	
 	public NellodeeApplication() {
 		this.cookies = new BasicCookieStore();
 		this.basic = new BasicProfile();
 		this.about = new AboutMe();
+		this.data = new DataController();
 	}
 
 	/*	GETTERS AND SETTERS */
@@ -46,7 +47,14 @@ public class NellodeeApplication extends Application {
 	public void setAbout(AboutMe about) {
 		this.about = about;
 	}
-	
+	public DataController getData() {
+		return data;
+	}
+
+	public void setData(DataController data) {
+		this.data = data;
+	}
+
 	/* MANAGE PREFERENCES */
 	public boolean isFirstTime(Context context) {
 		return context.getSharedPreferences(getPrefsName(),MODE_PRIVATE).getBoolean("first", true);

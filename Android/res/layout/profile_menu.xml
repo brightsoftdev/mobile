@@ -6,38 +6,32 @@
   android:layout_height="fill_parent"
   android:gravity="center">
     <Button 
-    	android:id="@+id/myMessagesButton" 
+    	android:id="@+id/basicInfoButton" 
     	android:layout_width="150sp" 
     	android:layout_height="wrap_content"
-    	android:text="@string/myMessages" >
+    	android:text="@string/basicInfo" >
     </Button>
     
     <Button 
-    	android:id="@+id/myProfileButton" 
+    	android:id="@+id/aboutMeButton" 
     	android:layout_width="150sp" 
     	android:layout_height="wrap_content"
-    	android:text="@string/myProfile" >
+    	android:text="@string/aboutMe" >
     </Button>
     
 	<Button 
-    	android:id="@+id/myLibraryButton" 
+    	android:id="@+id/categoriesButton" 
     	android:layout_width="150sp" 
     	android:layout_height="wrap_content"
-    	android:text="@string/myLibrary" >
+    	android:text="@string/categories" >
     </Button>
     
 	<Button 
-    	android:id="@+id/myMembershipButton" 
+    	android:id="@+id/publicationsButton" 
     	android:layout_width="150sp" 
     	android:layout_height="wrap_content"
-    	android:text="@string/myMembership" >
+    	android:text="@string/publications" >
     </Button>
   
-	<Button 
-    	android:id="@+id/myContactsButton" 
-    	android:layout_width="150sp" 
-    	android:layout_height="wrap_content"
-    	android:text="@string/myContacts" >
-    </Button>
 
 </LinearLayout>

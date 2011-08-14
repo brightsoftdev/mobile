@@ -4,19 +4,26 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.ArrayList;
 
 import org.apache.http.client.CookieStore;
 
 import com.immutable.nellodee.NellodeeApplication;
 import com.immutable.nellodee.R;
+import com.immutable.nellodee.Rols;
 import com.immutable.nellodee.user.BasicProfile;
 import com.immutable.nellodee.webservices.MeService;
 
 import android.app.Activity;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 public class BasicProfileActivity extends Activity {
@@ -43,32 +50,52 @@ public class BasicProfileActivity extends Activity {
     	BasicProfile basic = me.callService();
 
     	Log.i("BASIC PROFILE", url+"/"+basic.getPicPath());
-    	Drawable image = ImageOperations(url+"/"+basic.getPicPath());
-		ImageView imgView = new ImageView(this);
-		imgView = (ImageView)findViewById(R.id.profile_pic);
-		imgView.setImageDrawable(image);
+    	if(basic.getPicPath().length()<1){
+            ImageView image = (ImageView) findViewById(R.id.profile_pic);
+            Bitmap defaultIcon = BitmapFactory.decodeResource(getResources(), R.drawable.default_icon);
+            image.setImageBitmap(defaultIcon);
+    	}
+    	else{
+    		Drawable image = ImageOperations(url+"/"+basic.getPicPath());
+			ImageView imgView = new ImageView(this);
+			imgView = (ImageView)findViewById(R.id.profile_pic);
+			imgView.setImageDrawable(image);
+    	}   	
+    	EditText firstNameET = (EditText) findViewById(R.id.firstNameET);
+    	firstNameET.setText(basic.getFirstName());
+    	EditText lastNameET = (EditText) findViewById(R.id.lastNameET);
+    	lastNameET.setText(basic.getLastName());
+    	EditText prefNameET = (EditText) findViewById(R.id.prefNameET);
+    	prefNameET.setText(basic.getPrefName());
     	
-    	TextView firstNameTV = (TextView) findViewById(R.id.txt_firstName);
-    	firstNameTV.setText(basic.getFirstName());
-    	TextView lastNameTV = (TextView) findViewById(R.id.txt_lastName);
-    	lastNameTV.setText(basic.getLastName());
-    	TextView prefNameTV = (TextView) findViewById(R.id.txt_prefName);
-    	prefNameTV.setText(basic.getPrefName());
+    	EditText usernameET = (EditText) findViewById(R.id.usernameET);
+    	usernameET.setText(basic.getUsername());
+		EditText emailET = (EditText) findViewById(R.id.emailET);
+		emailET.setText(basic.getEmail());
     	
-    	TextView usernameTV = (TextView) findViewById(R.id.txt_userName);
-		usernameTV.setText(basic.getUsername());
-    	TextView emailTV = (TextView) findViewById(R.id.txt_email);
-    	emailTV.setText(basic.getEmail());
+		Spinner s = (Spinner) findViewById(R.id.rolSP);
+	    ArrayAdapter adapter = ArrayAdapter.createFromResource(
+	            this, R.array.rols, android.R.layout.simple_spinner_item);
+	    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+	    s.setAdapter(adapter);
+	    ArrayList<String> rols = app.getData().getRols().getTags();
+	    if(basic.getRol()!=""){
+	    	if(rols.contains(basic.getRol())){
+	    		int selection = rols.indexOf(basic.getRol());
+	    		s.setSelection(rols.indexOf(basic.getRol())+1);
+	    	}
+	    }
+	    else{
+	    	s.setSelection(0);
+	    }
+	    
+		EditText departmentET = (EditText) findViewById(R.id.departmentET);
+		departmentET.setText(basic.getDepartment());
+    	EditText collegeET = (EditText) findViewById(R.id.colllegeET);
+    	collegeET.setText(basic.getCollege());
     	
-    	TextView rolTV = (TextView) findViewById(R.id.txt_rol);
-    	rolTV.setText(basic.getRol());
-    	TextView departmentTV = (TextView) findViewById(R.id.txt_department);
-    	departmentTV.setText(basic.getDepartment());
-    	TextView collegeTV = (TextView) findViewById(R.id.txt_college);
-    	collegeTV.setText(basic.getCollege());
-    	
-    	TextView tagsTV = (TextView) findViewById(R.id.txt_tags);
-    	tagsTV.setText(basic.getTags());
+    	EditText tagsET = (EditText) findViewById(R.id.tagsET);
+    	tagsET.setText(basic.getTags());
     	
 	}
 

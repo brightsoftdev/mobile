@@ -3,8 +3,16 @@
     <string name="welcome_text">Nellodee: sakai for android</string>
     <string name="app_name">Nellodee</string>
     
-    <!-- BUTTONS -->
+    <!-- GENERIC BUTTONS -->
 	<string name="OK">OK</string>
+	<string name="CANCEL">Cancel</string>
+	<string name="Edit">Edit</string>
+	
+	<!-- WARNINGS and ERRORS  -->    
+    <string name="missing">There are missing fields</string>
+    <string name="noLogin">You shall never pass!</string>
+    <string name="noLoginDialog">Sorry, but user name or password don\'t seem right, try again?</string>
+    <string name="serverFail">Sorry, but we can\'t reach the server.</string>
 	
 	<!-- URL Activity -->
     <string name="url">Sakai URL </string>
@@ -20,15 +28,47 @@
     <string name="password">Password: </string>
 	<string name="sign_in">Sign in</string>
 	
-	<!-- MENU -->
+	<!-- TABS MENU -->
 	<string name="you">You</string>
 	<string name="createAdd">Create + Add</string>
 	<string name="explore">Explore</string>
 	
-	<!-- WARNINGS and ERRORS  -->    
-    <string name="missing">There are missing fields</string>
-    <string name="noLogin">You shall never pass!</string>
-    <string name="noLoginDialog">Sorry, but user name or password don\'t seem right, try again?</string>
-    <string name="serverFail">Sorry, but we can\'t reach the server.</string>
+ 	<!-- YOU MENU -->
+ 	<string name="myMessages">My messages</string>
+ 	<string name="myProfile">My profile</string> 	
+ 	<string name="myLibrary">My library</string>
+ 	<string name="myMembership">My membership</string>
+ 	<string name="myContacts">My contacts</string>
+    
+    <!-- PROFILE MENU -->
+    <string name="basicInfo">Basic Information</string>
+    <string name="aboutMe">About me</string>
+    <string name="categories">Categories</string>
+	<string name="publications">Publications</string>
+	
+	<!-- BASIC PROFILE -->
+	<string name="firstName">First name: </string>
+	<string name="lastName">Last name: </string>
+	<string name="prefName">Preferred name: </string>
+	<string name="userName">User name: </string>
+	<string name="email">Email: </string>
+	<string name="rol">Rol/Position: </string>
+	<string name="department">Department: </string>
+	<string name="college">College: </string>
+	<string name="tags">Tags: </string>
 
+	<string name="rol_prompt">Select you rol/position</string>	
+	<string-array name="rols">
+		<item> </item>
+        <item>Academic Related Staff</item>
+        <item>Academic Staff</item>
+        <item>Assistant Staff</item>
+        <item>Graduate Student</item>
+        <item>Undergraduate Student</item>
+        <item>Non-Academic Staff</item>
+        <item>Postgraduate Student</item>
+        <item>Research Staff</item>
+        <item>Other</item>
+    </string-array>
+	
 </resources>

@@ -11,7 +11,7 @@
 #import "AboutViewController.h"
 #import "MeService.h"
 #import "TagsViewController.h"
-#import "CategoriesViewController.h"
+//#import "CategoriesViewController.h"
 
 @implementation ProfileViewController
 
@@ -109,12 +109,12 @@
         
     }
     else if ([indexPath row] == CATEGORIES   ){
-		CategoriesViewController *categoriesView =[[CategoriesViewController alloc] initWithStyle:UITableViewStyleGrouped];
+		/*CategoriesViewController *categoriesView =[[CategoriesViewController alloc] initWithStyle:UITableViewStyleGrouped];
         
         // Push the detail view controller.
         [[self navigationController] pushViewController:categoriesView animated:YES];
         [categoriesView release];
-		
+		*/
         
     }
     else{
