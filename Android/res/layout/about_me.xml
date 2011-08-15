@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView 
+android:id="@+id/ScrollView01"
+xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent" >
+	
+<RelativeLayout
+	android:id="@+id/AboutMeRL"
+	android:orientation="vertical"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	
+	<TextView 
+		android:id="@+id/aboutMeTV" 
+		android:layout_height="wrap_content" 
+		android:layout_width="fill_parent" 
+		android:text="@string/about_me"
+		android:layout_marginTop="25dp"
+		android:layout_marginRight="15dp"
+		android:layout_below="@id/AboutMeRL"/>
+    <EditText 
+		android:id="@+id/aboutMeET" 
+		android:layout_height="wrap_content" 
+		android:layout_width="fill_parent" 
+		android:layout_below="@id/aboutMeTV"
+		android:layout_marginRight="15dp"/>
+		
+	<TextView 
+		android:id="@+id/academicInterestsTV" 
+		android:layout_height="wrap_content" 
+		android:layout_width="fill_parent" 
+		android:text="@string/academicInterests"
+		android:layout_marginTop="15dp"
+		android:layout_marginRight="15dp"
+		android:layout_below="@id/aboutMeET"/>
+    <EditText 
+		android:id="@+id/academicInterestsET" 
+		android:layout_height="wrap_content" 
+		android:layout_width="fill_parent" 
+		android:layout_below="@id/academicInterestsTV"
+		android:layout_marginRight="15dp"/>
+		
+	<TextView 
+		android:id="@+id/personalInterestsTV" 
+		android:layout_height="wrap_content" 
+		android:layout_width="fill_parent" 
+		android:text="@string/personalInterests"
+		android:layout_marginTop="15dp"
+		android:layout_marginRight="15dp"
+		android:layout_below="@id/academicInterestsET"/>
+    <EditText 
+		android:id="@+id/personalInterestsET" 
+		android:layout_height="wrap_content" 
+		android:layout_width="fill_parent" 
+		android:layout_below="@id/personalInterestsTV"
+		android:layout_marginRight="15dp"/>
+		
+	<TextView 
+		android:id="@+id/hobbiesTV" 
+		android:layout_height="wrap_content" 
+		android:layout_width="fill_parent" 
+		android:text="@string/hobbies"
+		android:layout_marginTop="15dp"
+		android:layout_marginRight="15dp"
+		android:layout_below="@id/personalInterestsET"/>
+    <EditText 
+		android:id="@+id/hobbiesET" 
+		android:layout_height="wrap_content" 
+		android:layout_width="fill_parent" 
+		android:layout_below="@id/hobbiesTV"
+		android:layout_marginRight="15dp"/>    
+		
+	<TextView 
+		android:id="@+id/permissionsTV" 
+		android:layout_height="wrap_content" 
+		android:layout_width="fill_parent" 
+		android:text="@string/permissions"
+		android:layout_marginTop="25dp"
+		android:layout_below="@id/hobbiesET"
+		android:layout_marginRight="15dp"/>
+	<Spinner 
+		android:id="@+id/permissionsSP"
+		android:layout_height="wrap_content"  
+		android:layout_width="fill_parent"
+		android:layout_below="@id/permissionsTV" 
+		android:layout_marginRight="15dp"
+		android:prompt="@string/permissions_prompt"/>	
+</RelativeLayout>
+</ScrollView>

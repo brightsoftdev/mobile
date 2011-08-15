@@ -9,6 +9,9 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -100,4 +103,18 @@ public class YouMenuActivity extends Activity {
 		Intent intent = new Intent(this,TabsActivity.class);
 		startActivity(intent);
 	}
+	
+    public boolean onCreateOptionsMenu(Menu menu) {
+    	menu.clear();
+		MenuInflater inflater = getMenuInflater();
+		inflater.inflate(R.menu.basic_menu, menu); 
+        return true;
+    }
+ 
+    public boolean onMenuItemSelected(int featureId, MenuItem item) {
+        //handle on menu item selected here
+        //do not call super.onMenuItemSelected(featureId, item) here
+ 
+        return true;
+    }
 }

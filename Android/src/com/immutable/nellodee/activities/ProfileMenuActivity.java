@@ -1,11 +1,15 @@
 package com.immutable.nellodee.activities;
 
 import com.immutable.nellodee.R;
+import com.immutable.nellodee.user.AboutMe;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
@@ -31,7 +35,7 @@ public class ProfileMenuActivity extends Activity {
 		basicInfoButton.setOnClickListener(onBasicInfo);
 		
 		aboutMeButton = (Button) findViewById(R.id.aboutMeButton);
-		aboutMeButton.setOnClickListener(onBasicInfo);
+		aboutMeButton.setOnClickListener(onAboutMe);
 		
 		categoriesButton = (Button) findViewById(R.id.categoriesButton);
 		categoriesButton.setOnClickListener(onBasicInfo);
@@ -55,5 +59,31 @@ public class ProfileMenuActivity extends Activity {
 
 	}
 	
+	private View.OnClickListener onAboutMe = new View.OnClickListener() {
+		public void onClick(View v) {
+			loadAboutMe();		
+		}
+	};
+	private void loadAboutMe(){
+		
+		Intent intent = new Intent(getParent(),AboutMeActivity.class);
+		TabGroupActivity parentActivity = (TabGroupActivity)getParent();
+		parentActivity.startChildActivity("ABOUT_ME", intent);
+
+	}
+	
+    public boolean onCreateOptionsMenu(Menu menu) {
+    	menu.clear();
+		MenuInflater inflater = getMenuInflater();
+		inflater.inflate(R.menu.basic_menu, menu); 
+        return true;
+    }
+ 
+    public boolean onMenuItemSelected(int featureId, MenuItem item) {
+        //handle on menu item selected here
+        //do not call super.onMenuItemSelected(featureId, item) here
+ 
+        return true;
+    }
 
 }

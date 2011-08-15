@@ -21,6 +21,7 @@ import org.json.JSONObject;
 
 import android.util.Log;
 
+import com.immutable.nellodee.user.AboutMe;
 import com.immutable.nellodee.user.BasicProfile;
 
 
@@ -62,7 +63,7 @@ public class MeService {
 		this.cookies = cookies;
 	}
 
-	public BasicProfile callService(){
+	public BasicProfile basicProfileService(){
 		
 		int status;
 		HttpResponse response;
@@ -150,4 +151,93 @@ public class MeService {
 		return null;
 	}
 	
+	public AboutMe aboutMeService(){
+		
+		int status;
+		HttpResponse response;
+		HttpGet requestGET = new HttpGet();
+		BufferedReader in = null;
+		AboutMe about = new AboutMe();
+		
+		Log.i("ME SERVICE", "Saved URL: " + url);
+		String uri = url + "/system/me";
+		Log.i("ME SERVICE", "Service URL: " + uri);
+		try {
+			requestGET.setURI(new URI(uri));
+			DefaultHttpClient client  = new DefaultHttpClient();
+			
+			CookieStore store = cookies;
+			client.setCookieStore(store);
+
+			response = client.execute(requestGET);
+			status = response.getStatusLine().getStatusCode();
+			Log.i("ME SERVICE","Status: "+ status);
+			
+			in = new BufferedReader(new InputStreamReader(response.getEntity().getContent()));
+			StringBuffer sb = new StringBuffer();
+			String line= "";
+			String NL = System.getProperty("line.separator");
+			while ((line=in.readLine())!=null){
+				sb.append(line+NL);
+			}
+			in.close();
+			String jString = sb.toString();
+			System.out.println("JSON:" + jString);
+
+			
+	    	/* Parse JSON String and populate Basic Profile */
+			JSONObject jObject;
+			jObject = new JSONObject(jString); 
+			JSONObject aboutMeProfileObject = jObject.getJSONObject("profile").getJSONObject("aboutme").getJSONObject("elements");
+			
+			if(aboutMeProfileObject.has("aboutme")){
+				JSONObject aboutMeObject = aboutMeProfileObject.getJSONObject("aboutme");
+				about.setAboutMe(aboutMeObject.has("value") ? aboutMeObject.getString("value") : "");
+			}
+			else{
+				about.setAboutMe("");
+			}
+			
+			if (aboutMeProfileObject.has("academicinterests")){
+				JSONObject academicInterestsObject = aboutMeProfileObject.getJSONObject("academicinterests");
+				about.setAcademicInterests(academicInterestsObject.has("value") ? academicInterestsObject.getString("value") : "");
+			}
+			else{
+				about.setAcademicInterests("");
+			}
+			
+			if (aboutMeProfileObject.has("personalinterestsObject")){
+				JSONObject PersonalInterestsObject = aboutMeProfileObject.getJSONObject("personalinterestsObject");
+				about.setPersonalInterests(PersonalInterestsObject.has("value") ? PersonalInterestsObject.getString("value") : "");
+			}
+			else{
+				about.setPersonalInterests("");
+			}
+			
+			if (aboutMeProfileObject.has("hobbies")){
+				JSONObject hobbiesObject = aboutMeProfileObject.getJSONObject("hobbies");
+				about.setHobbies(hobbiesObject.has("value") ? hobbiesObject.getString("value") : "");
+			}
+			else{
+				about.setHobbies("");
+			}
+			
+			
+			return about;
+			
+		} catch (URISyntaxException e) {
+			e.printStackTrace();
+		} catch (IllegalStateException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (JSONException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return null;
+	}
 }

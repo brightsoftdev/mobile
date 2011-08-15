@@ -1,15 +1,15 @@
 package com.immutable.nellodee.user;
 
 public class AboutMe {
-	private String about;
-	private String academicInterests;
-	private String personalInterests;
-	private String hobbies;
+	String aboutMe;
+	String academicInterests;
+	String personalInterests;
+    String hobbies;
 	
 	
 	public AboutMe() {
 		super();
-		this.about = "";
+		this.aboutMe = "";
 		this.academicInterests = "";
 		this.personalInterests = "";
 		this.hobbies = "";
@@ -18,17 +18,17 @@ public class AboutMe {
 	public AboutMe(String about, String academicInterests,
 			String personalInterests, String hobbies) {
 		super();
-		this.about = about;
+		this.aboutMe = about;
 		this.academicInterests = academicInterests;
 		this.personalInterests = personalInterests;
 		this.hobbies = hobbies;
 	}
 	
-	public String getAbout() {
-		return about;
+	public String getAboutMe() {
+		return aboutMe;
 	}
-	public void setAbout(String about) {
-		this.about = about;
+	public void setAboutMe(String about) {
+		this.aboutMe = about;
 	}
 	public String getAcademicInterests() {
 		return academicInterests;
