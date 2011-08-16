@@ -93,5 +93,8 @@
         <item>Only me</item>
     </string-array>
     
-    
+    <!-- SETTINGS -->
+    <string name="urlTitle">URL </string>
+    <string name="urlSummary">The url where you can find your Sakai</string>
+    <string name="urlDialog">Enter the Sakai url</string>    
 </resources>

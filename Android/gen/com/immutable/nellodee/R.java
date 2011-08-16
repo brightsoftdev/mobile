@@ -9,8 +9,8 @@ package com.immutable.nellodee;
 
 public final class R {
     public static final class array {
-        public static final int permissions_types=0x7f050001;
-        public static final int rols=0x7f050000;
+        public static final int permissions_types=0x7f060001;
+        public static final int rols=0x7f060000;
     }
     public static final class attr {
     }
@@ -24,62 +24,62 @@ public final class R {
         public static final int user=0x7f020006;
     }
     public static final class id {
-        public static final int AboutMeRL=0x7f070001;
-        public static final int BasicProfileRL=0x7f070014;
-        public static final int ScrollView01=0x7f070000;
-        public static final int about=0x7f070035;
-        public static final int aboutMeButton=0x7f070029;
-        public static final int aboutMeET=0x7f070003;
-        public static final int aboutMeTV=0x7f070002;
-        public static final int academicInterestsET=0x7f070005;
-        public static final int academicInterestsTV=0x7f070004;
-        public static final int basicInfoButton=0x7f070028;
-        public static final int categoriesButton=0x7f07002a;
-        public static final int collegeTV=0x7f070024;
-        public static final int colllegeET=0x7f070025;
-        public static final int datas=0x7f07000d;
-        public static final int departmentET=0x7f070023;
-        public static final int departmentTV=0x7f070022;
-        public static final int emailET=0x7f07001f;
-        public static final int emailTV=0x7f07001e;
-        public static final int firstNameET=0x7f070017;
-        public static final int firstNameTV=0x7f070016;
-        public static final int hobbiesET=0x7f070009;
-        public static final int hobbiesTV=0x7f070008;
-        public static final int lastNameET=0x7f070019;
-        public static final int lastNameTV=0x7f070018;
-        public static final int login_button=0x7f070013;
-        public static final int myContactsButton=0x7f070033;
-        public static final int myLibraryButton=0x7f070031;
-        public static final int myMembershipButton=0x7f070032;
-        public static final int myMessagesButton=0x7f07002f;
-        public static final int myProfileButton=0x7f070030;
-        public static final int pass=0x7f070010;
-        public static final int password=0x7f070012;
-        public static final int permissionsSP=0x7f07000b;
-        public static final int permissionsTV=0x7f07000a;
-        public static final int personalInterestsET=0x7f070007;
-        public static final int personalInterestsTV=0x7f070006;
-        public static final int prefNameET=0x7f07001b;
-        public static final int prefNameTV=0x7f07001a;
-        public static final int profile_pic=0x7f070015;
-        public static final int publicationsButton=0x7f07002b;
-        public static final int quit=0x7f070036;
-        public static final int rolSP=0x7f070021;
-        public static final int rolTV=0x7f070020;
-        public static final int settings=0x7f070034;
-        public static final int tagsET=0x7f070027;
-        public static final int tagsTV=0x7f070026;
-        public static final int txt_pass=0x7f070011;
-        public static final int txt_url=0x7f07002c;
-        public static final int txt_user=0x7f07000e;
-        public static final int update=0x7f070037;
-        public static final int url=0x7f07002d;
-        public static final int url_button=0x7f07002e;
-        public static final int username=0x7f07000f;
-        public static final int usernameET=0x7f07001d;
-        public static final int usernameTV=0x7f07001c;
-        public static final int welcome_text=0x7f07000c;
+        public static final int AboutMeRL=0x7f080001;
+        public static final int BasicProfileRL=0x7f080014;
+        public static final int ScrollView01=0x7f080000;
+        public static final int about=0x7f080035;
+        public static final int aboutMeButton=0x7f080029;
+        public static final int aboutMeET=0x7f080003;
+        public static final int aboutMeTV=0x7f080002;
+        public static final int academicInterestsET=0x7f080005;
+        public static final int academicInterestsTV=0x7f080004;
+        public static final int basicInfoButton=0x7f080028;
+        public static final int categoriesButton=0x7f08002a;
+        public static final int collegeTV=0x7f080024;
+        public static final int colllegeET=0x7f080025;
+        public static final int datas=0x7f08000d;
+        public static final int departmentET=0x7f080023;
+        public static final int departmentTV=0x7f080022;
+        public static final int emailET=0x7f08001f;
+        public static final int emailTV=0x7f08001e;
+        public static final int firstNameET=0x7f080017;
+        public static final int firstNameTV=0x7f080016;
+        public static final int hobbiesET=0x7f080009;
+        public static final int hobbiesTV=0x7f080008;
+        public static final int lastNameET=0x7f080019;
+        public static final int lastNameTV=0x7f080018;
+        public static final int login_button=0x7f080013;
+        public static final int myContactsButton=0x7f080033;
+        public static final int myLibraryButton=0x7f080031;
+        public static final int myMembershipButton=0x7f080032;
+        public static final int myMessagesButton=0x7f08002f;
+        public static final int myProfileButton=0x7f080030;
+        public static final int pass=0x7f080010;
+        public static final int password=0x7f080012;
+        public static final int permissionsSP=0x7f08000b;
+        public static final int permissionsTV=0x7f08000a;
+        public static final int personalInterestsET=0x7f080007;
+        public static final int personalInterestsTV=0x7f080006;
+        public static final int prefNameET=0x7f08001b;
+        public static final int prefNameTV=0x7f08001a;
+        public static final int profile_pic=0x7f080015;
+        public static final int publicationsButton=0x7f08002b;
+        public static final int quit=0x7f080036;
+        public static final int rolSP=0x7f080021;
+        public static final int rolTV=0x7f080020;
+        public static final int settings=0x7f080034;
+        public static final int tagsET=0x7f080027;
+        public static final int tagsTV=0x7f080026;
+        public static final int txt_pass=0x7f080011;
+        public static final int txt_url=0x7f08002c;
+        public static final int txt_user=0x7f08000e;
+        public static final int update=0x7f080037;
+        public static final int url=0x7f08002d;
+        public static final int url_button=0x7f08002e;
+        public static final int username=0x7f08000f;
+        public static final int usernameET=0x7f08001d;
+        public static final int usernameTV=0x7f08001c;
+        public static final int welcome_text=0x7f08000c;
     }
     public static final class layout {
         public static final int about_me=0x7f030000;
@@ -92,81 +92,89 @@ public final class R {
         public static final int you_menu=0x7f030007;
     }
     public static final class menu {
-        public static final int basic_menu=0x7f060000;
-        public static final int update_menu=0x7f060001;
+        public static final int basic_menu=0x7f070000;
+        public static final int update_menu=0x7f070001;
     }
     public static final class string {
-        public static final int CANCEL=0x7f040003;
-        public static final int Edit=0x7f040004;
+        public static final int CANCEL=0x7f050003;
+        public static final int Edit=0x7f050004;
         /**  GENERIC BUTTONS 
          */
-        public static final int OK=0x7f040002;
-        public static final int about=0x7f04000d;
-        public static final int aboutMe=0x7f040022;
+        public static final int OK=0x7f050002;
+        public static final int about=0x7f05000d;
+        public static final int aboutMe=0x7f050022;
         /**  ABOUT ME PROFILE 
          */
-        public static final int about_me=0x7f04002f;
-        public static final int academicInterests=0x7f040030;
-        public static final int app_name=0x7f040001;
+        public static final int about_me=0x7f05002f;
+        public static final int academicInterests=0x7f050030;
+        public static final int app_name=0x7f050001;
         /**  PROFILE MENU 
          */
-        public static final int basicInfo=0x7f040021;
-        public static final int categories=0x7f040023;
-        public static final int college=0x7f04002c;
-        public static final int createAdd=0x7f04001a;
-        public static final int department=0x7f04002b;
+        public static final int basicInfo=0x7f050021;
+        public static final int categories=0x7f050023;
+        public static final int college=0x7f05002c;
+        public static final int createAdd=0x7f05001a;
+        public static final int department=0x7f05002b;
         /**  MENUS 
          */
-        public static final int edit=0x7f040009;
-        public static final int email=0x7f040029;
-        public static final int explore=0x7f04001b;
+        public static final int edit=0x7f050009;
+        public static final int email=0x7f050029;
+        public static final int explore=0x7f05001b;
         /**  BASIC PROFILE 
          */
-        public static final int firstName=0x7f040025;
-        public static final int hobbies=0x7f040032;
-        public static final int lastName=0x7f040026;
+        public static final int firstName=0x7f050025;
+        public static final int hobbies=0x7f050032;
+        public static final int lastName=0x7f050026;
         /**  WARNINGS and ERRORS  
          */
-        public static final int missing=0x7f040005;
-        public static final int myContacts=0x7f040020;
-        public static final int myLibrary=0x7f04001e;
-        public static final int myMembership=0x7f04001f;
+        public static final int missing=0x7f050005;
+        public static final int myContacts=0x7f050020;
+        public static final int myLibrary=0x7f05001e;
+        public static final int myMembership=0x7f05001f;
         /**  YOU MENU 
          */
-        public static final int myMessages=0x7f04001c;
-        public static final int myProfile=0x7f04001d;
-        public static final int next=0x7f040010;
-        public static final int noLogin=0x7f040006;
-        public static final int noLoginDialog=0x7f040007;
-        public static final int noURL=0x7f040012;
-        public static final int noURL_message=0x7f040013;
-        public static final int noValid=0x7f040014;
-        public static final int noValid_message=0x7f040015;
-        public static final int password=0x7f040017;
-        public static final int permissions=0x7f04000b;
-        public static final int permissions_prompt=0x7f040033;
-        public static final int personalInterests=0x7f040031;
-        public static final int prefName=0x7f040027;
-        public static final int publications=0x7f040024;
-        public static final int quit=0x7f04000e;
-        public static final int remember=0x7f040011;
-        public static final int rol=0x7f04002a;
-        public static final int rol_prompt=0x7f04002e;
-        public static final int serverFail=0x7f040008;
-        public static final int settings=0x7f04000c;
-        public static final int sign_in=0x7f040018;
-        public static final int tags=0x7f04002d;
-        public static final int update=0x7f04000a;
+        public static final int myMessages=0x7f05001c;
+        public static final int myProfile=0x7f05001d;
+        public static final int next=0x7f050010;
+        public static final int noLogin=0x7f050006;
+        public static final int noLoginDialog=0x7f050007;
+        public static final int noURL=0x7f050012;
+        public static final int noURL_message=0x7f050013;
+        public static final int noValid=0x7f050014;
+        public static final int noValid_message=0x7f050015;
+        public static final int password=0x7f050017;
+        public static final int permissions=0x7f05000b;
+        public static final int permissions_prompt=0x7f050033;
+        public static final int personalInterests=0x7f050031;
+        public static final int prefName=0x7f050027;
+        public static final int publications=0x7f050024;
+        public static final int quit=0x7f05000e;
+        public static final int remember=0x7f050011;
+        public static final int rol=0x7f05002a;
+        public static final int rol_prompt=0x7f05002e;
+        public static final int serverFail=0x7f050008;
+        public static final int settings=0x7f05000c;
+        public static final int sign_in=0x7f050018;
+        public static final int tags=0x7f05002d;
+        public static final int update=0x7f05000a;
         /**  URL Activity 
          */
-        public static final int url=0x7f04000f;
-        public static final int userName=0x7f040028;
+        public static final int url=0x7f05000f;
+        public static final int urlDialog=0x7f050036;
+        public static final int urlSummary=0x7f050035;
+        /**  SETTINGS 
+         */
+        public static final int urlTitle=0x7f050034;
+        public static final int userName=0x7f050028;
         /**   LOG IN Activity 
          */
-        public static final int username=0x7f040016;
-        public static final int welcome_text=0x7f040000;
+        public static final int username=0x7f050016;
+        public static final int welcome_text=0x7f050000;
         /**  TABS MENU 
          */
-        public static final int you=0x7f040019;
+        public static final int you=0x7f050019;
+    }
+    public static final class xml {
+        public static final int settings=0x7f040000;
     }
 }

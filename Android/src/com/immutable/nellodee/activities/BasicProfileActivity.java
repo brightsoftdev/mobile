@@ -139,10 +139,18 @@ public class BasicProfileActivity extends Activity {
     }
  
     public boolean onMenuItemSelected(int featureId, MenuItem item) {
-        //handle on menu item selected here
-        //do not call super.onMenuItemSelected(featureId, item) here
- 
-        return true;
+
+		switch (item.getItemId()){
+		case R.id.settings:
+			startActivity(new Intent(this, EditSettingsActivity.class));
+			break;
+		case R.id.about:
+			break;
+		case R.id.quit:
+			System.exit(RESULT_OK);
+			break;
+		}
+		return true;
     }
     
     /*public class MyOnItemSelectedListener implements OnItemSelectedListener {

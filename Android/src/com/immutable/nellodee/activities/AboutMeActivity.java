@@ -10,6 +10,7 @@ import com.immutable.nellodee.user.AboutMe;
 import com.immutable.nellodee.webservices.MeService;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.Drawable;
@@ -80,10 +81,17 @@ public class AboutMeActivity extends Activity {
     }
  
     public boolean onMenuItemSelected(int featureId, MenuItem item) {
-        //handle on menu item selected here
-        //do not call super.onMenuItemSelected(featureId, item) here
- 
-        return true;
-    }
+		switch (item.getItemId()){
+		case R.id.settings:
+			startActivity(new Intent(this, EditSettingsActivity.class));
+			break;
+		case R.id.about:
+			break;
+		case R.id.quit:
+			System.exit(RESULT_OK);
+			break;
+		}
+		return true;
+	}
 
 }
