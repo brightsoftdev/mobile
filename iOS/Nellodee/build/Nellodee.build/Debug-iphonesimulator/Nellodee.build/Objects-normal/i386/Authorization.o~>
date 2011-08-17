@@ -1,0 +1,6 @@
+/Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/Authorization.m: In function '-[Authorization checkURL:]':
+/Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/Authorization.m:109: warning: passing argument 1 of 'NSLog' from incompatible pointer type
+/Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/Authorization.m:109: warning: format not a string literal and no format arguments
+/Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/Authorization.m:113: warning: passing argument 1 of 'NSLog' from incompatible pointer type
+/Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/Authorization.m:113: warning: format not a string literal and no format arguments
+/Users/ada/GSoC/Nellodee/iOS/Nellodee/Classes/Authorization.m:104: warning: unused variable 'data'
