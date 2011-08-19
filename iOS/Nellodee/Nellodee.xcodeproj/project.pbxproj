@@ -19,10 +19,11 @@
 		60214E1313E86928005CD90C /* TagsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60214E1113E86927005CD90C /* TagsViewController.m */; };
 		60214E1413E86928005CD90C /* TagsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60214E1213E86927005CD90C /* TagsViewController.xib */; };
 		60214E1813E871F4005CD90C /* RolTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60214E1613E871F3005CD90C /* RolTableViewController.m */; };
+		604F441813FD33A200049848 /* CategoriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 604F441613FD33A200049848 /* CategoriesViewController.m */; };
+		604F441913FD33A200049848 /* CategoriesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 604F441713FD33A200049848 /* CategoriesViewController.xib */; };
 		605F08E013D34D4A00E9935A /* Profile.m in Sources */ = {isa = PBXBuildFile; fileRef = 605F08DF13D34D4A00E9935A /* Profile.m */; };
 		605F08E313D34D6500E9935A /* BasicInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 605F08E213D34D6500E9935A /* BasicInfo.m */; };
 		605F08E613D34D7400E9935A /* About.m in Sources */ = {isa = PBXBuildFile; fileRef = 605F08E513D34D7400E9935A /* About.m */; };
-		605F08E913D34D9000E9935A /* Categories.m in Sources */ = {isa = PBXBuildFile; fileRef = 605F08E813D34D9000E9935A /* Categories.m */; };
 		605F08EC13D34DC900E9935A /* Publications.m in Sources */ = {isa = PBXBuildFile; fileRef = 605F08EB13D34DC900E9935A /* Publications.m */; };
 		605FFB4D13E9491600E2ADAB /* DetailHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 605FFB4C13E9491600E2ADAB /* DetailHeaderView.xib */; };
 		605FFB5B13EB189E00E2ADAB /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 605FFB5913EB189D00E2ADAB /* AboutViewController.m */; };
@@ -33,6 +34,7 @@
 		6071B77A13D304F700E32321 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6071B77613D304F700E32321 /* MainViewController.xib */; };
 		6071B77C13D3055500E32321 /* ViewTwoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6071B77B13D3055500E32321 /* ViewTwoController.xib */; };
 		6071B77F13D3056100E32321 /* MeService.m in Sources */ = {isa = PBXBuildFile; fileRef = 6071B77E13D3056100E32321 /* MeService.m */; };
+		607D1ED513FD383E00FC90D6 /* CategoriesDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 607D1ED413FD383E00FC90D6 /* CategoriesDataController.m */; };
 		6085710413DF221200E884D1 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6085710213DF221200E884D1 /* ProfileViewController.m */; };
 		6085710513DF221200E884D1 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6085710313DF221200E884D1 /* ProfileViewController.xib */; };
 		6086D63013D0162E00718AAF /* ViewTwoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6086D62F13D0162E00718AAF /* ViewTwoController.m */; };
@@ -79,14 +81,15 @@
 		60214E1213E86927005CD90C /* TagsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TagsViewController.xib; path = Classes/TagsViewController.xib; sourceTree = "<group>"; };
 		60214E1513E871F3005CD90C /* RolTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RolTableViewController.h; sourceTree = "<group>"; };
 		60214E1613E871F3005CD90C /* RolTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RolTableViewController.m; sourceTree = "<group>"; };
+		604F441513FD33A200049848 /* CategoriesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoriesViewController.h; sourceTree = "<group>"; };
+		604F441613FD33A200049848 /* CategoriesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoriesViewController.m; sourceTree = "<group>"; };
+		604F441713FD33A200049848 /* CategoriesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CategoriesViewController.xib; path = Classes/CategoriesViewController.xib; sourceTree = "<group>"; };
 		605F08DE13D34D4A00E9935A /* Profile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Profile.h; sourceTree = "<group>"; };
 		605F08DF13D34D4A00E9935A /* Profile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Profile.m; sourceTree = "<group>"; };
 		605F08E113D34D6500E9935A /* BasicInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicInfo.h; sourceTree = "<group>"; };
 		605F08E213D34D6500E9935A /* BasicInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicInfo.m; sourceTree = "<group>"; };
 		605F08E413D34D7400E9935A /* About.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = About.h; sourceTree = "<group>"; };
 		605F08E513D34D7400E9935A /* About.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = About.m; sourceTree = "<group>"; };
-		605F08E713D34D9000E9935A /* Categories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Categories.h; sourceTree = "<group>"; };
-		605F08E813D34D9000E9935A /* Categories.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Categories.m; sourceTree = "<group>"; };
 		605F08EA13D34DC900E9935A /* Publications.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Publications.h; sourceTree = "<group>"; };
 		605F08EB13D34DC900E9935A /* Publications.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Publications.m; sourceTree = "<group>"; };
 		605FFB4C13E9491600E2ADAB /* DetailHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailHeaderView.xib; sourceTree = "<group>"; };
@@ -102,6 +105,8 @@
 		6071B77B13D3055500E32321 /* ViewTwoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ViewTwoController.xib; path = Classes/ViewTwoController.xib; sourceTree = "<group>"; };
 		6071B77D13D3056100E32321 /* MeService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeService.h; sourceTree = "<group>"; };
 		6071B77E13D3056100E32321 /* MeService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeService.m; sourceTree = "<group>"; };
+		607D1ED313FD383E00FC90D6 /* CategoriesDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoriesDataController.h; sourceTree = "<group>"; };
+		607D1ED413FD383E00FC90D6 /* CategoriesDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoriesDataController.m; sourceTree = "<group>"; };
 		6085710113DF221200E884D1 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
 		6085710213DF221200E884D1 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		6085710313DF221200E884D1 /* ProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ProfileViewController.xib; path = Classes/ProfileViewController.xib; sourceTree = "<group>"; };
@@ -283,6 +288,8 @@
 		60893EDE13B5F9F0008DCDF0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				604F441513FD33A200049848 /* CategoriesViewController.h */,
+				604F441613FD33A200049848 /* CategoriesViewController.m */,
 				605FFB5813EB189D00E2ADAB /* AboutViewController.h */,
 				605FFB5913EB189D00E2ADAB /* AboutViewController.m */,
 				60E196AD13E07D15001C0471 /* BasicProfileViewController.h */,
@@ -318,8 +325,6 @@
 				605F08E213D34D6500E9935A /* BasicInfo.m */,
 				605F08E413D34D7400E9935A /* About.h */,
 				605F08E513D34D7400E9935A /* About.m */,
-				605F08E713D34D9000E9935A /* Categories.h */,
-				605F08E813D34D9000E9935A /* Categories.m */,
 				605F08EA13D34DC900E9935A /* Publications.h */,
 				605F08EB13D34DC900E9935A /* Publications.m */,
 			);
@@ -340,6 +345,8 @@
 			children = (
 				60D15E5913F183E8001DF7D3 /* Category.h */,
 				60D15E5A13F183E8001DF7D3 /* Category.m */,
+				607D1ED313FD383E00FC90D6 /* CategoriesDataController.h */,
+				607D1ED413FD383E00FC90D6 /* CategoriesDataController.m */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -347,6 +354,7 @@
 		60F1E77A13F4657000C55D90 /* Layout */ = {
 			isa = PBXGroup;
 			children = (
+				604F441713FD33A200049848 /* CategoriesViewController.xib */,
 				605FFB4C13E9491600E2ADAB /* DetailHeaderView.xib */,
 				605FFB5A13EB189D00E2ADAB /* AboutViewController.xib */,
 				60214E1213E86927005CD90C /* TagsViewController.xib */,
@@ -426,6 +434,7 @@
 				605FFB5C13EB189E00E2ADAB /* AboutViewController.xib in Resources */,
 				60972C1813F04D89006040D5 /* defaultIcon.png in Resources */,
 				609A634C13F6EAA50002128F /* Notes-1.png in Resources */,
+				604F441913FD33A200049848 /* CategoriesViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,7 +469,6 @@
 				605F08E013D34D4A00E9935A /* Profile.m in Sources */,
 				605F08E313D34D6500E9935A /* BasicInfo.m in Sources */,
 				605F08E613D34D7400E9935A /* About.m in Sources */,
-				605F08E913D34D9000E9935A /* Categories.m in Sources */,
 				605F08EC13D34DC900E9935A /* Publications.m in Sources */,
 				601CC3DC13DC1C5100777B89 /* UserViewController.m in Sources */,
 				6085710413DF221200E884D1 /* ProfileViewController.m in Sources */,
@@ -469,6 +477,8 @@
 				60214E1813E871F4005CD90C /* RolTableViewController.m in Sources */,
 				605FFB5B13EB189E00E2ADAB /* AboutViewController.m in Sources */,
 				60D15E5B13F183E8001DF7D3 /* Category.m in Sources */,
+				604F441813FD33A200049848 /* CategoriesViewController.m in Sources */,
+				607D1ED513FD383E00FC90D6 /* CategoriesDataController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

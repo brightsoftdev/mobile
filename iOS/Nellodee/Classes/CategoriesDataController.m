@@ -50,7 +50,7 @@
 										@"psychology",@"othersinbiologicalsciences",nil]];
    	[categories addObject:cat];
 
-	/*cat.title=@"Veterinary Sciences and Agriculture";
+	cat.title=@"Veterinary Sciences and Agriculture";
 	cat.tag=@"veterinarysciencesagriculture";
 	cat.subcategories = [[NSDictionary alloc] 
 						 initWithObjects:[[NSArray alloc] 
@@ -59,10 +59,12 @@
 										  @"Agriculture",@"Forestry",@"Food and Beverage studies"
 										  @"Agricultural Sciences",@"Others in Veterinary Sciences and Agriculture",nil]
 						 forKeys:[[NSArray alloc]
-								  initWithObjects:@"preclinicalveterinarymedicine",@"clinicalveterinarymedicineanddentistry",
-										@"animalscience",@"agriculture",@"forestry",@"foodandbeveragestudies",
-										@"agriculturalsciences",@"others",nil]];
+								  initWithObjects:@"preclinicalveterinarymedicine",
+								  @"clinicalveterinarymedicineanddentistry", @"animalscience", 
+								  @"agriculture",@"forestry",@"foodandbeveragestudies"
+								  @"agriculturalsciences",@"others",nil]];
    	[categories addObject:cat];
+
     
 	cat.title=@"Physical Sciences";
 	cat.tag=@"physicalsciences";						 
@@ -90,13 +92,17 @@
 
 
 	[categories addObject:cat];
-	*/
-	// ...
 	
+	// ...
+
 	self.categoriesList = categories;
 	[cat release];
 	[categories release];
 }
 
-
+- (NSString *) categoriesShoWithTag:(NSString*)tag{
+	NSString *category;
+	for (Category *cat in self.categoriesList){
+	}
+}
 @end

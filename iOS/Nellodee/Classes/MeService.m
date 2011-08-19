@@ -11,6 +11,7 @@
 #import "BasicInfo.h"
 #import "About.h"
 #import "NellodeeApp.h"
+#import "CategoriesDataController.h"
 
 @implementation MeService
 
@@ -103,18 +104,28 @@
 	NSString *tagsString = [properties objectForKey:@"sakai:tags"];
 	NSString *tags;
 	NSArray *tagsArray = [tagsString componentsSeparatedByString:@","];
-	NSMutableArray *categories = [[NSMutableArray alloc] init]; 
+	NSMutableArray *categoriesString = [[NSMutableArray alloc] init]; 
 	for(NSString *tag in tagsArray){
 		if([tag hasPrefix:@"directory/"]){
-			[categories addObject:tag];
+			[categoriesString addObject:tag];
 		}
 		else{
 			tags = tag;
 			
 		}
 	}
-	
-
+	//If there are categories let's parse them
+	NSMutableArray *userCategories = [[NSMutableArray alloc] init];
+	if([categoriesString count] > 0){
+		CategoriesDataController *existingCat = [[CategoriesDataController alloc] init];
+		NSMutableArray *categoriesSplit;
+		for(NSString *cat in categoriesString){
+			categoriesSplit = [cat componentsSeparatedByString: @"/"];
+			[userCategories addObject:[categoriesSplit lastObject]];
+		}
+		[categoriesSplit release];
+	}
+	[categoriesString release];
     [basicInfo setTags:[properties objectForKey:@"sakai:tags"]];
     
     [[NellodeeApp sharedNellodeeData] setBasicInfo:basicInfo];

@@ -16,4 +16,6 @@
 @property (nonatomic,retain) NSMutableArray *categoriesList;
 
 - (void)loadData;
+- (NSString *) categoriesShoWithTag:(NSString*)tag;
+
 @end

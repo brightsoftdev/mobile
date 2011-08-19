@@ -8,9 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
+@class BasicInfo,About;
 
 @interface Profile : NSObject {
-    
+    BasicInfo *basicInfo;
+    About *about;
+	NSMutableArray *categories;
 }
+
+@property (nonatomic, retain) BasicInfo * basicInfo;
+@property (nonatomic, retain) About *about;
+@property (nonatomic, retain) NSMutableArray *categories;
 
 @end
