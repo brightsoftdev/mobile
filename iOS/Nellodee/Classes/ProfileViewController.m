@@ -9,13 +9,14 @@
 #import "ProfileViewController.h"
 #import "BasicProfileViewController.h"
 #import "AboutViewController.h"
+#import "BasicInfoWS.h"
 #import "MeService.h"
 #import "TagsViewController.h"
 //#import "CategoriesViewController.h"
 
 @implementation ProfileViewController
 
-@synthesize options;
+@synthesize options,basicInfoWS;
 
 
 #define BASIC 0
@@ -85,11 +86,13 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    MeService *me =[[MeService alloc] init];
-    [me meService];
-    
+    //MeService *me =[[MeService alloc] init];
+    //[me meService];
+	
     if([indexPath row] == BASIC){
-    
+		basicInfoWS = [[BasicInfoWS alloc] init];
+		[basicInfoWS meService];
+		
         BasicProfileViewController *profileView = [[BasicProfileViewController alloc] initWithStyle:UITableViewStyleGrouped];
         
         // Push the detail view controller.
@@ -101,9 +104,7 @@
     }
     else if ([indexPath row] == ABOUT   ){
         AboutViewController *aboutView = [[AboutViewController alloc] initWithStyle:UITableViewStyleGrouped];
-        
-        // Push the detail view controller.
-        [[self navigationController] pushViewController:aboutView animated:YES];
+		[[self navigationController] pushViewController:aboutView animated:YES];
         [aboutView release];
 
         
@@ -122,86 +123,19 @@
         /*
          When a row is selected, create the detail view controller and set its detail item to the item associated with the selected row.
          */
-        TagsViewController *profileViewController = [[TagsViewController alloc] init];
+        //TagsViewController *profileViewController = [[TagsViewController alloc] init];
         
         // Push the detail view controller.
-        [[self navigationController] pushViewController:profileViewController animated:YES];
-        [profileViewController release];
+        //[[self navigationController] pushViewController:profileViewController animated:YES];
+        //[profileViewController release];
     }
     
 }
 
-/*
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    if([indexPath row] == BASIC){
-        [[NSNotificationCenter defaultCenter] addObserver:self
-                                              selector:@selector(loadBasicProfileView:) 
-                                              name:@"meServiceNotification"
-                                              object:nil];
-    }
-    else if([indexPath row] == ABOUT){
-        [[NSNotificationCenter defaultCenter] addObserver:self
-                                                 selector:@selector(loadAboutMeView:) 
-                                                     name:@"meServiceNotification"
-                                                   object:nil];
-        
-    }
-    
-    MeService *me =[[MeService alloc] init];
-    [me meService];
-
-    
-
-}*/
-
-
-/*- (void) loadBasicProfileView:(NSNotification *) notification{
-
-    
-    if ([[notification name] isEqualToString:@"meServiceNotification"]){
-        NSLog (@"Successfully received the test notification!");
-
-        //NSString  *nombre = [[[NellodeeApp sharedNellodeeData] basicInfo] firstName];
-        
-
-        //BasicProfileViewController *basicProfileView =[[BasicProfileViewController alloc] initWithStyle:UITableViewStyleGrouped];
-        // [self.navigationController pushViewController:basicProfileView animated:NO];
-        */
-        /*UIViewController *nextCntlr;
-        
-        nextCntlr = [[BasicProfileViewController alloc] initWithStyle:UITableViewStyleGrouped];
-        nextCntlr.title = @"Basic Profile";
-        [[self navigationController] pushViewController:nextCntlr animated:YES];
-        
-          
-        UIViewController *topVC = (UIViewController *)self.navigationController.delegate;
-        [topVC.navigationController pushViewController:nextCntlr animated:YES];
-        [nextCntlr release];*/
-    
-/*    }
+-(void) dealloc{
+	[basicInfoWS release];
+	[options release];
+	[super dealloc];
 }
-- (void) loadAboutMeView:(NSNotification *) notification{
-    
-    
-    if ([[notification name] isEqualToString:@"meServiceNotification"]){
-        NSLog (@"[ABOUT VIEW] Successfully received the test notification! ");
-        AboutViewController *aboutView =[[AboutViewController alloc] initWithStyle:UITableViewStyleGrouped];
-        [self.navigationController pushViewController:aboutView animated:NO];
-        */
-        /*UIViewController *nextCntlr;
-        
-        nextCntlr = [[AboutViewController alloc] initWithStyle:UITableViewStyleGrouped];
-        nextCntlr.title = @"About me";
-        [[self navigationController] pushViewController:nextCntlr animated:YES];
-        
-        UIViewController *topVC = (UIViewController *)self.navigationController.delegate;
-        [topVC.navigationController pushViewController:nextCntlr animated:YES];
-        [nextCntlr release];*/
-        
-//    }
-//}
-
-
-
 @end

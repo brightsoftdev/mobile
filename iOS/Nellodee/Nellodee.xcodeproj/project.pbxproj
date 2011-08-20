@@ -57,6 +57,7 @@
 		60D15E5B13F183E8001DF7D3 /* Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D15E5A13F183E8001DF7D3 /* Category.m */; };
 		60E196B013E07D15001C0471 /* BasicProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E196AE13E07D15001C0471 /* BasicProfileViewController.m */; };
 		60E196B113E07D15001C0471 /* BasicProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60E196AF13E07D15001C0471 /* BasicProfileViewController.xib */; };
+		60EF343614004FF000CA0BE0 /* BasicInfoWS.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EF343514004FF000CA0BE0 /* BasicInfoWS.m */; };
 		60F65C2113D2DF6A00B4EAAD /* URLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F65C1F13D2DF6A00B4EAAD /* URLViewController.m */; };
 		60F65C2213D2DF6A00B4EAAD /* URLViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60F65C2013D2DF6A00B4EAAD /* URLViewController.xib */; };
 		B7F6524210FFD98E0008748C /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7F6524010FFD98E0008748C /* MainViewController.xib */; };
@@ -148,6 +149,8 @@
 		60E196AD13E07D15001C0471 /* BasicProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicProfileViewController.h; sourceTree = "<group>"; };
 		60E196AE13E07D15001C0471 /* BasicProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicProfileViewController.m; sourceTree = "<group>"; };
 		60E196AF13E07D15001C0471 /* BasicProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BasicProfileViewController.xib; path = Classes/BasicProfileViewController.xib; sourceTree = "<group>"; };
+		60EF343414004FF000CA0BE0 /* BasicInfoWS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicInfoWS.h; sourceTree = "<group>"; };
+		60EF343514004FF000CA0BE0 /* BasicInfoWS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicInfoWS.m; sourceTree = "<group>"; };
 		60F65C1E13D2DF6A00B4EAAD /* URLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URLViewController.h; sourceTree = "<group>"; };
 		60F65C1F13D2DF6A00B4EAAD /* URLViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URLViewController.m; sourceTree = "<group>"; };
 		60F65C2013D2DF6A00B4EAAD /* URLViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = URLViewController.xib; path = Classes/URLViewController.xib; sourceTree = "<group>"; };
@@ -173,6 +176,7 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				60EF343114004FBF00CA0BE0 /* WebServices */,
 				60D15E5813F183AD001DF7D3 /* Data */,
 				605F08ED13D35DE300E9935A /* Kernel */,
 				608AC8D213CA5DBB004A0693 /* User */,
@@ -351,6 +355,15 @@
 			name = Data;
 			sourceTree = "<group>";
 		};
+		60EF343114004FBF00CA0BE0 /* WebServices */ = {
+			isa = PBXGroup;
+			children = (
+				60EF343414004FF000CA0BE0 /* BasicInfoWS.h */,
+				60EF343514004FF000CA0BE0 /* BasicInfoWS.m */,
+			);
+			name = WebServices;
+			sourceTree = "<group>";
+		};
 		60F1E77A13F4657000C55D90 /* Layout */ = {
 			isa = PBXGroup;
 			children = (
@@ -479,6 +492,7 @@
 				60D15E5B13F183E8001DF7D3 /* Category.m in Sources */,
 				604F441813FD33A200049848 /* CategoriesViewController.m in Sources */,
 				607D1ED513FD383E00FC90D6 /* CategoriesDataController.m in Sources */,
+				60EF343614004FF000CA0BE0 /* BasicInfoWS.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

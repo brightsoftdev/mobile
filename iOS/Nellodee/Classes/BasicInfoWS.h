@@ -1,8 +1,8 @@
 //
-//  MeService.h
+//  BasicInfoWS.h
 //  Nellodee
 //
-//  Created by Ada Hopper on 11/07/11.
+//  Created by Ada Hopper on 20/08/11.
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
@@ -11,22 +11,15 @@
 @class SBJsonStreamParser;
 @class SBJsonStreamParserAdapter;
 @class BasicInfo;
-@class About;
-@class Categories;
 
-@interface MeService : NSObject {
+@interface BasicInfoWS : NSObject {
 	NSMutableData *responseData;
-    
     BasicInfo *basicInfo;
-    About *about;
-	Categories *categories;
-
 }
+
 - (BOOL) meService;
 
 @property (nonatomic, retain) NSMutableData *responseData;
 @property (nonatomic, retain) BasicInfo * basicInfo;
-@property (nonatomic, retain) About *about;
-@property (nonatomic, retain) Categories *categories;
 
 @end

@@ -85,7 +85,7 @@
         prefNameTextField.text = [basic prefName];
 		
 		NellodeeApp *sharedNell = [NellodeeApp sharedNellodeeData];
-		NSString *imagePath;
+		NSString *imagePath = [[[NSString alloc] init] autorelease];
 		if([basic picturePath] != nil){
 			imagePath = [[sharedNell sakaiURL] stringByAppendingString:[basic picturePath]];
 			NSLog(@"[BASIC PROFILE] Image Path: %@",imagePath);
@@ -97,13 +97,11 @@
 		[sharedNell release];
 		
 		if([basic picturePath] != nil){
-			NSError *error=nil;			
-			NSData* imageData = [[[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:imagePath] options:0 error:&error] autorelease];
+			NSData* imageData = [[[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:imagePath] options:0 error:nil] autorelease];
 			UIImage* image = [[[UIImage alloc] initWithData:imageData] autorelease];
 			[photoButton setImage:image forState:UIControlStateNormal];
 			//[self updatePhotoButton];
 		}
-		[imagePath release];
 
         [self.tableView reloadData];
 

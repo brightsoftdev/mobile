@@ -65,7 +65,7 @@
     basicInfo = [[BasicInfo alloc]init];
     
 	NSLog(@"didReceiveData");    
-    
+    /*
     // Store incoming data into a string
     NSString *jsonString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
     
@@ -102,7 +102,7 @@
     [basicInfo setDepartament:[properties objectForKey:@"department"]];
     [basicInfo setCollege:[properties objectForKey:@"college"]];
 	NSString *tagsString = [properties objectForKey:@"sakai:tags"];
-	NSString *tags;
+	/*NSString *tags;
 	NSArray *tagsArray = [tagsString componentsSeparatedByString:@","];
 	NSMutableArray *categoriesString = [[NSMutableArray alloc] init]; 
 	for(NSString *tag in tagsArray){
@@ -130,7 +130,7 @@
     
     [[NellodeeApp sharedNellodeeData] setBasicInfo:basicInfo];
     
-    
+    /*
     NSDictionary * aboutMeDic = [[[results objectForKey:@"profile"] objectForKey:@"aboutme"] objectForKey:@"elements"];
     NSLog(@"Dictionary value for \"about\" is \"%@\"",aboutMeDic);
 
@@ -145,7 +145,7 @@
     [about setHobbies:[[aboutMeDic objectForKey:@"hobbies"] objectForKey:@"value"]];
 
     NellodeeApp *nell = [NellodeeApp sharedNellodeeData];
-    [nell setAboutMe:about];
+    [nell setAboutMe:about];*/
 
 }  
 
