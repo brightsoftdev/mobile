@@ -19,6 +19,7 @@
 		60214E1313E86928005CD90C /* TagsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60214E1113E86927005CD90C /* TagsViewController.m */; };
 		60214E1413E86928005CD90C /* TagsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60214E1213E86927005CD90C /* TagsViewController.xib */; };
 		60214E1813E871F4005CD90C /* RolTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60214E1613E871F3005CD90C /* RolTableViewController.m */; };
+		602DB05A140079470001ECCF /* AboutMeWS.m in Sources */ = {isa = PBXBuildFile; fileRef = 602DB059140079470001ECCF /* AboutMeWS.m */; };
 		604F441813FD33A200049848 /* CategoriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 604F441613FD33A200049848 /* CategoriesViewController.m */; };
 		604F441913FD33A200049848 /* CategoriesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 604F441713FD33A200049848 /* CategoriesViewController.xib */; };
 		605F08E013D34D4A00E9935A /* Profile.m in Sources */ = {isa = PBXBuildFile; fileRef = 605F08DF13D34D4A00E9935A /* Profile.m */; };
@@ -82,6 +83,8 @@
 		60214E1213E86927005CD90C /* TagsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TagsViewController.xib; path = Classes/TagsViewController.xib; sourceTree = "<group>"; };
 		60214E1513E871F3005CD90C /* RolTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RolTableViewController.h; sourceTree = "<group>"; };
 		60214E1613E871F3005CD90C /* RolTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RolTableViewController.m; sourceTree = "<group>"; };
+		602DB058140079470001ECCF /* AboutMeWS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutMeWS.h; sourceTree = "<group>"; };
+		602DB059140079470001ECCF /* AboutMeWS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutMeWS.m; sourceTree = "<group>"; };
 		604F441513FD33A200049848 /* CategoriesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoriesViewController.h; sourceTree = "<group>"; };
 		604F441613FD33A200049848 /* CategoriesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoriesViewController.m; sourceTree = "<group>"; };
 		604F441713FD33A200049848 /* CategoriesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CategoriesViewController.xib; path = Classes/CategoriesViewController.xib; sourceTree = "<group>"; };
@@ -360,6 +363,8 @@
 			children = (
 				60EF343414004FF000CA0BE0 /* BasicInfoWS.h */,
 				60EF343514004FF000CA0BE0 /* BasicInfoWS.m */,
+				602DB058140079470001ECCF /* AboutMeWS.h */,
+				602DB059140079470001ECCF /* AboutMeWS.m */,
 			);
 			name = WebServices;
 			sourceTree = "<group>";
@@ -493,6 +498,7 @@
 				604F441813FD33A200049848 /* CategoriesViewController.m in Sources */,
 				607D1ED513FD383E00FC90D6 /* CategoriesDataController.m in Sources */,
 				60EF343614004FF000CA0BE0 /* BasicInfoWS.m in Sources */,
+				602DB05A140079470001ECCF /* AboutMeWS.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

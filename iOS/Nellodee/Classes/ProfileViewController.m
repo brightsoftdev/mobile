@@ -10,13 +10,15 @@
 #import "BasicProfileViewController.h"
 #import "AboutViewController.h"
 #import "BasicInfoWS.h"
-#import "MeService.h"
+#import "AboutMeWS.h"
+//#import "MeService.h"
 #import "TagsViewController.h"
 //#import "CategoriesViewController.h"
 
 @implementation ProfileViewController
 
-@synthesize options,basicInfoWS;
+@synthesize options;
+@synthesize basicInfoWS, aboutMeWS;
 
 
 #define BASIC 0
@@ -103,6 +105,9 @@
         
     }
     else if ([indexPath row] == ABOUT   ){
+		aboutMeWS = [[AboutMeWS alloc] init];
+		[aboutMeWS meService];
+		
         AboutViewController *aboutView = [[AboutViewController alloc] initWithStyle:UITableViewStyleGrouped];
 		[[self navigationController] pushViewController:aboutView animated:YES];
         [aboutView release];
@@ -134,6 +139,7 @@
 
 
 -(void) dealloc{
+	[aboutMeWS release];
 	[basicInfoWS release];
 	[options release];
 	[super dealloc];

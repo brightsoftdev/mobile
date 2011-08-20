@@ -1,24 +1,27 @@
 //
-//  BasicInfoWS.m
+//  AboutMeWS.m
 //  Nellodee
 //
-//  Created by Ada Hopper on 20/08/11.
+//  Created by Ada Hopper on 21/08/11.
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
-#import "BasicInfo.h"
+
+#import "AboutMeWS.h"
 
 #import "SBJson.h"
 #import "NellodeeApp.h"
-#import "BasicInfoWS.h"
+#import "About.h"
 
-@implementation BasicInfoWS
+@implementation AboutMeWS
+
+
 @synthesize responseData;
-@synthesize basicInfo;
+@synthesize aboutMe;
 
 -(BOOL) meService{
 	NellodeeApp *sharedNell = [NellodeeApp sharedNellodeeData];
 	NSString *meServiceURL = [[sharedNell sakaiURL]	stringByAppendingString:@"/system/me"];
-	NSLog(@"[BASIC INFO WS] Sakai url: %@",meServiceURL);
+	NSLog(@"[ABOUT ME WS] Sakai url: %@",meServiceURL);
 	
 	
 	NSMutableURLRequest *request = [NSMutableURLRequest
@@ -34,7 +37,7 @@
 		[request setAllHTTPHeaderFields:headers];
 	}
 	else{
-		NSLog(@"[BASIC INFO WS] Error: user no authenticated");
+		NSLog(@"[ABOUT ME WS] Error: user no authenticated");
 	}
 	
 	[[NSURLConnection alloc] initWithRequest:request delegate:self];  
@@ -46,7 +49,7 @@
 
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {  
-	NSLog(@"[BASIC INFO WS] Did ReceiveResponse");
+	NSLog(@"[ABOUT ME WS] Did ReceiveResponse");
 	NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)response;
 	if ([httpResponse statusCode] >= 400) {
 		NSLog(@"Remote url returned error %d %@",[httpResponse statusCode],[NSHTTPURLResponse localizedStringForStatusCode:[httpResponse statusCode]]);
@@ -58,9 +61,8 @@
 }  
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {  
-    basicInfo = [[BasicInfo alloc]init];
     
-	NSLog(@"didReceiveData");    
+	NSLog(@"[ABOUT ME WS] Did receive data");    
 	
 	
 	// Store incoming data into a string
@@ -69,49 +71,25 @@
 	// Create a dictionary from the JSON string
 	NSDictionary *results = [jsonString JSONValue];
 	//NSLog(@"Dictionary value for \"results\" is \"%@\"",results);
+		
 	
-	NSString *username = [[NSString alloc] initWithString:[[results objectForKey:@"user"] objectForKey:@"userid"]];
-	[basicInfo setUsername:username];
-	 
-	NSDictionary * properties = [[results objectForKey:@"user"] objectForKey:@"properties"];
-	//NSLog(@"Dictionary value for \"foo\" is \"%@\"",properties);
-	 
-
-	//Getting the profile picture
-	SBJsonParser * jsonParser = [SBJsonParser new];
-	NSDictionary * picPath = [jsonParser objectWithString:[properties objectForKey:@"picture"]];
-	if(picPath!=nil){
-		NSString *pathPicture = [[NSString alloc] initWithString:[@"/~" stringByAppendingString:username]];
-		pathPicture = [pathPicture stringByAppendingString:[@"/public/profile/" stringByAppendingString:[picPath objectForKey:@"name"]]];
-
-		[basicInfo setPicturePath:[pathPicture copy]];
-		[pathPicture release];
-	}
-	[picPath release];
-	[jsonParser release];
-
+    NSDictionary * aboutMeDic = [[[results objectForKey:@"profile"] objectForKey:@"aboutme"] objectForKey:@"elements"];
+    //NSLog(@"Dictionary value for \"about\" is \"%@\"",aboutMeDic);
+	    
+    aboutMe = [[About alloc]init];
+    //NSLog(@"Dictionary value for \"aboutme\" is \"%@\"",[[aboutMeDic objectForKey:@"aboutme"] objectForKey:@"value"]);
 	
-	[basicInfo setFirstName:[properties objectForKey:@"firstName"]];
-	[basicInfo setLastName:[properties objectForKey:@"lastName"]];
-	[basicInfo setPrefName:[properties objectForKey:@"preferredName"]];
-	[basicInfo setEmail:[properties objectForKey:@"email"]];
-	[basicInfo setRol:[properties objectForKey:@"role"]];
-	[basicInfo setDepartament:[properties objectForKey:@"department"]];
-	[basicInfo setCollege:[properties objectForKey:@"college"]];
+    [aboutMe setAboutMe:[[aboutMeDic objectForKey:@"aboutme"] objectForKey:@"value"]];
+    [aboutMe setAcademicInterests:[[aboutMeDic objectForKey:@"academicinterests"] objectForKey:@"value"]];
+    [aboutMe setPersonalInterests:[[aboutMeDic objectForKey:@"personalinterests"] objectForKey:@"value"]];
+    [aboutMe setHobbies:[[aboutMeDic objectForKey:@"hobbies"] objectForKey:@"value"]];
 	
-	//Separating user tags from categories
-	NSString *tagsString = [properties objectForKey:@"sakai:tags"];
-	NSArray *tagsArray = [tagsString componentsSeparatedByString:@","];
-	for(NSString *tag in tagsArray){
-		if(![tag hasPrefix:@"directory/"]){
-			[basicInfo setTags:tag];
-			break;
-		}
-	}
+    //NellodeeApp *nell = [NellodeeApp sharedNellodeeData];
+    //[nell setAboutMe:about];
 	
-	[[NellodeeApp sharedNellodeeData] setBasicInfo:basicInfo];
-	 
-
+	[[NellodeeApp sharedNellodeeData] setAboutMe:aboutMe];
+	
+	
 	
 }  
 
@@ -131,11 +109,9 @@
 
 
 - (void)dealloc {
-    [basicInfo dealloc];
+    [aboutMe dealloc];
     [responseData dealloc];
     [super dealloc];
 }
-
-
 
 @end
