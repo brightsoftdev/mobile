@@ -10,11 +10,13 @@
 #import "BasicInfo.h"
 #import "About.h"
 #import "MeService.h"
+#import "Profile.h"
 
 @implementation NellodeeApp
 
 @synthesize sakaiURL, cookies;
 @synthesize basicInfo,aboutMe;
+@synthesize userProfile;
 
 
 #pragma mark Singleton Methods
@@ -25,6 +27,7 @@
         if(!sharedNell)
             sharedNell = [[super allocWithZone:NULL] init];
     }
+	
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSString *url = [defaults objectForKey:@"url"];
     NSLog(@" URL: %@",url);
@@ -60,6 +63,7 @@
 
 - (id)init {
     if ((self = [super init])) {
+		userProfile = [[Profile alloc] init];
         //Get stored data
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
         NSString *url = [defaults objectForKey:@"url"];
@@ -74,6 +78,7 @@
 
 - (void)dealloc {
     // Should never be called, but just here for clarity really.
+	[userProfile release];
     [sakaiURL release];
     [cookies release];
     [super dealloc];

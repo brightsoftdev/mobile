@@ -5,11 +5,11 @@
 //  Created by Ada Hopper on 20/08/11.
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
-#import "BasicInfo.h"
+#import "BasicInfoWS.h"
 
 #import "SBJson.h"
 #import "NellodeeApp.h"
-#import "BasicInfoWS.h"
+#import "BasicInfo.h"
 
 @implementation BasicInfoWS
 @synthesize responseData;

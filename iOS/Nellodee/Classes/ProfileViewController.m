@@ -11,14 +11,15 @@
 #import "AboutViewController.h"
 #import "BasicInfoWS.h"
 #import "AboutMeWS.h"
+#import "CategoriesWS.h"
 //#import "MeService.h"
 #import "TagsViewController.h"
-//#import "CategoriesViewController.h"
+#import "CategoriesViewController.h"
 
 @implementation ProfileViewController
 
 @synthesize options;
-@synthesize basicInfoWS, aboutMeWS;
+@synthesize basicInfoWS, aboutMeWS,categoriesWS;
 
 
 #define BASIC 0
@@ -115,12 +116,13 @@
         
     }
     else if ([indexPath row] == CATEGORIES   ){
-		/*CategoriesViewController *categoriesView =[[CategoriesViewController alloc] initWithStyle:UITableViewStyleGrouped];
+		categoriesWS = [[CategoriesWS alloc] init];
+		[categoriesWS meService];
+		CategoriesViewController *categoriesView =[[CategoriesViewController alloc] initWithStyle:UITableViewStyleGrouped];
         
         // Push the detail view controller.
         [[self navigationController] pushViewController:categoriesView animated:YES];
         [categoriesView release];
-		*/
         
     }
     else{
@@ -139,6 +141,7 @@
 
 
 -(void) dealloc{
+	[categoriesWS release];
 	[aboutMeWS release];
 	[basicInfoWS release];
 	[options release];

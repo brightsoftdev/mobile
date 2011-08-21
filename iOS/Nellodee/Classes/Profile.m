@@ -10,5 +10,6 @@
 
 
 @implementation Profile
+@synthesize basicInfo,about,categories;
 
 @end

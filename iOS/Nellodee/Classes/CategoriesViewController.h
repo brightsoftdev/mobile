@@ -10,7 +10,11 @@
 
 
 @interface CategoriesViewController : UITableViewController <UINavigationControllerDelegate, UITextFieldDelegate>{
+	@private
+		NSMutableArray *categories;
+		NSMutableArray *catString;
 
 }
-
+@property (nonatomic,retain) NSMutableArray *categories;
+@property (nonatomic,retain) NSMutableArray *catString;
 @end

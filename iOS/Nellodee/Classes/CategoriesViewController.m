@@ -7,50 +7,58 @@
 //
 
 #import "CategoriesViewController.h"
-
+#import "NellodeeApp.h"
+#import "CategoriesDataController.h"
 
 @implementation CategoriesViewController
-
+@synthesize categories,catString;
 
 #pragma mark -
 #pragma mark View lifecycle
 
-/*
-- (void)viewDidLoad {
-    [super viewDidLoad];
+- (id)initWithStyle:(UITableViewStyle)style
+{
+    self = [super initWithStyle:style];
+    if (self) {
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(loadCategoriesView:) 
+                                                     name:@"meServiceNotification"
+                                                   object:nil];    
+    }
+    return self;
+}
+- (void) loadCategoriesView:(NSNotification *) notification{
+    
+    
+    if ([[notification name] isEqualToString:@"meServiceNotification"]){
+        NSLog (@"[CATEGORIES] Successfully received the notification!");
+        
+        
+        self.navigationItem.rightBarButtonItem = self.editButtonItem;
+        
+        //Get user information
+		categories = [NSMutableArray arrayWithArray:[[[NellodeeApp sharedNellodeeData] userProfile] categories]];
+		self.catString = [NSMutableArray array];
+		CategoriesDataController *catData = [[CategoriesDataController alloc] init];
+		for (int i = 0; i < [categories count]; i = i + 1){
+			[catString addObject:[catData categoriesShoWithTag:[categories objectAtIndex:i]]];
+		}
+		
+		[catData release];
+		
+        // Update the view with current data before it is displayed.
+        [super viewWillAppear:YES];
+        
+        // Scroll the table view to the top before it appears  
+        [self.tableView setContentOffset:CGPointZero animated:YES];
+        self.title = @"Categories";
+        
+        [self.tableView reloadData]; 
+        
+    }
+}
 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-}
-*/
 
-/*
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-}
-*/
-/*
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-}
-*/
-/*
-- (void)viewWillDisappear:(BOOL)animated {
-    [super viewWillDisappear:animated];
-}
-*/
-/*
-- (void)viewDidDisappear:(BOOL)animated {
-    [super viewDidDisappear:animated];
-}
-*/
-/*
-// Override to allow orientations other than the default portrait orientation.
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    // Return YES for supported orientations.
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
-*/
 
 
 #pragma mark -
@@ -64,7 +72,8 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return 5;
+	categories = [NSMutableArray arrayWithArray:[[[NellodeeApp sharedNellodeeData] userProfile] categories]];
+    return [categories count];
 }
 
 
@@ -78,8 +87,9 @@
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
     }
     
-	cell.textLabel.text = @"celda";
-
+	//NSLog(@" indice: %@", indexPath.row);
+	cell.textLabel.text = [self.catString objectAtIndex:indexPath.row];
+	[[cell textLabel] setFont:[UIFont systemFontOfSize:10.0]];
     return cell;
 }
 
@@ -156,6 +166,8 @@
 
 
 - (void)dealloc {
+	[categories release];
+	[catString release];
     [super dealloc];
 }
 

@@ -24,8 +24,9 @@
     
     
     NSMutableArray *categories = [[NSMutableArray alloc] init];
-	Category *cat = [[Category alloc]init];
+	Category *cat;
 	
+	cat = [[Category alloc]init];
 	cat.title=@"Medicine and Dentistry";
 	cat.tag=@"medicineanddentistry";
 	cat.subcategories = [[NSDictionary alloc] 
@@ -36,7 +37,9 @@
 								  initWithObjects:@"preclinicalmedicine",@"preclinicaldentistry",@"clinicalmedicine",
 								  @"clinicaldentistry",@"othersinmedicineanddentistry",nil]];
    	[categories addObject:cat];
-	
+	[cat release];
+
+	cat = [[Category alloc]init];
 	cat.title=@"Biological Sciences";
 	cat.tag=@"biologicalsciences";
 	cat.subcategories = [[NSDictionary alloc] 
@@ -49,7 +52,9 @@
 										@"sportsscience", @"molecularbiologybiophysicsandbiochemistry",
 										@"psychology",@"othersinbiologicalsciences",nil]];
    	[categories addObject:cat];
+	[cat release];
 
+	cat = [[Category alloc]init];
 	cat.title=@"Veterinary Sciences and Agriculture";
 	cat.tag=@"veterinarysciencesagriculture";
 	cat.subcategories = [[NSDictionary alloc] 
@@ -64,8 +69,9 @@
 								  @"agriculture",@"forestry",@"foodandbeveragestudies"
 								  @"agriculturalsciences",@"others",nil]];
    	[categories addObject:cat];
+	[cat release];
 
-    
+	cat = [[Category alloc]init];
 	cat.title=@"Physical Sciences";
 	cat.tag=@"physicalsciences";						 
 	cat.subcategories = [[NSDictionary alloc] 
@@ -78,7 +84,9 @@
 							   @"astronomy",@"geology",@"oceansciences",@"others",nil]];
 				  
 	[categories addObject:cat];
-    
+	[cat release];
+
+	cat = [[Category alloc]init];
 	cat.title=@"Mathematical and Computer Sciences";
 	cat.tag=@"mathematicalandcomputersciences";
 	cat.subcategories = [[NSDictionary alloc] initWithObjects:[[NSArray alloc] 
@@ -92,17 +100,38 @@
 
 
 	[categories addObject:cat];
-	
+	[cat release];
 	// ...
 
 	self.categoriesList = categories;
-	[cat release];
 	[categories release];
 }
 
 - (NSString *) categoriesShoWithTag:(NSString*)tag{
-	NSString *category;
+	NSString *category = [[NSString alloc] initWithString:@""];
+	NSArray *catSubcat = [[[NSArray alloc] init] autorelease];
+	catSubcat = [tag componentsSeparatedByString:@"/"];
+	
 	for (Category *cat in self.categoriesList){
+		//NSLog(@"Tag : %@",[cat tag]);
+		if([[catSubcat objectAtIndex:1] isEqualToString:[cat tag]]){
+			category = [category stringByAppendingString:[cat title]];
+			//NSLog(@"Category : %@",category);
+			if([catSubcat count]>2){
+				category = [category stringByAppendingString:@" > "];
+				category = [category stringByAppendingString:[[cat subcategories] objectForKey:[catSubcat objectAtIndex:2]]];  
+			}
+			break;
+		}
+	
 	}
+	
+	return category;
+
+}
+
+-(void) dealloc{
+	[categoriesList release];
+	[super dealloc];
 }
 @end
