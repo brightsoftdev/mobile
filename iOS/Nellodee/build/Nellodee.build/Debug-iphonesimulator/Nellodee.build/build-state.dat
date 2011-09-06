@@ -826,6 +826,11 @@ c000000004E5015900000000000001DA6
 t1313871248
 s7590
 
+N/Users/ada/GSoC/Nellodee/iOS/Nellodee/Settings.bundle
+c000000004E5143210000000000000088
+t1313948449
+s136
+
 N/Users/ada/GSoC/Nellodee/iOS/Nellodee/TabViewController.xib
 c00000000000000000000000000000000
 t2
@@ -903,6 +908,10 @@ s8
 N/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator/Nellodee.app/ProfileViewController.nib
 t1313880421
 s1516
+
+N/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator/Nellodee.app/Settings.bundle
+t2
+s0
 
 N/Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator/Nellodee.app/TabViewController.nib
 t2
@@ -1927,6 +1936,9 @@ xCpResource
 xbuild/Debug-iphonesimulator/Nellodee.app/Notes-1.png
 xNotes-1.png
 lSLF07#2@16"Copy Notes-1.png335573222#335573222#0(0"0(0#0#49"/Users/ada/GSoC/Nellodee/iOS/Nellodee/Notes-1.png8618823648#467"    cd /Users/ada/GSoC/Nellodee/iOS/Nellodee    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/ada/GSoC/Nellodee/iOS/Nellodee/Notes-1.png /Users/ada/GSoC/Nellodee/iOS/Nellodee/build/Debug-iphonesimulator/Nellodee.app0#
+
+CCpResource build/Debug-iphonesimulator/Nellodee.app/Settings.bundle Settings.bundle
+r0
 
 CCpResource build/Debug-iphonesimulator/Nellodee.app/defaultIcon.png defaultIcon.png
 s335573222.595148
